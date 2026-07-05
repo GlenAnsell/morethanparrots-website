@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'whitenoise.runserver_nostatic',
     'crispy_forms',
     'crispy_bootstrap5',
     'book',
     'marketing',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -148,6 +150,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY', default='')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY', default='')
 STRIPE_WEBHOOK_SECRET = config('STRIPE_WEBHOOK_SECRET', default='')
+
+# Email (Mailgun via HTTP API)
+MAILGUN_API_KEY = config('MAILGUN_API_KEY', default='')
+MAILGUN_DOMAIN = config('MAILGUN_DOMAIN', default='')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='Glen Ansell <hello@morethanparrots.com>')
 
 # Default primary key
 default_auto_field = 'django.db.models.BigAutoField'

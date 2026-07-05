@@ -37,10 +37,27 @@
                 <div class="score-circle" id="scoreDisplay">0</div>
                 <h2 class="display-font mb-3" id="resultTitle">Your Result</h2>
                 <p class="text-white-50 lead" id="resultDescription"></p>
-                <div class="mt-4">
-                    <a href="#" class="btn btn-copper btn-lg">Get Your Full Report (Free)</a>
+
+                <!-- Email capture for results -->
+                <div id="emailCapture" class="mt-4">
+                    <p class="text-white-50 mb-3">Enter your email to receive your personalized report:</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <input type="email" id="resultEmail" class="form-control form-control-lg" placeholder="you@company.com">
+                                <button class="btn btn-copper" type="button" id="sendResultsBtn">Get My Report</button>
+                            </div>
+                            <div id="emailFeedback" class="small"></div>
+                        </div>
+                    </div>
+                    <p class="text-white-50 small mt-2">No spam. Unsubscribe any time.</p>
                 </div>
-                <p class="text-white-50 small mt-3">Includes personalized recommendations + chapter guide</p>
+
+                <div id="resultSuccess" class="d-none mt-4">
+                    <p class="text-white-50">Your report is on its way. In the meantime:</p>
+                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg me-2">Pre-Order the Book</a>
+                    <a href="{% url 'blog:post_list' %}" class="btn btn-outline-copper btn-lg">Read the Blog</a>
+                </div>
             </div>
         </div>
     </div>
@@ -73,6 +90,8 @@ const questions = [
 ];
 
 let answers = {};
+let currentScore = 0;
+let currentPersona = "";
 
 function renderQuestions() {
     const container = document.getElementById('quizContainer');
@@ -95,7 +114,6 @@ function renderQuestions() {
             const val = parseInt(this.dataset.val);
             answers[qId] = val;
             
-            // Visual selection
             document.querySelectorAll(`[data-q="${qId}"]`).forEach(b => b.classList.remove('selected'));
             this.classList.add('selected');
             
@@ -117,6 +135,7 @@ function showResults() {
     const total = Object.values(answers).reduce((a, b) => a + b, 0);
     const max = questions.length * 5;
     const score = Math.round((total / max) * 100);
+    currentScore = score;
     
     document.getElementById('quizContainer').classList.add('d-none');
     document.getElementById('resultContainer').classList.remove('d-none');
@@ -136,13 +155,54 @@ function showResults() {
         title = "The Architect";
         desc = "You're leading AI transformation. The book's skeptical frameworks will help you avoid the traps that even experienced teams fall into.";
     }
+    currentPersona = title;
     
     document.getElementById('resultTitle').textContent = title;
     document.getElementById('resultDescription').textContent = desc;
     
-    // Scroll to results
     document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
 }
+
+// Handle email submission
+document.getElementById('sendResultsBtn').addEventListener('click', async function() {
+    const email = document.getElementById('resultEmail').value.trim();
+    const feedback = document.getElementById('emailFeedback');
+    
+    if (!email || !email.includes('@')) {
+        feedback.innerHTML = '<span class="text-warning">Please enter a valid email.</span>';
+        return;
+    }
+    
+    this.disabled = true;
+    this.textContent = 'Sending...';
+    
+    try {
+        const resp = await fetch('/api/scorecard/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                score: currentScore,
+                persona: currentPersona,
+                answers: answers,
+                email: email
+            })
+        });
+        const data = await resp.json();
+        
+        if (data.success) {
+            document.getElementById('emailCapture').classList.add('d-none');
+            document.getElementById('resultSuccess').classList.remove('d-none');
+        } else {
+            feedback.innerHTML = '<span class="text-warning">' + (data.error || 'Something went wrong.') + '</span>';
+            this.disabled = false;
+            this.textContent = 'Get My Report';
+        }
+    } catch (e) {
+        feedback.innerHTML = '<span class="text-warning">Network error. Please try again.</span>';
+        this.disabled = false;
+        this.textContent = 'Get My Report';
+    }
+});
 
 renderQuestions();
 </script>

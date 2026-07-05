@@ -10,3 +10,4 @@ crispy-bootstrap5>=2023.10
 django-crispy-forms>=2.1
 Pillow>=10.0
 dj-database-url>=2.0
+bleach>=6.0

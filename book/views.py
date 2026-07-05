@@ -3,9 +3,40 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.conf import settings
 import markdown
 import json
 import os
+import requests
+
+# ── Email helpers ──────────────────────────────────────────────────────────
+
+def send_email(to_email, subject, html_body, text_body=""):
+    """Send via Mailgun HTTP API. Returns (success_bool, response_or_error)."""
+    api_key = getattr(settings, 'MAILGUN_API_KEY', '')
+    domain = getattr(settings, 'MAILGUN_DOMAIN', '')
+    if not api_key or not domain:
+        return False, "MAILGUN_API_KEY or MAILGUN_DOMAIN not configured"
+    
+    url = f"https://api.mailgun.net/v3/{domain}/messages"
+    from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', f"Glen Ansell <hello@{domain}>")
+    
+    resp = requests.post(
+        url,
+        auth=("api", api_key),
+        data={
+            "from": from_email,
+            "to": to_email,
+            "subject": subject,
+            "text": text_body or html_body,
+            "html": html_body,
+        },
+        timeout=30
+    )
+    return resp.status_code == 200, resp.text
+
+
+# ── Page views ─────────────────────────────────────────────────────────────
 
 def home(request):
     return render(request, 'book/home.html')
@@ -60,6 +91,9 @@ def chapter_preview(request, chapter_num):
     }
     return render(request, 'book/chapter_preview.html', context)
 
+
+# ── API endpoints ──────────────────────────────────────────────────────────
+
 @csrf_exempt
 def api_subscribe(request):
     if request.method != 'POST':
@@ -85,6 +119,40 @@ def api_subscribe(request):
             if source not in (subscriber.source or ''):
                 subscriber.source = f"{subscriber.source or ''},{source}"
             subscriber.save()
+        
+        # Send welcome email (fire-and-forget, don't fail the API call)
+        if created:
+            display_name = first_name if first_name else "there"
+            welcome_html = f"""<!DOCTYPE html>
+<html><body style="font-family:Inter,sans-serif;color:#1A1A2E;background:#FAFAF8;padding:40px 20px;">
+<div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;padding:40px;box-shadow:0 4px 20px rgba(26,35,78,0.08);">
+  <h2 style="color:#1A234E;font-family:'Playfair Display',serif;margin-top:0;">Welcome to The Waiting Room</h2>
+  <p>Hi {display_name},</p>
+  <p>You just joined <strong>The Waiting Room</strong> — the weekly briefing that cuts through AI hype and tells you what actually matters.</p>
+  <p>Here's what to expect:</p>
+  <ul>
+    <li><strong>Tuesday mornings:</strong> One headline decoded, one tool tested, one myth busted.</li>
+    <li><strong>No fluff.</strong> If it's not actionable, it doesn't make the cut.</li>
+    <li><strong>Skeptical by default.</strong> I don't get excited about press releases.</li>
+  </ul>
+  <p>In the meantime, here are three things worth your time:</p>
+  <ol>
+    <li><a href="https://morethanparrots.com/preview/1/" style="color:#B87A4A;">Read Chapter 1 free</a> — What AI Actually Is (And What It Isn't)</li>
+    <li><a href="https://morethanparrots.com/readiness-scorecard/" style="color:#B87A4A;">Take the AI Readiness Scorecard</a> — 5 minutes, brutally honest</li>
+    <li><a href="https://morethanparrots.com/prompt-library/" style="color:#B87A4A;">Browse the Prompt Library</a> — 200+ tested prompts for business owners</li>
+  </ol>
+  <p style="margin-top:30px;">The book drops soon. You'll hear about it first.</p>
+  <p style="color:#6B7280;font-size:14px;margin-top:30px;">— Glen Ansell<br>Author, <em>More Than Parrots, Less Than Gods</em></p>
+  <hr style="border:none;border-top:1px solid #e5e7eb;margin:30px 0;">
+  <p style="font-size:12px;color:#9CA3AF;">You're receiving this because you subscribed at morethanparrots.com. <a href="https://morethanparrots.com/" style="color:#9CA3AF;">Unsubscribe</a> any time.</p>
+</div>
+</body></html>"""
+            try:
+                ok, err = send_email(email, "Welcome to The Waiting Room — your AI skeptic's briefing", welcome_html)
+                if not ok:
+                    print(f"[EMAIL] Welcome email failed for {email}: {err}")
+            except Exception as e:
+                print(f"[EMAIL] Welcome email exception for {email}: {e}")
         
         return JsonResponse({
             'success': True,
@@ -130,13 +198,70 @@ def api_scorecard(request):
         answers = data.get('answers', {})
         email = data.get('email', '').strip().lower()
         
-        from .models import ScorecardSubmission
-        submission = ScorecardSubmission.objects.create(
+        from .models import ScorecardResult
+        submission = ScorecardResult.objects.create(
             email=email if email else None,
             score=score,
             persona=persona,
             answers=answers
         )
+        
+        # Send personalized scorecard email if email provided
+        if email:
+            display_name = data.get('first_name', '').strip() or "there"
+            
+            # Persona-specific recommendations
+            recommendations = {
+                "The Explorer": {
+                    "chapters": "Chapters 1–5",
+                    "focus": "Build foundational understanding before making any AI investments.",
+                    "action": "Start with Chapter 1 (free preview) and the AI Strategy Playbook."
+                },
+                "The Curious": {
+                    "chapters": "Chapters 6–9, 13",
+                    "focus": "You need structure and a clear implementation framework.",
+                    "action": "Read the Partnership Framework and the Implementation Playbook chapters."
+                },
+                "The Practitioner": {
+                    "chapters": "Chapters 14–17",
+                    "focus": "Scaling requires governance, team building, and avoiding common traps.",
+                    "action": "Deep-dive into governance frameworks and the Team Builder's Guide."
+                },
+                "The Architect": {
+                    "chapters": "Chapters 10–12, 18–19",
+                    "focus": "Even experts fall for hype. The skeptical frameworks will save you from expensive mistakes.",
+                    "action": "Read the Industry Disruption chapters and the Future-Proofing sections."
+                }
+            }
+            rec = recommendations.get(persona, recommendations["The Explorer"])
+            
+            score_html = f"""<!DOCTYPE html>
+<html><body style="font-family:Inter,sans-serif;color:#1A1A2E;background:#FAFAF8;padding:40px 20px;">
+<div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;padding:40px;box-shadow:0 4px 20px rgba(26,35,78,0.08);">
+  <h2 style="color:#1A234E;font-family:'Playfair Display',serif;margin-top:0;">Your AI Readiness Scorecard Results</h2>
+  <p>Hi {display_name},</p>
+  <div style="text-align:center;padding:24px;background:linear-gradient(135deg,#1A234E 0%,#0F1635 100%);border-radius:12px;color:#fff;margin:20px 0;">
+    <div style="font-size:48px;font-weight:bold;color:#B87A4A;">{score}%</div>
+    <div style="font-size:20px;font-weight:600;margin-top:8px;">{persona}</div>
+  </div>
+  <p><strong>What this means:</strong></p>
+  <p>{rec['focus']}</p>
+  <p><strong>Recommended reading:</strong> {rec['chapters']}</p>
+  <p><strong>Next action:</strong> {rec['action']}</p>
+  <div style="text-align:center;margin:30px 0;">
+    <a href="https://morethanparrots.com/book/" style="display:inline-block;background:#B87A4A;color:#fff;text-decoration:none;padding:14px 32px;border-radius:8px;font-weight:500;">Pre-Order the Book</a>
+  </div>
+  <p style="color:#6B7280;font-size:14px;margin-top:30px;">— Glen Ansell<br>Author, <em>More Than Parrots, Less Than Gods</em></p>
+  <hr style="border:none;border-top:1px solid #e5e7eb;margin:30px 0;">
+  <p style="font-size:12px;color:#9CA3AF;">You completed this scorecard at morethanparrots.com.</p>
+</div>
+</body></html>"""
+            try:
+                ok, err = send_email(email, f"Your AI Readiness Result: {persona} ({score}%)", score_html)
+                if not ok:
+                    print(f"[EMAIL] Scorecard email failed for {email}: {err}")
+            except Exception as e:
+                print(f"[EMAIL] Scorecard email exception for {email}: {e}")
         
         return JsonResponse({
             'success': True,
@@ -159,8 +284,8 @@ def api_calculator(request):
         output_volume = data.get('output_volume', '')
         email = data.get('email', '').strip().lower()
         
-        from .models import CalculatorSubmission
-        submission = CalculatorSubmission.objects.create(
+        from .models import CalculatorResult
+        CalculatorResult.objects.create(
             email=email if email else None,
             role=role,
             team_size=team_size,
@@ -171,7 +296,6 @@ def api_calculator(request):
         
         return JsonResponse({
             'success': True,
-            'id': submission.id,
         })
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
