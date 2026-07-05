@@ -3,37 +3,12 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from django.conf import settings
 import markdown
 import json
 import os
-import requests
 
-# ── Email helpers ──────────────────────────────────────────────────────────
-
-def send_email(to_email, subject, html_body, text_body=""):
-    """Send via Mailgun HTTP API. Returns (success_bool, response_or_error)."""
-    api_key = getattr(settings, 'MAILGUN_API_KEY', '')
-    domain = getattr(settings, 'MAILGUN_DOMAIN', '')
-    if not api_key or not domain:
-        return False, "MAILGUN_API_KEY or MAILGUN_DOMAIN not configured"
-    
-    url = f"https://api.mailgun.net/v3/{domain}/messages"
-    from_email = getattr(settings, 'DEFAULT_FROM_EMAIL', f"Glen Ansell <hello@{domain}>")
-    
-    resp = requests.post(
-        url,
-        auth=("api", api_key),
-        data={
-            "from": from_email,
-            "to": to_email,
-            "subject": subject,
-            "text": text_body or html_body,
-            "html": html_body,
-        },
-        timeout=30
-    )
-    return resp.status_code == 200, resp.text
+# ── Email sender ─────────────────────────────────────────────────────────────
+from .email_sender import send_email
 
 
 # ── Page views ─────────────────────────────────────────────────────────────
@@ -210,7 +185,6 @@ def api_scorecard(request):
         if email:
             display_name = data.get('first_name', '').strip() or "there"
             
-            # Persona-specific recommendations
             recommendations = {
                 "The Explorer": {
                     "chapters": "Chapters 1–5",
@@ -294,9 +268,7 @@ def api_calculator(request):
             capabilities=capabilities
         )
         
-        return JsonResponse({
-            'success': True,
-        })
+        return JsonResponse({'success': True})
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 

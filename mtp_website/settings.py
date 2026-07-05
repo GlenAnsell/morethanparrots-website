@@ -151,9 +151,13 @@ STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY', default='')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY', default='')
 STRIPE_WEBHOOK_SECRET = config('STRIPE_WEBHOOK_SECRET', default='')
 
-# Email (Mailgun via HTTP API)
-MAILGUN_API_KEY = config('MAILGUN_API_KEY', default='')
-MAILGUN_DOMAIN = config('MAILGUN_DOMAIN', default='')
+# Email (Microsoft Graph API)
+# For shared mailboxes: add Mail.Send (Application) permission + admin consent in Azure
+MS_GRAPH_TENANT_ID = config('MS_GRAPH_TENANT_ID', default='')
+MS_GRAPH_CLIENT_ID = config('MS_GRAPH_CLIENT_ID', default='')
+MS_GRAPH_CLIENT_SECRET = config('MS_GRAPH_CLIENT_SECRET', default='')
+MS_GRAPH_SENDER_UPN = config('MS_GRAPH_SENDER_UPN', default='')
+MS_GRAPH_DELEGATED_ACCOUNT = config('MS_GRAPH_DELEGATED_ACCOUNT', default='xcode')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='Glen Ansell <hello@morethanparrots.com>')
 
 # Default primary key
