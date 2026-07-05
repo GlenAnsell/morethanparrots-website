@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Contact — More Than Parrots, Less Than Gods{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h1 class="display-4 display-font text-navy">Contact</h1>
+                    <p class="lead text-muted">Questions, speaking requests, or just want to argue? Reach out.</p>
+                    <div class="divider-copper mx-auto"></div>
+                </div>
+                <div class="card border-0 shadow-lg p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Topic</label>
+                            <select class="form-select">
+                                <option>General inquiry</option>
+                                <option>Speaking request</option>
+                                <option>Press</option>
+                                <option>Partnership</option>
+                                <option>Found a typo (you're the best)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-copper w-100">Send Message</button>
+                    </form>
+                </div>
+                <div class="text-center mt-4 text-muted small">
+                    <p>For business inquiries: <a href="mailto:hello@morethanparrots.com" class="text-copper">hello@morethanparrots.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

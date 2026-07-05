@@ -1,0 +1,14 @@
+[Unit]
+Description=gunicorn daemon for MTP Website
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/mtp
+ExecStart=/var/www/mtp/venv/bin/gunicorn --config gunicorn.conf.py mtp_website.wsgi:application
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

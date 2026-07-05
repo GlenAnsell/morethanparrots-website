@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% block title %}Resource Calculator — More Than Parrots, Less Than Gods{% endblock %}
+
+{% block extra_css %}
+<style>
+    .calc-card { background: white; border-radius: 12px; padding: 24px; border: 1px solid #e5e7eb; margin-bottom: 16px; }
+    .result-highlight { background: linear-gradient(135deg, #1A234E 0%, #0F1635 100%); color: white; border-radius: 12px; padding: 24px; }
+    .cost-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; background: #FEF3E8; color: #B87A4A; font-weight: 600; font-size: 14px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 display-font text-navy">AI Resource Calculator</h1>
+            <p class="lead text-muted">What should you actually budget for AI tools? Personalized estimate in 60 seconds.</p>
+            <div class="divider-copper mx-auto"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="calc-card">
+                    <h5 class="text-navy mb-3">1. What best describes your role?</h5>
+                    <select class="form-select" id="roleSelect">
+                        <option value="">Select...</option>
+                        <option value="solo">Solo entrepreneur / Freelancer</option>
+                        <option value="small">Small business owner (1-10 team)</option>
+                        <option value="medium">Mid-size company (11-50 team)</option>
+                        <option value="enterprise">Enterprise (50+ team)</option>
+                    </select>
+                </div>
+
+                <div class="calc-card">
+                    <h5 class="text-navy mb-3">2. Which AI capabilities do you need? (Select all)</h5>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="llm" id="capLLM">
+                                <label class="form-check-label" for="capLLM">Text generation (ChatGPT, Claude)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="image" id="capImage">
+                                <label class="form-check-label" for="capImage">Image generation (Midjourney, DALL-E)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="code" id="capCode">
+                                <label class="form-check-label" for="capCode">Code assistance (GitHub Copilot)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="data" id="capData">
+                                <label class="form-check-label" for="capData">Data analysis (Tableau AI, Excel)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="voice" id="capVoice">
+                                <label class="form-check-label" for="capVoice">Voice / speech (ElevenLabs, Whisper)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="automation" id="capAuto">
+                                <label class="form-check-label" for="capAuto">Workflow automation (Zapier, Make)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-card">
+                    <h5 class="text-navy mb-3">3. What's your current monthly software budget?</h5>
+                    <select class="form-select" id="budgetSelect">
+                        <option value="">Select...</option>
+                        <option value="low">Under $100/month</option>
+                        <option value="mid">$100-500/month</option>
+                        <option value="high">$500-2,000/month</option>
+                        <option value="enterprise">$2,000+/month</option>
+                    </select>
+                </div>
+
+                <div class="calc-card">
+                    <h5 class="text-navy mb-3">4. How much do you expect AI to increase your output?</h5>
+                    <select class="form-select" id="outputSelect">
+                        <option value="">Select...</option>
+                        <option value="10">10-25% faster</option>
+                        <option value="25">25-50% faster</option>
+                        <option value="50">50-100% faster</option>
+                        <option value="100">2x+ improvement</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-copper btn-lg w-100" onclick="calculateBudget()">Calculate My Budget</button>
+            </div>
+
+            <div class="col-lg-5">
+                <div id="resultPanel" class="d-none">
+                    <div class="result-highlight mb-4">
+                        <h4 class="display-font">Recommended Budget</h4>
+                        <div class="display-3 display-font text-copper mt-3" id="budgetResult">$0</div>
+                        <p class="text-white-50">per month</p>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="text-navy mb-3">Suggested Stack</h6>
+                            <div id="stackList"></div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-sm mt-3">
+                        <div class="card-body">
+                            <h6 class="text-navy mb-3">ROI Projection</h6>
+                            <p class="text-muted small">At your selected output increase, you should break even in <strong id="breakEven">0</strong> months.</p>
+                            <p class="text-muted small">Annual time savings: <strong id="timeSaved">0</strong> hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="emptyPanel" class="text-center text-muted p-5">
+                    <div class="display-4 mb-3">📈</div>
+                    <p>Answer the questions to get your personalized estimate.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function calculateBudget() {
+    const role = document.getElementById('roleSelect').value;
+    const budget = document.getElementById('budgetSelect').value;
+    const output = document.getElementById('outputSelect').value;
+    
+    const caps = [];
+    document.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => caps.push(cb.value));
+    
+    if (!role || !budget || !output || caps.length === 0) {
+        alert('Please answer all questions');
+        return;
+    }
+    
+    // Base costs per capability per role
+    const baseCosts = {
+        llm: { solo: 20, small: 60, medium: 200, enterprise: 800 },
+        image: { solo: 30, small: 80, medium: 250, enterprise: 1000 },
+        code: { solo: 10, small: 40, medium: 150, enterprise: 600 },
+        data: { solo: 50, small: 150, medium: 500, enterprise: 2000 },
+        voice: { solo: 20, small: 60, medium: 200, enterprise: 800 },
+        automation: { solo: 20, small: 80, medium: 300, enterprise: 1200 }
+    };
+    
+    let total = 0;
+    const stack = [];
+    
+    caps.forEach(cap => {
+        total += baseCosts[cap][role];
+        stack.push(cap);
+    });
+    
+    // Budget adjustment
+    const budgetMultipliers = { low: 0.7, mid: 1.0, high: 1.3, enterprise: 1.8 };
+    total *= budgetMultipliers[budget];
+    
+    const outputMultipliers = { '10': 0.8, '25': 1.0, '50': 1.3, '100': 1.8 };
+    total *= outputMultipliers[output];
+    
+    document.getElementById('emptyPanel').classList.add('d-none');
+    document.getElementById('resultPanel').classList.remove('d-none');
+    document.getElementById('budgetResult').textContent = '$' + Math.round(total).toLocaleString();
+    
+    // Stack names
+    const stackNames = {
+        llm: 'ChatGPT Team / Claude Pro',
+        image: 'Midjourney / DALL-E',
+        code: 'GitHub Copilot',
+        data: 'Tableau AI / Power BI',
+        voice: 'ElevenLabs / Whisper API',
+        automation: 'Zapier / Make'
+    };
+    
+    document.getElementById('stackList').innerHTML = stack.map(s => 
+        `<div class="d-flex justify-content-between align-items-center mb-2"><span>${stackNames[s]}</span><span class="cost-badge">$${baseCosts[s][role]}/mo</span></div>`
+    ).join('');
+    
+    // Simple ROI calc
+    const hourlyRate = 75; // assumed
+    const hoursSaved = { '10': 4, '25': 10, '50': 20, '100': 40 };
+    const monthlyHoursSaved = hoursSaved[output] * 4; // 4 weeks
+    const monthlyValue = monthlyHoursSaved * hourlyRate;
+    const breakEven = total > 0 ? Math.ceil(total / (monthlyValue * 0.3)) : 0; // 30% realization
+    
+    document.getElementById('breakEven').textContent = breakEven;
+    document.getElementById('timeSaved').textContent = (monthlyHoursSaved * 12).toLocaleString();
+    
+    document.getElementById('resultPanel').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+{% endblock %}

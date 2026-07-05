@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}More Than Parrots, Less Than Gods{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1A234E;
+            --copper: #B87A4A;
+            --copper-light: #D49A6E;
+            --cream: #F5F1EB;
+            --off-white: #FAFAF8;
+            --text-dark: #1A1A2E;
+            --text-muted: #6B7280;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--off-white);
+            color: var(--text-dark);
+        }
+        h1, h2, h3, h4, h5, h6, .display-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-navy { background-color: var(--navy) !important; }
+        .bg-copper { background-color: var(--copper) !important; }
+        .text-navy { color: var(--navy) !important; }
+        .text-copper { color: var(--copper) !important; }
+        .text-cream { color: var(--cream) !important; }
+        .btn-copper {
+            background: var(--copper);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-copper:hover {
+            background: var(--copper-light);
+            color: white;
+            transform: translateY(-1px);
+        }
+        .btn-outline-copper {
+            border: 2px solid var(--copper);
+            color: var(--copper);
+            background: transparent;
+            padding: 10px 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-outline-copper:hover {
+            background: var(--copper);
+            color: white;
+        }
+        .navbar { background: var(--navy); }
+        .navbar .nav-link { color: rgba(255,255,255,0.85) !important; }
+        .navbar .nav-link:hover { color: var(--copper-light) !important; }
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F1635 100%);
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
+        .section-padding { padding: 80px 0; }
+        .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(26,35,78,0.15); }
+        .divider-copper { width: 60px; height: 3px; background: var(--copper); }
+        .footer { background: var(--navy); color: rgba(255,255,255,0.7); }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand display-font fs-4 text-cream" href="{% url 'book:home' %}">
+                <span class="text-copper">M</span>ore Than <span class="text-copper">P</span>arrots
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:book_detail' %}">The Book</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:scorecard' %}">Scorecard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:calculator' %}">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:prompt_library' %}">Prompts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:community' %}">Community</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-copper" href="{% url 'book:book_detail' %}">Buy Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="display-font text-cream mb-3">More Than Parrots,<br>Less Than Gods</h4>
+                    <p class="small">A field guide to the human-AI partnership.</p>
+                </div>
+                <div class="col-md-2 offset-md-2">
+                    <h6 class="text-copper mb-3">Book</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="{% url 'book:book_detail' %}" class="text-white-50 text-decoration-none">Overview</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Chapters</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Buy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-copper mb-3">Tools</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="{% url 'book:scorecard' %}" class="text-white-50 text-decoration-none">Scorecard</a></li>
+                        <li><a href="{% url 'book:calculator' %}" class="text-white-50 text-decoration-none">Calculator</a></li>
+                        <li><a href="{% url 'book:prompt_library' %}" class="text-white-50 text-decoration-none">Prompts</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-copper mb-3">Connect</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="{% url 'book:community' %}" class="text-white-50 text-decoration-none">Community</a></li>
+                        <li><a href="{% url 'book:about' %}" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="{% url 'book:contact' %}" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small text-white-50">
+                © 2026 Glen Ansell. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

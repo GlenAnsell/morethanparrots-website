@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}{{ chapter_title }} — Preview — More Than Parrots, Less Than Gods{% endblock %}
+
+{% block extra_css %}
+<style>
+    .chapter-content { max-width: 720px; margin: 0 auto; }
+    .chapter-content h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+    .chapter-content h2 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--navy); }
+    .chapter-content h3 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .chapter-content p { line-height: 1.8; margin-bottom: 1.2rem; color: #374151; }
+    .chapter-content blockquote { border-left: 4px solid var(--copper); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #4B5563; }
+    .chapter-content hr { border: none; border-top: 1px solid #E5E7EB; margin: 2rem 0; }
+    .chapter-content strong { color: var(--navy); }
+    .chapter-content ul, .chapter-content ol { margin-bottom: 1.2rem; padding-left: 1.5rem; }
+    .chapter-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .preview-banner { background: linear-gradient(135deg, var(--navy) 0%, #0F1635 100%); color: white; padding: 40px 0; text-align: center; }
+    .preview-banner h1 { color: white; }
+    .preview-banner .lead { color: rgba(255,255,255,0.7); }
+    .chapter-nav { background: var(--cream); padding: 20px 0; border-bottom: 1px solid #E5E7EB; }
+    .endnotes { font-size: 0.9rem; color: #6B7280; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #E5E7EB; }
+    .endnotes p { margin-bottom: 0.5rem; }
+    .cta-banner { background: var(--copper); color: white; padding: 40px; border-radius: 12px; text-align: center; margin: 3rem 0; }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="preview-banner">
+    <div class="container">
+        <span class="badge bg-white text-navy mb-2">Free Preview</span>
+        <h1 class="display-font">{{ chapter_title }}</h1>
+        <p class="lead mb-0">Chapter {{ chapter_number }} of <em>More Than Parrots, Less Than Gods</em></p>
+    </div>
+</section>
+
+<div class="chapter-nav">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <a href="{% url 'book:home' %}" class="text-decoration-none text-muted">← Back to Home</a>
+            </div>
+            <div class="text-muted small">
+                {{ chapter_number }} / 3 free preview chapters
+            </div>
+            <div>
+                {% if prev_chapter %}
+                <a href="{% url 'book:chapter_preview' prev_chapter %}" class="text-decoration-none text-muted me-3">← Previous</a>
+                {% endif %}
+                {% if next_chapter %}
+                <a href="{% url 'book:chapter_preview' next_chapter %}" class="text-decoration-none text-muted">Next →</a>
+                {% else %}
+                <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-sm">Buy the Full Book</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="chapter-content">
+            {{ chapter_html|safe }}
+            
+            <div class="cta-banner">
+                <h3 class="display-font">Want the Rest?</h3>
+                <p class="mb-3">This was Chapter {{ chapter_number }} of 19. Get the complete book — ebook, paperback, or hardcover.</p>
+                <a href="{% url 'book:book_detail' %}" class="btn btn-light btn-lg text-navy fw-bold">Buy the Book</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

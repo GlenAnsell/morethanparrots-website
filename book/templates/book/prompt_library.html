@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %}Prompt Library — More Than Parrots, Less Than Gods{% endblock %}
+
+{% block extra_css %}
+<style>
+    .prompt-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid #e5e7eb; margin-bottom: 12px; transition: all 0.2s; }
+    .prompt-card:hover { border-color: #B87A4A; box-shadow: 0 4px 12px rgba(26,35,78,0.08); }
+    .copy-btn { opacity: 0; transition: opacity 0.2s; }
+    .prompt-card:hover .copy-btn { opacity: 1; }
+    .category-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; background: #FEF3E8; color: #B87A4A; font-size: 12px; font-weight: 500; }
+    .premium-lock { background: linear-gradient(135deg, #1A234E 0%, #0F1635 100%); color: white; border-radius: 12px; padding: 40px; text-align: center; }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 display-font text-navy">AI Prompt Library</h1>
+            <p class="lead text-muted">25 free prompts to use immediately. 200+ more in the full collection.</p>
+            <div class="divider-copper mx-auto"></div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="searchPrompts" placeholder="Search prompts...">
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex gap-2 flex-wrap">
+                    <span class="category-badge" style="cursor:pointer;" onclick="filterCategory('all')">All</span>
+                    <span class="category-badge" style="cursor:pointer;" onclick="filterCategory('strategy')">Strategy</span>
+                    <span class="category-badge" style="cursor:pointer;" onclick="filterCategory('writing')">Writing</span>
+                    <span class="category-badge" style="cursor:pointer;" onclick="filterCategory('analysis')">Analysis</span>
+                    <span class="category-badge" style="cursor:pointer;" onclick="filterCategory('coding')">Coding</span>
+                    <span class="category-badge" style="cursor:pointer;" onclick="filterCategory('creative')">Creative</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="promptsContainer">
+            <!-- Prompts injected by JS -->
+        </div>
+
+        <div class="premium-lock mt-5">
+            <h3 class="display-font">Unlock 200+ Premium Prompts</h3>
+            <p class="text-white-50">Get the complete collection organized by industry, role, and use case.</p>
+            <a href="#" class="btn btn-copper btn-lg">Get Full Collection — $9</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const prompts = [
+    { id: 1, cat: 'strategy', title: 'AI Strategy Audit', text: 'Act as a skeptical AI consultant. Review our current AI usage: [describe your setup]. Identify 3 red flags, 2 missed opportunities, and 1 thing we should stop doing immediately.' },
+    { id: 2, cat: 'strategy', title: 'Vendor Evaluation', text: 'Evaluate [AI vendor/product] for our use case: [describe]. Give me: (1) 3 genuine strengths, (2) 3 limitations they won't advertise, (3) 2 cheaper alternatives, (4) whether we actually need this or if we're FOMO-buying.' },
+    { id: 3, cat: 'strategy', title: 'Implementation Roadmap', text: 'Create a 90-day AI implementation plan for [team/department]. Phase 1: quick wins (weeks 1-4). Phase 2: integration (weeks 5-8). Phase 3: optimization (weeks 9-12). Include budget estimates and risk mitigation.' },
+    { id: 4, cat: 'writing', title: 'Skeptical First Draft', text: 'Write a first draft of [document type] about [topic]. Use a skeptical, conversational tone. Challenge one common assumption. Include one surprising statistic (flag it for fact-checking). Keep it under [word count].' },
+    { id: 5, cat: 'writing', title: 'AI-Human Collaboration', text: 'I wrote this: [paste your text]. Improve it without making it sound like AI wrote it. Keep my voice. Fix awkward phrasing. Add one subtle flourish. Mark what you changed and why.' },
+    { id: 6, cat: 'writing', title: 'Executive Summary', text: 'Summarize this [report/document] into 3 bullet points for a CEO who has 30 seconds. Each bullet must include: (1) the finding, (2) the implication, (3) the recommended action.' },
+    { id: 7, cat: 'analysis', title: 'Data Storytelling', text: 'I have this data: [paste or describe]. Turn it into a narrative that a non-technical stakeholder can act on. Include: (1) the headline, (2) the "so what", (3) 2 possible decisions, (4) what data is missing that would change the conclusion.' },
+    { id: 8, cat: 'analysis', title: 'Bias Detector', text: 'Analyze this dataset/description for potential bias: [paste]. Identify: (1) sampling bias, (2) measurement bias, (3) algorithmic bias risk, (4) one question the data cannot answer. Suggest one way to validate your concerns.' },
+    { id: 9, cat: 'analysis', title: 'Decision Framework', text: 'We're deciding between [Option A] and [Option B] for [decision context]. Build a weighted decision matrix with 5 criteria. Suggest weights based on our priorities: [describe]. Include one "devil's advocate" argument for each option.' },
+    { id: 10, cat: 'coding', title: 'Code Review Assistant', text: 'Review this code: [paste]. Identify: (1) bugs or edge cases, (2) performance issues, (3) security concerns, (4) whether this is even the right approach. Be critical — assume I'm wrong until proven otherwise.' },
+    { id: 11, cat: 'coding', title: 'API Integration Plan', text: 'I need to integrate [AI API] into [system]. Design the architecture. Include: (1) authentication approach, (2) error handling strategy, (3) rate limiting plan, (4) fallback when the API fails, (5) cost monitoring.' },
+    { id: 12, cat: 'creative', title: 'Concept Generation', text: 'Generate 5 unconventional ideas for [project/goal]. Constraint: each idea must use AI in a way that amplifies human judgment rather than replacing it. Rate each on: feasibility, originality, risk.' },
+    { id: 13, cat: 'creative', title: 'Analogy Builder', text: 'Explain [complex AI concept] using an analogy from [familiar domain]. The analogy must capture: (1) how it works, (2) its limitations, (3) why it sometimes fails unexpectedly. Avoid "it's like a brain" — be original.' },
+    { id: 14, cat: 'strategy', title: 'Team Upskill Plan', text: 'Design a 4-week AI upskilling plan for [team role]. Week 1: fundamentals. Week 2: hands-on with one tool. Week 3: workflow integration. Week 4: evaluation and ethics. Include 2 hours/week time commitment.' },
+    { id: 15, cat: 'analysis', title: 'ROI Calculator', text: 'Help me build an ROI model for [AI initiative]. Inputs: [current costs], [expected benefits], [implementation costs]. Output: (1) payback period, (2) 3-year NPV, (3) sensitivity analysis for 50% and 150% of expected benefits.' },
+    { id: 16, cat: 'writing', title: 'Email Diplomat', text: 'Draft a diplomatic email to [recipient] about [sensitive topic]. Tone: assertive but not aggressive. Must include: (1) clear ask, (2) the "why it matters", (3) an easy yes. No corporate jargon.' },
+    { id: 17, cat: 'coding', title: 'Prompt Engineering', text: 'I need a prompt that consistently produces [specific output]. Give me: (1) the base prompt, (2) 3 variations to test, (3) the evaluation criteria, (4) common failure modes and how to avoid them.' },
+    { id: 18, cat: 'creative', title: 'Scenario Planning', text: 'Build 3 scenarios for [business situation] 2 years out: (1) optimistic, (2) realistic, (3) pessimistic. Each must include: key assumptions, early warning signals, and the first action to take if this scenario unfolds.' },
+    { id: 19, cat: 'strategy', title: 'Ethics Checklist', text: 'Create an ethics checklist for [AI use case]. Must cover: data privacy, fairness/bias, transparency, human oversight, environmental impact, and stakeholder communication. Flag any "we'll figure it out later" as red.' },
+    { id: 20, cat: 'analysis', title: 'Competitive Intel', text: 'Analyze how [competitor] might use AI against us in [market]. Identify: (1) their likely AI investments, (2) our vulnerability, (3) our counter-move, (4) whether we should match or differentiate. No fluff.' },
+    { id: 21, cat: 'writing', title: 'Meeting Prep', text: 'I have a meeting about [topic] with [attendees]. Prep me with: (1) 3 questions they'll ask, (2) 2 objections they'll raise, (3) one piece of evidence that settles the debate, (4) my opening 30 seconds.' },
+    { id: 22, cat: 'coding', title: 'Debug Partner', text: 'I have this error: [paste error]. System: [describe]. Walk me through debugging it. Don't just give the answer — teach me the mental model. Ask me one question at a time.' },
+    { id: 23, cat: 'creative', title: 'Narrative Arc', text: 'Structure a [presentation type] about [topic] as a story. Opening hook, rising tension (the problem), climax (the insight), resolution (the action). 5 minutes max. One surprise moment.' },
+    { id: 24, cat: 'strategy', title: 'Exit Strategy', text: 'If we need to reverse our AI investment in [area], what's the off-ramp? Include: (1) data portability plan, (2) team transition, (3) cost of reversal, (4) timeline, (5) what we keep vs. discard.' },
+    { id: 25, cat: 'analysis', title: 'Signal vs. Noise', text: 'I'm overwhelmed by [data stream/source]. Help me build a filter: what signals matter vs. what's noise? Include: (1) 3 key metrics, (2) one leading indicator, (3) the "so what" threshold for each.' }
+];
+
+function renderPrompts(filter = 'all') {
+    const container = document.getElementById('promptsContainer');
+    const filtered = filter === 'all' ? prompts : prompts.filter(p => p.cat === filter);
+    
+    container.innerHTML = filtered.map(p => `
+        <div class="prompt-card" data-cat="${p.cat}">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                    <span class="category-badge me-2">${p.cat}</span>
+                    <strong class="text-navy">${p.title}</strong>
+                </div>
+                <button class="btn btn-sm btn-outline-copper copy-btn" onclick="copyPrompt(${p.id})">Copy</button>
+            </div>
+            <p class="text-muted small mb-0 font-monospace">${p.text}</p>
+        </div>
+    `).join('');
+}
+
+function filterCategory(cat) {
+    renderPrompts(cat);
+}
+
+function copyPrompt(id) {
+    const prompt = prompts.find(p => p.id === id);
+    navigator.clipboard.writeText(prompt.text).then(() => {
+        alert('Prompt copied!');
+    });
+}
+
+// Search
+document.getElementById('searchPrompts').addEventListener('input', function() {
+    const term = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.prompt-card');
+    cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(term) ? 'block' : 'none';
+    });
+});
+
+renderPrompts();
+</script>
+{% endblock %}
