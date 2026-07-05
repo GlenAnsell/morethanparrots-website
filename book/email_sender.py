@@ -133,13 +133,21 @@ def send_email(to_email, subject, html_body, text_body="", from_email=None):
 
     sender = from_email or getattr(settings, "MS_GRAPH_SENDER_UPN", "") or getattr(settings, "DEFAULT_FROM_EMAIL", "")
     if "<" in sender:
-        # Extract email from "Name <email>" format
         sender = sender.split("<")[1].split(">")[0].strip()
 
     if not sender:
         return False, "No sender configured (MS_GRAPH_SENDER_UPN or DEFAULT_FROM_EMAIL)"
 
-    url = f"https://graph.microsoft.com/v1.0/users/{sender}/sendMail"
+    # Determine token type and endpoint
+    is_client_credentials = bool(getattr(settings, "MS_GRAPH_CLIENT_SECRET", ""))
+
+    if is_client_credentials:
+        # Application permission: send directly as the user
+        url = f"https://graph.microsoft.com/v1.0/users/{sender}/sendMail"
+    else:
+        # Delegated permission: use /me/sendMail with explicit from (supports SendAs)
+        url = "https://graph.microsoft.com/v1.0/me/sendMail"
+
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
@@ -151,9 +159,9 @@ def send_email(to_email, subject, html_body, text_body="", from_email=None):
         "toRecipients": [{"emailAddress": {"address": to_email}}],
     }
 
-    # If text_body provided, include it as a comment or note — Graph v1.0 doesn't
-    # support multipart/alternative directly, so we stick with HTML primary.
-    # The recipient's client will render the HTML.
+    # Add explicit from for delegated SendAs/shared mailbox support
+    if not is_client_credentials:
+        message["from"] = {"emailAddress": {"address": sender, "name": "Glen Ansell"}}
 
     payload = {"message": message, "saveToSentItems": "true"}
 
