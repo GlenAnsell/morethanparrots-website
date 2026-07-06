@@ -11,6 +11,12 @@ class NewsletterSubscriber(models.Model):
     tags = models.CharField(max_length=200, blank=True, 
                             help_text='Comma-separated tags (e.g., scorecard-completed, buyer-intent)')
     
+    # Nurture sequence tracking
+    nurture_day_2_sent = models.DateTimeField(blank=True, null=True)
+    nurture_day_7_sent = models.DateTimeField(blank=True, null=True)
+    nurture_day_14_sent = models.DateTimeField(blank=True, null=True)
+    nurture_unsubscribed = models.BooleanField(default=False)
+    
     class Meta:
         ordering = ['-subscribed_at']
     
