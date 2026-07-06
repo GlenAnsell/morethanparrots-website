@@ -1,7 +1,19 @@
-# MTP Website Translations — English
+# MTP Website Translations — German
 # Copyright (C) 2026 Glen Ansell
 msgid ""
 msgstr ""
+"Project-Id-Version: MTP 1.0\n"
+"Report-Msgid-Bugs-To: hello@morethanparrots.com\n"
+"POT-Creation-Date: 2026-07-06 12:00+0000\n"
+"PO-Revision-Date: 2026-07-06 12:00+0000\n"
+"Last-Translator: Glen Ansell\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 
 msgid "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
 msgstr "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
@@ -95,9 +107,6 @@ msgstr "Inhalt"
 
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
 msgstr "Das Papageienproblem — Warum die meiste KI dümmer ist, als sie aussieht"
-
-msgid "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
-msgstr "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
 
 msgid "The Partnership — A framework for human-AI collaboration"
 msgstr "Die Partnerschaft — Ein Framework für Mensch-KI-Zusammenarbeit"
@@ -215,3 +224,4 @@ msgstr "Ich lebe in Südafrika mit meiner Partnerin Donné, Tochter Tayla und vi
 
 msgid "Get in Touch"
 msgstr "Kontakt aufnehmen"
+
