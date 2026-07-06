@@ -1,228 +1,217 @@
-# MTP Website Translations — German
+# MTP Website Translations — English
 # Copyright (C) 2026 Glen Ansell
 msgid ""
 msgstr ""
-"Project-Id-Version: MTP 1.0\n"
-"Report-Msgid-Bugs-To: hello@morethanparrots.com\n"
-"POT-Creation-Date: 2026-07-06 12:00+0000\n"
-"PO-Revision-Date: 2026-07-06 12:00+0000\n"
-"Last-Translator: Glen Ansell\n"
-"Language-Team: MTP\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
-msgstr ""
+msgstr "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
 
 msgid "Home"
-msgstr ""
+msgstr "Startseite"
 
 msgid "The Book"
-msgstr ""
+msgstr "Das Buch"
 
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 msgid "Scorecard"
-msgstr ""
+msgstr "Scorecard"
 
 msgid "Calculator"
-msgstr ""
+msgstr "Rechner"
 
 msgid "Prompts"
-msgstr ""
+msgstr "Prompts"
 
 msgid "Community"
-msgstr ""
+msgstr "Community"
 
 msgid "Buy Now"
-msgstr ""
+msgstr "Kaufen"
 
 msgid "A field guide to the human-AI partnership."
-msgstr ""
+msgstr "Ein Leitfaden für die Mensch-KI-Partnerschaft."
 
 msgid "Book"
-msgstr ""
+msgstr "Buch"
 
 msgid "Overview"
-msgstr ""
+msgstr "Überblick"
 
 msgid "Chapters"
-msgstr ""
+msgstr "Kapitel"
 
 msgid "Buy"
-msgstr ""
+msgstr "Kaufen"
 
 msgid "Resources"
-msgstr ""
+msgstr "Ressourcen"
 
 msgid "Connect"
-msgstr ""
+msgstr "Kontakt"
 
 msgid "About"
-msgstr ""
+msgstr "Über"
 
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 msgid "© 2026 Glen Ansell. All rights reserved."
-msgstr ""
+msgstr "© 2026 Glen Ansell. Alle Rechte vorbehalten."
 
 msgid "More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership"
-msgstr ""
+msgstr "Mehr als Papageien, weniger als Götter — Ein Leitfaden für die Mensch-KI-Partnerschaft"
 
 msgid "A skeptical, practical guide to working with AI without becoming obsolete. 19 chapters on jobs, ethics, and the future of human work. Pre-order now."
-msgstr ""
+msgstr "Ein skeptischer, praktischer Leitfaden für die Arbeit mit KI, ohne obsolet zu werden. 19 Kapitel über Arbeitsplätze, Ethik und die Zukunft der menschlichen Arbeit. Jetzt vorbestellen."
 
 msgid "Coming 2026"
-msgstr ""
+msgstr "Erscheint 2026"
 
 msgid "Pre-Order Now"
-msgstr ""
+msgstr "Vorbestellen"
 
 msgid "Take the Scorecard"
-msgstr ""
+msgstr "Scorecard ausfüllen"
 
 msgid "Words"
-msgstr ""
+msgstr "Wörter"
 
 msgid "Sources"
-msgstr ""
+msgstr "Quellen"
 
 msgid "More Than Parrots, Less Than Gods — Book Cover"
-msgstr ""
+msgstr "Mehr als Papageien, weniger als Götter — Buchcover"
 
 msgid "The Book — More Than Parrots, Less Than Gods"
-msgstr ""
+msgstr "Das Buch — Mehr als Papageien, weniger als Götter"
 
 msgid "A 19-chapter manifesto for the human-AI partnership. Written for business leaders who are tired of AI hype and want real answers."
-msgstr ""
+msgstr "Ein 19-Kapitel-Manifesto für die Mensch-KI-Partnerschaft. Geschrieben für Geschäftsführer, die den KI-Hype leid sind und echte Antworten wollen."
 
 msgid "What's Inside"
-msgstr ""
+msgstr "Inhalt"
 
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr ""
+msgstr "Das Papageienproblem — Warum die meiste KI dümmer ist, als sie aussieht"
 
 msgid "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
-msgstr ""
+msgstr "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
 
 msgid "The Partnership — A framework for human-AI collaboration"
-msgstr ""
+msgstr "Die Partnerschaft — Ein Framework für Mensch-KI-Zusammenarbeit"
 
 msgid "The Skeptic's Toolkit — How to evaluate any AI claim"
-msgstr ""
+msgstr "Das Toolkit des Skeptikers — Wie man jeden KI-Anspruch bewertet"
 
 msgid "Implementation Playbook — From pilot to production"
-msgstr ""
+msgstr "Implementierungsleitfaden — Vom Piloten bis zur Produktion"
 
 msgid "The Team Chapter — Upskilling without replacement"
-msgstr ""
+msgstr "Das Teamkapitel — Weiterbildung ohne Ersatz"
 
 msgid "Ethics & Governance — Staying on the right side of history"
-msgstr ""
+msgstr "Ethik und Governance — Auf der richtigen Seite der Geschichte"
 
 msgid "Future-Proofing — 10-year career strategy"
-msgstr ""
+msgstr "Zukunftssicher — 10-Jahres-Karrierestrategie"
 
 msgid "By The Numbers"
-msgstr ""
+msgstr "In Zahlen"
 
 msgid "Years Research"
-msgstr ""
+msgstr "Jahre Forschung"
 
 msgid "Order Now"
-msgstr ""
+msgstr "Bestellen"
 
 msgid "Book Cover"
-msgstr ""
+msgstr "Buchcover"
 
 msgid "Buy Ebook — $12.99"
-msgstr ""
+msgstr "Ebook — $12,99"
 
 msgid "Paperback — $18.99"
-msgstr ""
+msgstr "Taschenbuch — $18,99"
 
 msgid "Hardcover — $27.99"
-msgstr ""
+msgstr "Gebundenes Buch — $27,99"
 
 msgid "Free shipping"
-msgstr ""
+msgstr "Kostenloser Versand"
 
 msgid "on orders over $35"
-msgstr ""
+msgstr "bei Bestellungen über $35"
 
 msgid "30-day guarantee"
-msgstr ""
+msgstr "30-Tage-Garantie"
 
 msgid "— not satisfied? Full refund."
-msgstr ""
+msgstr "— nicht zufrieden? Volle Rückerstattung."
 
 msgid "Also available on:"
-msgstr ""
+msgstr "Auch erhältlich bei:"
 
 msgid "Contact — More Than Parrots, Less Than Gods"
-msgstr ""
+msgstr "Kontakt — Mehr als Papageien, weniger als Götter"
 
 msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr ""
+msgstr "Fragen, Vortragsanfragen oder einfach Lust zu diskutieren? Melden Sie sich."
 
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 msgid "Topic"
-msgstr ""
+msgstr "Thema"
 
 msgid "General inquiry"
-msgstr ""
+msgstr "Allgemeine Anfrage"
 
 msgid "Speaking request"
-msgstr ""
+msgstr "Vortragsanfrage"
 
 msgid "Press"
-msgstr ""
+msgstr "Presse"
 
 msgid "Partnership"
-msgstr ""
+msgstr "Partnerschaft"
 
 msgid "Found a typo (you're the best)"
-msgstr ""
+msgstr "Tippfehler gefunden (Sie sind der Beste)"
 
 msgid "Message"
-msgstr ""
+msgstr "Nachricht"
 
 msgid "Send Message"
-msgstr ""
+msgstr "Senden"
 
 msgid "For business inquiries:"
-msgstr ""
+msgstr "Für geschäftliche Anfragen:"
 
 msgid "About — More Than Parrots, Less Than Gods"
-msgstr ""
+msgstr "Über — Mehr als Papageien, weniger als Götter"
 
 msgid "About the Author"
-msgstr ""
+msgstr "Über den Autor"
 
 msgid "Author, AI Strategist, Skeptic"
-msgstr ""
+msgstr "Autor, KI-Stratege, Skeptiker"
 
 msgid "Coding since age 7. First IT business at 23. MSc in research psychology. Harvard AI certificate. 12+ years building AI and modeling systems."
-msgstr ""
+msgstr "Programmieren seit dem 7. Lebensjahr. Erstes IT-Geschäft mit 23. MSc in Forschungspsychologie. Harvard KI-Zertifikat. 12+ Jahre Aufbau von KI- und Modellierungssystemen."
 
 msgid "I've watched AI go from academic curiosity to boardroom buzzword. I've built systems that worked and systems that failed. I've seen vendors promise the moon and deliver a rock."
-msgstr ""
+msgstr "Ich habe erlebt, wie KI von akademischer Neugier zum Boardroom-Buzzword wurde. Ich habe Systeme gebaut, die funktionierten, und solche, die scheiterten. Ich habe Anbieter gesehen, die den Mond versprachen und einen Stein lieferten."
 
 msgid "This book is what I wish someone had handed me five years ago — a skeptical, practical, deeply researched guide to working with AI without losing your mind or your job."
-msgstr ""
+msgstr "Dieses Buch ist das, was ich mir gewünscht hätte, dass mir jemand vor fünf Jahren gegeben hätte — ein skeptischer, praktischer, tief recherchierter Leitfaden für die Arbeit mit KI, ohne den Verstand oder den Job zu verlieren."
 
 msgid "I live in South Africa with my partner Donné, daughter Tayla, and four dogs. I play tennis and padel. I wear an Apple Watch. I don't have a garden."
-msgstr ""
+msgstr "Ich lebe in Südafrika mit meiner Partnerin Donné, Tochter Tayla und vier Hunden. Ich spiele Tennis und Padel. Ich trage eine Apple Watch. Ich habe keinen Garten."
 
 msgid "Get in Touch"
-msgstr ""
+msgstr "Kontakt aufnehmen"

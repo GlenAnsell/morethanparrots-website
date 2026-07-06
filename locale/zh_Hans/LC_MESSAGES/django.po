@@ -1,228 +1,217 @@
-# MTP Website Translations — Chinese (Simplified)
+# MTP Website Translations — English
 # Copyright (C) 2026 Glen Ansell
 msgid ""
 msgstr ""
-"Project-Id-Version: MTP 1.0\n"
-"Report-Msgid-Bugs-To: hello@morethanparrots.com\n"
-"POT-Creation-Date: 2026-07-06 12:00+0000\n"
-"PO-Revision-Date: 2026-07-06 12:00+0000\n"
-"Last-Translator: Glen Ansell\n"
-"Language-Team: MTP\n"
-"Language: zh_Hans\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
-msgstr ""
+msgstr "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
 
 msgid "Home"
-msgstr ""
+msgstr "首页"
 
 msgid "The Book"
-msgstr ""
+msgstr "书籍"
 
 msgid "Blog"
-msgstr ""
+msgstr "博客"
 
 msgid "Scorecard"
-msgstr ""
+msgstr "评分卡"
 
 msgid "Calculator"
-msgstr ""
+msgstr "计算器"
 
 msgid "Prompts"
-msgstr ""
+msgstr "提示词"
 
 msgid "Community"
-msgstr ""
+msgstr "社区"
 
 msgid "Buy Now"
-msgstr ""
+msgstr "立即购买"
 
 msgid "A field guide to the human-AI partnership."
-msgstr ""
+msgstr "人机合作实战指南。"
 
 msgid "Book"
-msgstr ""
+msgstr "书籍"
 
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 msgid "Chapters"
-msgstr ""
+msgstr "章节"
 
 msgid "Buy"
-msgstr ""
+msgstr "购买"
 
 msgid "Resources"
-msgstr ""
+msgstr "资源"
 
 msgid "Connect"
-msgstr ""
+msgstr "联系"
 
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 msgid "Contact"
-msgstr ""
+msgstr "联系方式"
 
 msgid "© 2026 Glen Ansell. All rights reserved."
-msgstr ""
+msgstr "© 2026 Glen Ansell。保留所有权利。"
 
 msgid "More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership"
-msgstr ""
+msgstr "不只是鹦鹉，不及神祇——人机合作实战指南"
 
 msgid "A skeptical, practical guide to working with AI without becoming obsolete. 19 chapters on jobs, ethics, and the future of human work. Pre-order now."
-msgstr ""
+msgstr "一本关于如何与AI共事而不被淘汰的怀疑论实用指南。19章探讨工作、伦理和人类工作的未来。立即预订。"
 
 msgid "Coming 2026"
-msgstr ""
+msgstr "2026年推出"
 
 msgid "Pre-Order Now"
-msgstr ""
+msgstr "立即预订"
 
 msgid "Take the Scorecard"
-msgstr ""
+msgstr "使用评分卡"
 
 msgid "Words"
-msgstr ""
+msgstr "字数"
 
 msgid "Sources"
-msgstr ""
+msgstr "来源"
 
 msgid "More Than Parrots, Less Than Gods — Book Cover"
-msgstr ""
+msgstr "不只是鹦鹉，不及神祇——封面"
 
 msgid "The Book — More Than Parrots, Less Than Gods"
-msgstr ""
+msgstr "书籍 — 不只是鹦鹉，不及神祇"
 
 msgid "A 19-chapter manifesto for the human-AI partnership. Written for business leaders who are tired of AI hype and want real answers."
-msgstr ""
+msgstr "19章人机合作宣言。为厌倦AI炒作、寻求真知灼见的企业领袖而作。"
 
 msgid "What's Inside"
-msgstr ""
+msgstr "内容一览"
 
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr ""
+msgstr "鹦鹉问题——为什么大多数AI比看起来笨"
 
 msgid "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
-msgstr ""
+msgstr "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
 
 msgid "The Partnership — A framework for human-AI collaboration"
-msgstr ""
+msgstr "合作关系——人机协作框架"
 
 msgid "The Skeptic's Toolkit — How to evaluate any AI claim"
-msgstr ""
+msgstr "怀疑者工具箱——如何评估任何AI说法"
 
 msgid "Implementation Playbook — From pilot to production"
-msgstr ""
+msgstr "实施手册——从试点到投产"
 
 msgid "The Team Chapter — Upskilling without replacement"
-msgstr ""
+msgstr "团队篇——提升技能而非替代"
 
 msgid "Ethics & Governance — Staying on the right side of history"
-msgstr ""
+msgstr "伦理与治理——站在历史正确的一边"
 
 msgid "Future-Proofing — 10-year career strategy"
-msgstr ""
+msgstr "面向未来——10年职业规划"
 
 msgid "By The Numbers"
-msgstr ""
+msgstr "数据一览"
 
 msgid "Years Research"
-msgstr ""
+msgstr "年研究"
 
 msgid "Order Now"
-msgstr ""
+msgstr "立即订购"
 
 msgid "Book Cover"
-msgstr ""
+msgstr "封面"
 
 msgid "Buy Ebook — $12.99"
-msgstr ""
+msgstr "电子书 — $12.99"
 
 msgid "Paperback — $18.99"
-msgstr ""
+msgstr "平装本 — $18.99"
 
 msgid "Hardcover — $27.99"
-msgstr ""
+msgstr "精装本 — $27.99"
 
 msgid "Free shipping"
-msgstr ""
+msgstr "免费配送"
 
 msgid "on orders over $35"
-msgstr ""
+msgstr "订单满$35"
 
 msgid "30-day guarantee"
-msgstr ""
+msgstr "30天保障"
 
 msgid "— not satisfied? Full refund."
-msgstr ""
+msgstr "——不满意？全额退款。"
 
 msgid "Also available on:"
-msgstr ""
+msgstr "也可在以下平台获取："
 
 msgid "Contact — More Than Parrots, Less Than Gods"
-msgstr ""
+msgstr "联系方式 — 不只是鹦鹉，不及神祇"
 
 msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr ""
+msgstr "有问题、演讲邀请，或只是想争论？联系我。"
 
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 msgid "Email"
-msgstr ""
+msgstr "邮箱"
 
 msgid "Topic"
-msgstr ""
+msgstr "主题"
 
 msgid "General inquiry"
-msgstr ""
+msgstr "一般咨询"
 
 msgid "Speaking request"
-msgstr ""
+msgstr "演讲邀请"
 
 msgid "Press"
-msgstr ""
+msgstr "媒体"
 
 msgid "Partnership"
-msgstr ""
+msgstr "合作"
 
 msgid "Found a typo (you're the best)"
-msgstr ""
+msgstr "发现错别字（你是最棒的）"
 
 msgid "Message"
-msgstr ""
+msgstr "留言"
 
 msgid "Send Message"
-msgstr ""
+msgstr "发送"
 
 msgid "For business inquiries:"
-msgstr ""
+msgstr "商务咨询："
 
 msgid "About — More Than Parrots, Less Than Gods"
-msgstr ""
+msgstr "关于 — 不只是鹦鹉，不及神祇"
 
 msgid "About the Author"
-msgstr ""
+msgstr "关于作者"
 
 msgid "Author, AI Strategist, Skeptic"
-msgstr ""
+msgstr "作者、AI战略家、怀疑论者"
 
 msgid "Coding since age 7. First IT business at 23. MSc in research psychology. Harvard AI certificate. 12+ years building AI and modeling systems."
-msgstr ""
+msgstr "7岁开始编程。23岁创办第一家IT公司。研究心理学硕士。哈佛AI证书。12年以上构建AI和建模系统经验。"
 
 msgid "I've watched AI go from academic curiosity to boardroom buzzword. I've built systems that worked and systems that failed. I've seen vendors promise the moon and deliver a rock."
-msgstr ""
+msgstr "我见证了AI从学术好奇到董事会流行词。我构建过成功的系统，也构建过失败的系统。我见过供应商承诺月亮却只交付石头。"
 
 msgid "This book is what I wish someone had handed me five years ago — a skeptical, practical, deeply researched guide to working with AI without losing your mind or your job."
-msgstr ""
+msgstr "这本书是我希望五年前有人能交给我的——一本怀疑论、实用、深度研究的指南，教你如何与AI共事而不丢掉理智或工作。"
 
 msgid "I live in South Africa with my partner Donné, daughter Tayla, and four dogs. I play tennis and padel. I wear an Apple Watch. I don't have a garden."
-msgstr ""
+msgstr "我与伴侣Donné、女儿Tayla和四只狗住在南非。我打网球和板式网球。我戴Apple Watch。我没有花园。"
 
 msgid "Get in Touch"
-msgstr ""
+msgstr "取得联系"
