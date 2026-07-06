@@ -1,0 +1,228 @@
+# MTP Website Translations — French
+# Copyright (C) 2026 Glen Ansell
+msgid ""
+msgstr ""
+"Project-Id-Version: MTP 1.0\n"
+"Report-Msgid-Bugs-To: hello@morethanparrots.com\n"
+"POT-Creation-Date: 2026-07-06 12:00+0000\n"
+"PO-Revision-Date: 2026-07-06 12:00+0000\n"
+"Last-Translator: Glen Ansell\n"
+"Language-Team: MTP\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "The Book"
+msgstr ""
+
+msgid "Blog"
+msgstr ""
+
+msgid "Scorecard"
+msgstr ""
+
+msgid "Calculator"
+msgstr ""
+
+msgid "Prompts"
+msgstr ""
+
+msgid "Community"
+msgstr ""
+
+msgid "Buy Now"
+msgstr ""
+
+msgid "A field guide to the human-AI partnership."
+msgstr ""
+
+msgid "Book"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Chapters"
+msgstr ""
+
+msgid "Buy"
+msgstr ""
+
+msgid "Resources"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "© 2026 Glen Ansell. All rights reserved."
+msgstr ""
+
+msgid "More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership"
+msgstr ""
+
+msgid "A skeptical, practical guide to working with AI without becoming obsolete. 19 chapters on jobs, ethics, and the future of human work. Pre-order now."
+msgstr ""
+
+msgid "Coming 2026"
+msgstr ""
+
+msgid "Pre-Order Now"
+msgstr ""
+
+msgid "Take the Scorecard"
+msgstr ""
+
+msgid "Words"
+msgstr ""
+
+msgid "Sources"
+msgstr ""
+
+msgid "More Than Parrots, Less Than Gods — Book Cover"
+msgstr ""
+
+msgid "The Book — More Than Parrots, Less Than Gods"
+msgstr ""
+
+msgid "A 19-chapter manifesto for the human-AI partnership. Written for business leaders who are tired of AI hype and want real answers."
+msgstr ""
+
+msgid "What's Inside"
+msgstr ""
+
+msgid "The Parrot Problem — Why most AI is dumber than it looks"
+msgstr ""
+
+msgid "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
+msgstr ""
+
+msgid "The Partnership — A framework for human-AI collaboration"
+msgstr ""
+
+msgid "The Skeptic's Toolkit — How to evaluate any AI claim"
+msgstr ""
+
+msgid "Implementation Playbook — From pilot to production"
+msgstr ""
+
+msgid "The Team Chapter — Upskilling without replacement"
+msgstr ""
+
+msgid "Ethics & Governance — Staying on the right side of history"
+msgstr ""
+
+msgid "Future-Proofing — 10-year career strategy"
+msgstr ""
+
+msgid "By The Numbers"
+msgstr ""
+
+msgid "Years Research"
+msgstr ""
+
+msgid "Order Now"
+msgstr ""
+
+msgid "Book Cover"
+msgstr ""
+
+msgid "Buy Ebook — $12.99"
+msgstr ""
+
+msgid "Paperback — $18.99"
+msgstr ""
+
+msgid "Hardcover — $27.99"
+msgstr ""
+
+msgid "Free shipping"
+msgstr ""
+
+msgid "on orders over $35"
+msgstr ""
+
+msgid "30-day guarantee"
+msgstr ""
+
+msgid "— not satisfied? Full refund."
+msgstr ""
+
+msgid "Also available on:"
+msgstr ""
+
+msgid "Contact — More Than Parrots, Less Than Gods"
+msgstr ""
+
+msgid "Questions, speaking requests, or just want to argue? Reach out."
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Topic"
+msgstr ""
+
+msgid "General inquiry"
+msgstr ""
+
+msgid "Speaking request"
+msgstr ""
+
+msgid "Press"
+msgstr ""
+
+msgid "Partnership"
+msgstr ""
+
+msgid "Found a typo (you're the best)"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Send Message"
+msgstr ""
+
+msgid "For business inquiries:"
+msgstr ""
+
+msgid "About — More Than Parrots, Less Than Gods"
+msgstr ""
+
+msgid "About the Author"
+msgstr ""
+
+msgid "Author, AI Strategist, Skeptic"
+msgstr ""
+
+msgid "Coding since age 7. First IT business at 23. MSc in research psychology. Harvard AI certificate. 12+ years building AI and modeling systems."
+msgstr ""
+
+msgid "I've watched AI go from academic curiosity to boardroom buzzword. I've built systems that worked and systems that failed. I've seen vendors promise the moon and deliver a rock."
+msgstr ""
+
+msgid "This book is what I wish someone had handed me five years ago — a skeptical, practical, deeply researched guide to working with AI without losing your mind or your job."
+msgstr ""
+
+msgid "I live in South Africa with my partner Donné, daughter Tayla, and four dogs. I play tennis and padel. I wear an Apple Watch. I don't have a garden."
+msgstr ""
+
+msgid "Get in Touch"
+msgstr ""
