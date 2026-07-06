@@ -34,7 +34,7 @@ urlpatterns += i18n_patterns(
     path('', include('book.urls')),
     path('blog/', include('blog.urls')),
     path('', include('marketing.urls')),
-    prefix_default_language=False,
+    prefix_default_language=True,
 )
 
 if settings.DEBUG:
