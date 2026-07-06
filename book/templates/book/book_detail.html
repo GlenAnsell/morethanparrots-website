@@ -1,62 +1,63 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}The Book — More Than Parrots, Less Than Gods{% endblock %}
+{% block title %}{% trans 'The Book — More Than Parrots, Less Than Gods' %}{% endblock %}
 
 {% block content %}
 <section class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <h1 class="display-4 display-font text-navy mb-4">The Book</h1>
+                <h1 class="display-4 display-font text-navy mb-4">{% trans 'The Book' %}</h1>
                 <div class="divider-copper mb-4"></div>
                 
-                <p class="lead">A 19-chapter manifesto for the human-AI partnership. Written for business leaders who are tired of AI hype and want real answers.</p>
+                <p class="lead">{% trans 'A 19-chapter manifesto for the human-AI partnership. Written for business leaders who are tired of AI hype and want real answers.' %}</p>
                 
-                <h3 class="display-font text-navy mt-5 mb-3">What's Inside</h3>
+                <h3 class="display-font text-navy mt-5 mb-3">{% trans "What's Inside" %}</h3>
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">I.</span> <span>The Parrot Problem — Why most AI is dumber than it looks</span></li>
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">II.</span> <span>The God Complex — Why "AGI imminent" is a dangerous distraction</span></li>
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">III.</span> <span>The Partnership — A framework for human-AI collaboration</span></li>
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">IV.</span> <span>The Skeptic's Toolkit — How to evaluate any AI claim</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">I.</span> <span>{% trans 'The Parrot Problem — Why most AI is dumber than it looks' %}</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">II.</span> <span>{% trans 'The God Complex — Why "AGI imminent" is a dangerous distraction' %}</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">III.</span> <span>{% trans 'The Partnership — A framework for human-AI collaboration' %}</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">IV.</span> <span>{% trans "The Skeptic's Toolkit — How to evaluate any AI claim" %}</span></li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">V.</span> <span>Implementation Playbook — From pilot to production</span></li>
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">VI.</span> <span>The Team Chapter — Upskilling without replacement</span></li>
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">VII.</span> <span>Ethics &amp; Governance — Staying on the right side of history</span></li>
-                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">VIII.</span> <span>Future-Proofing — 10-year career strategy</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">V.</span> <span>{% trans 'Implementation Playbook — From pilot to production' %}</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">VI.</span> <span>{% trans 'The Team Chapter — Upskilling without replacement' %}</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">VII.</span> <span>{% trans 'Ethics & Governance — Staying on the right side of history' %}</span></li>
+                            <li class="mb-3 d-flex gap-2"><span class="text-copper fw-bold">VIII.</span> <span>{% trans 'Future-Proofing — 10-year career strategy' %}</span></li>
                         </ul>
                     </div>
                 </div>
 
-                <h3 class="display-font text-navy mt-5 mb-3">By The Numbers</h3>
+                <h3 class="display-font text-navy mt-5 mb-3">{% trans 'By The Numbers' %}</h3>
                 <div class="row g-3">
                     <div class="col-6 col-md-3">
                         <div class="card border-0 bg-cream text-center p-3">
                             <div class="display-4 text-copper display-font">19</div>
-                            <div class="small text-muted">Chapters</div>
+                            <div class="small text-muted">{% trans 'Chapters' %}</div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="card border-0 bg-cream text-center p-3">
                             <div class="display-4 text-copper display-font">89K</div>
-                            <div class="small text-muted">Words</div>
+                            <div class="small text-muted">{% trans 'Words' %}</div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="card border-0 bg-cream text-center p-3">
                             <div class="display-4 text-copper display-font">200+</div>
-                            <div class="small text-muted">Sources</div>
+                            <div class="small text-muted">{% trans 'Sources' %}</div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="card border-0 bg-cream text-center p-3">
                             <div class="display-4 text-copper display-font">12</div>
-                            <div class="small text-muted">Years Research</div>
+                            <div class="small text-muted">{% trans 'Years Research' %}</div>
                         </div>
                     </div>
                 </div>
@@ -66,24 +67,24 @@
                     <div class="card border-0 shadow-lg">
                         <div class="card-body p-4">
                             <div class="text-center mb-3">
-                                <img src="{% static 'book/images/cover.jpg' %}" alt="Book Cover" class="img-fluid rounded-3 mb-3" style="max-height: 300px;">
+                                <img src="{% static 'book/images/cover.jpg' %}" alt="{% trans 'Book Cover' %}" class="img-fluid rounded-3 mb-3" style="max-height: 300px;">
                             </div>
-                            <h5 class="text-center text-muted text-uppercase small fw-bold mb-3">Order Now</h5>
+                            <h5 class="text-center text-muted text-uppercase small fw-bold mb-3">{% trans 'Order Now' %}</h5>
                             <div class="d-grid gap-2">
-                                <a href="https://gumroad.com/l/morethanparrots-ebook" class="btn btn-copper btn-lg">Buy Ebook — $12.99</a>
-                                <a href="https://gumroad.com/l/morethanparrots-paperback" class="btn btn-outline-copper">Paperback — $18.99</a>
-                                <a href="https://gumroad.com/l/morethanparrots-hardcover" class="btn btn-outline-copper">Hardcover — $27.99</a>
+                                <a href="https://gumroad.com/l/morethanparrots-ebook" class="btn btn-copper btn-lg">{% trans 'Buy Ebook — $12.99' %}</a>
+                                <a href="https://gumroad.com/l/morethanparrots-paperback" class="btn btn-outline-copper">{% trans 'Paperback — $18.99' %}</a>
+                                <a href="https://gumroad.com/l/morethanparrots-hardcover" class="btn btn-outline-copper">{% trans 'Hardcover — $27.99' %}</a>
                             </div>
                             <hr>
                             <div class="small text-muted">
-                                <p><strong>Free shipping</strong> on orders over $35</p>
-                                <p><strong>30-day guarantee</strong> — not satisfied? Full refund.</p>
+                                <p><strong>{% trans 'Free shipping' %}</strong> {% trans 'on orders over $35' %}</p>
+                                <p><strong>{% trans '30-day guarantee' %}</strong> {% trans '— not satisfied? Full refund.' %}</p>
                             </div>
                         </div>
                     </div>
                     <div class="card border-0 shadow-sm mt-3">
                         <div class="card-body p-3 text-center">
-                            <p class="small text-muted mb-2">Also available on:</p>
+                            <p class="small text-muted mb-2">{% trans 'Also available on:' %}</p>
                             <div class="d-flex justify-content-center gap-2">
                                 <span class="badge bg-secondary">Amazon</span>
                                 <span class="badge bg-secondary">Apple Books</span>

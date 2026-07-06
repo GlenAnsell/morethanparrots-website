@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership{% endblock %}
-{% block meta_description %}A skeptical, practical guide to working with AI without becoming obsolete. 19 chapters on jobs, ethics, and the future of human work. Pre-order now.{% endblock %}
+{% block title %}{% trans 'More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership' %}{% endblock %}
+{% block meta_description %}{% trans 'A skeptical, practical guide to working with AI without becoming obsolete. 19 chapters on jobs, ethics, and the future of human work. Pre-order now.' %}{% endblock %}
 
 {% block content %}
 <!-- HERO -->
@@ -10,23 +11,23 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <span class="badge bg-copper text-white mb-3 px-3 py-2">Coming 2026</span>
+                <span class="badge bg-copper text-white mb-3 px-3 py-2">{% trans 'Coming 2026' %}</span>
                 <h1 class="display-2 text-white mb-4 display-font">More Than Parrots,<br>Less Than Gods</h1>
-                <p class="lead text-white-50 mb-4 fs-5">A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything.</p>
+                <p class="lead text-white-50 mb-4 fs-5">{% trans 'A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything.' %}</p>
                 <div class="d-flex gap-3 flex-wrap">
-                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg">Pre-Order Now</a>
-                    <a href="{% url 'book:scorecard' %}" class="btn btn-outline-copper btn-lg">Take the Scorecard</a>
+                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg">{% trans 'Pre-Order Now' %}</a>
+                    <a href="{% url 'book:scorecard' %}" class="btn btn-outline-copper btn-lg">{% trans 'Take the Scorecard' %}</a>
                 </div>
                 <div class="mt-4 d-flex gap-4 text-white-50 small">
-                    <div><strong class="text-white">19</strong> Chapters</div>
-                    <div><strong class="text-white">89K</strong> Words</div>
-                    <div><strong class="text-white">200+</strong> Sources</div>
+                    <div><strong class="text-white">19</strong> {% trans 'Chapters' %}</div>
+                    <div><strong class="text-white">89K</strong> {% trans 'Words' %}</div>
+                    <div><strong class="text-white">200+</strong> {% trans 'Sources' %}</div>
                 </div>
             </div>
             <div class="col-lg-5 offset-lg-1">
                 <div class="position-relative">
                     <div class="bg-white rounded-4 shadow-lg p-3" style="transform: rotate(-2deg);">
-                        <img src="{% static 'book/images/cover.jpg' %}" alt="More Than Parrots, Less Than Gods — Book Cover" class="img-fluid rounded-3">
+                        <img src="{% static 'book/images/cover.jpg' %}" alt="{% trans 'More Than Parrots, Less Than Gods — Book Cover' %}" class="img-fluid rounded-3">
                     </div>
                 </div>
             </div>

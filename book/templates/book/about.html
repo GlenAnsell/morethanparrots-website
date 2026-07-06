@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% block title %}About — More Than Parrots, Less Than Gods{% endblock %}
+{% load i18n %}
+
+{% block title %}{% trans 'About — More Than Parrots, Less Than Gods' %}{% endblock %}
 
 {% block content %}
 <section class="section-padding">
@@ -9,18 +11,18 @@
                 <div class="bg-navy rounded-4 p-5 text-center">
                     <div class="display-1 text-copper mb-3">👤</div>
                     <h3 class="text-white display-font">Glen Ansell</h3>
-                    <p class="text-white-50">Author, AI Strategist, Skeptic</p>
+                    <p class="text-white-50">{% trans 'Author, AI Strategist, Skeptic' %}</p>
                 </div>
             </div>
             <div class="col-lg-7">
-                <h1 class="display-4 display-font text-navy mb-4">About the Author</h1>
+                <h1 class="display-4 display-font text-navy mb-4">{% trans 'About the Author' %}</h1>
                 <div class="divider-copper mb-4"></div>
-                <p class="lead">Coding since age 7. First IT business at 23. MSc in research psychology. Harvard AI certificate. 12+ years building AI and modeling systems.</p>
-                <p class="text-muted">I've watched AI go from academic curiosity to boardroom buzzword. I've built systems that worked and systems that failed. I've seen vendors promise the moon and deliver a rock.</p>
-                <p class="text-muted">This book is what I wish someone had handed me five years ago — a skeptical, practical, deeply researched guide to working with AI without losing your mind or your job.</p>
-                <p class="text-muted">I live in South Africa with my partner Donné, daughter Tayla, and four dogs. I play tennis and padel. I wear an Apple Watch. I don't have a garden.</p>
+                <p class="lead">{% trans 'Coding since age 7. First IT business at 23. MSc in research psychology. Harvard AI certificate. 12+ years building AI and modeling systems.' %}</p>
+                <p class="text-muted">{% trans "I've watched AI go from academic curiosity to boardroom buzzword. I've built systems that worked and systems that failed. I've seen vendors promise the moon and deliver a rock." %}</p>
+                <p class="text-muted">{% trans 'This book is what I wish someone had handed me five years ago — a skeptical, practical, deeply researched guide to working with AI without losing your mind or your job.' %}</p>
+                <p class="text-muted">{% trans "I live in South Africa with my partner Donné, daughter Tayla, and four dogs. I play tennis and padel. I wear an Apple Watch. I don't have a garden." %}</p>
                 <div class="mt-4">
-                    <a href="{% url 'book:contact' %}" class="btn btn-copper">Get in Touch</a>
+                    <a href="{% url 'book:contact' %}" class="btn btn-copper">{% trans 'Get in Touch' %}</a>
                 </div>
             </div>
         </div>

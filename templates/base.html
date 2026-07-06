@@ -1,11 +1,12 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}More Than Parrots, Less Than Gods{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything.{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% trans 'A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything.' %}{% endblock %}">
     <link rel="canonical" href="https://morethanparrots.com{{ request.path }}">
     {% block extra_meta %}{% endblock %}
     
@@ -109,15 +110,29 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'book:home' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'book:book_detail' %}">The Book</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'book:scorecard' %}">Scorecard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'book:calculator' %}">Calculator</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'book:prompt_library' %}">Prompts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'book:community' %}">Community</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-copper" href="{% url 'book:book_detail' %}">Buy Now</a></li>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:home' %}">{% trans 'Home' %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:book_detail' %}">{% trans 'The Book' %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'blog:post_list' %}">{% trans 'Blog' %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:scorecard' %}">{% trans 'Scorecard' %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:calculator' %}">{% trans 'Calculator' %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:prompt_library' %}">{% trans 'Prompts' %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'book:community' %}">{% trans 'Community' %}</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-copper" href="{% url 'book:book_detail' %}">{% trans 'Buy Now' %}</a></li>
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ LANGUAGE_CODE|language_name_local }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="languageDropdown">
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_current_language as CURRENT_LANGUAGE %}
+                            {% for code, name in LANGUAGES %}
+                                {% if code != CURRENT_LANGUAGE %}
+                                    <li><a class="dropdown-item" href="{% url 'set_language' %}?language={{ code }}&next={{ request.path }}">{{ name }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -130,37 +145,37 @@
             <div class="row">
                 <div class="col-md-4">
                     <h4 class="display-font text-cream mb-3">More Than Parrots,<br>Less Than Gods</h4>
-                    <p class="small">A field guide to the human-AI partnership.</p>
+                    <p class="small">{% trans 'A field guide to the human-AI partnership.' %}</p>
                 </div>
                 <div class="col-md-2 offset-md-2">
-                    <h6 class="text-copper mb-3">Book</h6>
+                    <h6 class="text-copper mb-3">{% trans 'Book' %}</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="{% url 'book:book_detail' %}" class="text-white-50 text-decoration-none">Overview</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Chapters</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Buy</a></li>
+                        <li><a href="{% url 'book:book_detail' %}" class="text-white-50 text-decoration-none">{% trans 'Overview' %}</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">{% trans 'Chapters' %}</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">{% trans 'Buy' %}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
-                    <h6 class="text-copper mb-3">Resources</h6>
+                    <h6 class="text-copper mb-3">{% trans 'Resources' %}</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="{% url 'blog:post_list' %}" class="text-white-50 text-decoration-none">Blog</a></li>
-                        <li><a href="{% url 'book:scorecard' %}" class="text-white-50 text-decoration-none">Scorecard</a></li>
-                        <li><a href="{% url 'book:calculator' %}" class="text-white-50 text-decoration-none">Calculator</a></li>
-                        <li><a href="{% url 'book:prompt_library' %}" class="text-white-50 text-decoration-none">Prompts</a></li>
+                        <li><a href="{% url 'blog:post_list' %}" class="text-white-50 text-decoration-none">{% trans 'Blog' %}</a></li>
+                        <li><a href="{% url 'book:scorecard' %}" class="text-white-50 text-decoration-none">{% trans 'Scorecard' %}</a></li>
+                        <li><a href="{% url 'book:calculator' %}" class="text-white-50 text-decoration-none">{% trans 'Calculator' %}</a></li>
+                        <li><a href="{% url 'book:prompt_library' %}" class="text-white-50 text-decoration-none">{% trans 'Prompts' %}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
-                    <h6 class="text-copper mb-3">Connect</h6>
+                    <h6 class="text-copper mb-3">{% trans 'Connect' %}</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="{% url 'book:community' %}" class="text-white-50 text-decoration-none">Community</a></li>
-                        <li><a href="{% url 'book:about' %}" class="text-white-50 text-decoration-none">About</a></li>
-                        <li><a href="{% url 'book:contact' %}" class="text-white-50 text-decoration-none">Contact</a></li>
+                        <li><a href="{% url 'book:community' %}" class="text-white-50 text-decoration-none">{% trans 'Community' %}</a></li>
+                        <li><a href="{% url 'book:about' %}" class="text-white-50 text-decoration-none">{% trans 'About' %}</a></li>
+                        <li><a href="{% url 'book:contact' %}" class="text-white-50 text-decoration-none">{% trans 'Contact' %}</a></li>
                     </ul>
                 </div>
             </div>
             <hr class="border-secondary my-4">
             <div class="text-center small text-white-50">
-                © 2026 Glen Ansell. All rights reserved.
+                {% trans '© 2026 Glen Ansell. All rights reserved.' %}
             </div>
         </div>
     </footer>
