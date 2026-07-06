@@ -368,7 +368,7 @@ Skepticism isn't Luddism. It's due diligence. And in a market this frothy, it's 
             'slug': 'what-to-tell-kids-about-ai',
             'category': 'for-parents',
             'excerpt': 'Your kids are growing up with AI. They\'re using it for homework, entertainment, and social connection. Here\'s how to have the conversations that actually matter.',
-            'body': """My daughter is eleven. Last month, she asked me if AI could write her English essay. Not because she wanted to cheat — because she was genuinely curious where the line was between "using a tool" and "not doing the work."
+            'body': """My daughter is seventeen. Last month, she asked me if AI could write her English essay. Not because she wanted to cheat — because she was genuinely curious where the line was between "using a tool" and "not doing the work."
 
 That's the question this generation is grappling with. And most parents are unprepared for it.
 
