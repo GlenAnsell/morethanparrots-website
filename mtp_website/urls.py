@@ -32,9 +32,9 @@ urlpatterns = [
 # i18n URLs with language prefix
 urlpatterns += i18n_patterns(
     path('', include('book.urls')),
-    path('marketing/', include('marketing.urls')),
     path('blog/', include('blog.urls')),
-    prefix_default_language=True,
+    path('', include('marketing.urls')),
+    prefix_default_language=False,
 )
 
 if settings.DEBUG:
