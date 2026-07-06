@@ -128,7 +128,14 @@
                             {% get_current_language as CURRENT_LANGUAGE %}
                             {% for code, name in LANGUAGES %}
                                 {% if code != CURRENT_LANGUAGE %}
-                                    <li><a class="dropdown-item" href="{% url 'set_language' %}?language={{ code }}&next={{ request.path }}">{{ name }}</a></li>
+                                    <li>
+                                        <form action="{% url 'set_language' %}" method="post" style="margin:0;">
+                                            {% csrf_token %}
+                                            <input name="next" type="hidden" value="{{ request.path }}">
+                                            <input name="language" type="hidden" value="{{ code }}">
+                                            <button type="submit" class="dropdown-item">{{ name }}</button>
+                                        </form>
+                                    </li>
                                 {% endif %}
                             {% endfor %}
                         </ul>
