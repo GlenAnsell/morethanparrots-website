@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+import markdown
 import bleach
 
 
@@ -38,6 +39,8 @@ class Post(models.Model):
         return reverse('blog:post_detail', kwargs={'slug': self.slug})
 
     def save(self, *args, **kwargs):
+        # Convert Markdown to HTML, then sanitize
+        raw_html = markdown.markdown(self.body, extensions=['tables', 'fenced_code', 'nl2br'])
         allowed_tags = [
             'p', 'br', 'strong', 'b', 'em', 'i', 'u', 'h1', 'h2', 'h3', 'h4',
             'ul', 'ol', 'li', 'a', 'blockquote', 'code', 'pre', 'hr',
@@ -48,5 +51,5 @@ class Post(models.Model):
             'a': ['href', 'title', 'target', 'rel'],
             'img': ['src', 'alt', 'title', 'width', 'height'],
         }
-        self.body_html = bleach.clean(self.body, tags=allowed_tags, attributes=allowed_attrs, strip=True)
+        self.body_html = bleach.clean(raw_html, tags=allowed_tags, attributes=allowed_attrs, strip=True)
         super().save(*args, **kwargs)
