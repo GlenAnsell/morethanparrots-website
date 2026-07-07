@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Free Chapter Preview — More Than Parrots, Less Than Gods{% endblock %}
+{% load i18n %}
+{% block title %}{% trans "Free Chapter Preview" %} — {% trans "More Than Parrots, Less Than Gods" %}{% endblock %}
 
 {% block content %}
 <section class="section-padding bg-navy">
     <div class="container text-center">
-        <span class="badge bg-copper text-white mb-3">Free Preview</span>
-        <h1 class="display-3 display-font text-white mb-3">Read the First 3 Chapters</h1>
-        <p class="lead text-white-50">Get a taste of the skeptical, first-person voice that makes this book different.</p>
+        <span class="badge bg-copper text-white mb-3">{% trans "Free Preview" %}</span>
+        <h1 class="display-3 display-font text-white mb-3">{% trans "Read the First 3 Chapters" %}</h1>
+        <p class="lead text-white-50">{% trans "Get a taste of the skeptical, first-person voice that makes this book different." %}</p>
     </div>
 </section>
 
@@ -17,9 +18,9 @@
                 <div class="card h-100 border-0 shadow-sm card-hover">
                     <div class="card-body p-4">
                         <div class="text-copper display-4 mb-2">01</div>
-                        <h4 class="display-font text-navy">What AI Actually Is (And What It Isn't)</h4>
-                        <p class="text-muted">Pattern recognition at scale. The five things people wrongly believe about AI. What AI does better than humans — and where it fails catastrophically.</p>
-                        <a href="{% url 'book:chapter_preview' 1 %}" class="btn btn-outline-copper">Read Chapter 1</a>
+                        <h4 class="display-font text-navy">{% trans "What AI Actually Is (And What It Isn't)" %}</h4>
+                        <p class="text-muted">{% trans "Pattern recognition at scale. The five things people wrongly believe about AI. What AI does better than humans — and where it fails catastrophically." %}</p>
+                        <a href="{% url 'book:chapter_preview' 1 %}" class="btn btn-outline-copper">{% trans "Read Chapter 1" %}</a>
                     </div>
                 </div>
             </div>
@@ -27,9 +28,9 @@
                 <div class="card h-100 border-0 shadow-sm card-hover">
                     <div class="card-body p-4">
                         <div class="text-copper display-4 mb-2">02</div>
-                        <h4 class="display-font text-navy">A Short History of Artificial Intelligence</h4>
-                        <p class="text-muted">Three waves of AI development. Two winters that nearly killed the field. Why the current wave is different — and why it's also the same.</p>
-                        <a href="{% url 'book:chapter_preview' 2 %}" class="btn btn-outline-copper">Read Chapter 2</a>
+                        <h4 class="display-font text-navy">{% trans "A Short History of Artificial Intelligence" %}</h4>
+                        <p class="text-muted">{% trans "Three waves of AI development. Two winters that nearly killed the field. Why the current wave is different — and why it's also the same." %}</p>
+                        <a href="{% url 'book:chapter_preview' 2 %}" class="btn btn-outline-copper">{% trans "Read Chapter 2" %}</a>
                     </div>
                 </div>
             </div>
@@ -37,9 +38,9 @@
                 <div class="card h-100 border-0 shadow-sm card-hover">
                     <div class="card-body p-4">
                         <div class="text-copper display-4 mb-2">03</div>
-                        <h4 class="display-font text-navy">The Transformer Revolution</h4>
-                        <p class="text-muted">The paper that changed everything. Self-attention explained without math. Why context is everything — and why this is still not magic.</p>
-                        <a href="{% url 'book:chapter_preview' 3 %}" class="btn btn-outline-copper">Read Chapter 3</a>
+                        <h4 class="display-font text-navy">{% trans "The Transformer Revolution" %}</h4>
+                        <p class="text-muted">{% trans "The paper that changed everything. Self-attention explained without math. Why context is everything — and why this is still not magic." %}</p>
+                        <a href="{% url 'book:chapter_preview' 3 %}" class="btn btn-outline-copper">{% trans "Read Chapter 3" %}</a>
                     </div>
                 </div>
             </div>
@@ -48,9 +49,9 @@
         <div class="text-center mt-5">
             <div class="card border-0 shadow-lg mx-auto" style="max-width: 600px;">
                 <div class="card-body p-4">
-                    <h4 class="display-font text-navy">Get All 19 Chapters</h4>
-                    <p class="text-muted">Ebook $12.99 • Paperback $18.99 • Hardcover $27.99</p>
-                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg">Buy the Book</a>
+                    <h4 class="display-font text-navy">{% trans "Get All 19 Chapters" %}</h4>
+                    <p class="text-muted">{% trans "Ebook $12.99 • Paperback $18.99 • Hardcover $27.99" %}</p>
+                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg">{% trans "Buy the Book" %}</a>
                 </div>
             </div>
         </div>

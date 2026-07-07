@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% block title %}AI Readiness Scorecard — More Than Parrots, Less Than Gods{% endblock %}
+{% load i18n %}
+{% block title %}{% trans "AI Readiness Scorecard" %} — {% trans "More Than Parrots, Less Than Gods" %}{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -17,8 +18,8 @@
 <section class="section-padding">
     <div class="container">
         <div class="text-center mb-5">
-            <h1 class="display-4 display-font text-navy">AI Readiness Scorecard</h1>
-            <p class="lead text-muted">20 questions. 5 minutes. Know exactly where you stand.</p>
+            <h1 class="display-4 display-font text-navy">{% trans "AI Readiness Scorecard" %}</h1>
+            <p class="lead text-muted">{% trans "20 questions. 5 minutes. Know exactly where you stand." %}</p>
             <div class="divider-copper mx-auto"></div>
         </div>
 
@@ -26,37 +27,48 @@
         <div class="progress mb-4" style="height: 8px;">
             <div class="progress-bar progress-bar-copper" id="progressBar" style="width: 0%"></div>
         </div>
-        <div class="text-center small text-muted mb-4"><span id="qNumber">0</span> / 20 answered</div>
+        <div class="text-center small text-muted mb-4"><span id="qNumber">0</span> / 20 {% trans "answered" %}</div>
 
         <div id="quizContainer">
-            <!-- Questions injected by JS -->
+            {% for q in questions %}
+            <div class="question-card" data-id="{{ q.id }}">
+                <h5 class="mb-3 text-navy">{{ q.id }}. {{ q.text }}</h5>
+                <div class="row g-2">
+                    {% for opt in q.options %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="option-btn w-100" data-q="{{ q.id }}" data-val="{{ forloop.counter }}">{{ opt }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
         </div>
 
         <div id="resultContainer" class="d-none">
             <div class="result-card text-center">
                 <div class="score-circle" id="scoreDisplay">0</div>
-                <h2 class="display-font mb-3" id="resultTitle">Your Result</h2>
+                <h2 class="display-font mb-3" id="resultTitle">{% trans "Your Result" %}</h2>
                 <p class="text-white-50 lead" id="resultDescription"></p>
 
                 <!-- Email capture for results -->
                 <div id="emailCapture" class="mt-4">
-                    <p class="text-white-50 mb-3">Enter your email to receive your personalized report:</p>
+                    <p class="text-white-50 mb-3">{% trans "Enter your email to receive your personalized report:" %}</p>
                     <div class="row justify-content-center">
                         <div class="col-md-6">
                             <div class="input-group mb-3">
-                                <input type="email" id="resultEmail" class="form-control form-control-lg" placeholder="you@company.com">
-                                <button class="btn btn-copper" type="button" id="sendResultsBtn">Get My Report</button>
+                                <input type="email" id="resultEmail" class="form-control form-control-lg" placeholder="{% trans 'you@company.com' %}">
+                                <button class="btn btn-copper" type="button" id="sendResultsBtn">{% trans "Get My Report" %}</button>
                             </div>
                             <div id="emailFeedback" class="small"></div>
                         </div>
                     </div>
-                    <p class="text-white-50 small mt-2">No spam. Unsubscribe any time.</p>
+                    <p class="text-white-50 small mt-2">{% trans "No spam. Unsubscribe any time." %}</p>
                 </div>
 
                 <div id="resultSuccess" class="d-none mt-4">
-                    <p class="text-white-50">Your report is on its way. In the meantime:</p>
-                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg me-2">Pre-Order the Book</a>
-                    <a href="{% url 'blog:post_list' %}" class="btn btn-outline-copper btn-lg">Read the Blog</a>
+                    <p class="text-white-50">{% trans "Your report is on its way. In the meantime:" %}</p>
+                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg me-2">{% trans "Pre-Order the Book" %}</a>
+                    <a href="{% url 'blog:post_list' %}" class="btn btn-outline-copper btn-lg">{% trans "Read the Blog" %}</a>
                 </div>
             </div>
         </div>
@@ -66,116 +78,95 @@
 
 {% block extra_js %}
 <script>
-const questions = [
-    { id: 1, text: "How would you rate your current understanding of AI capabilities?", options: ["No idea", "Basic awareness", "Can use ChatGPT", "Build with AI APIs", "Expert-level"] },
-    { id: 2, text: "Does your organization have an AI strategy?", options: ["No", "Informal discussions", "Draft strategy", "Approved strategy", "Executing strategy"] },
-    { id: 3, text: "How many AI tools does your team use weekly?", options: ["None", "1-2", "3-5", "5-10", "10+"] },
-    { id: 4, text: "Have you identified which tasks AI could augment in your role?", options: ["No idea", "Vague sense", "Some tasks mapped", "Detailed workflow analysis", "Implemented changes"] },
-    { id: 5, text: "How comfortable are you evaluating AI vendor claims?", options: ["Very uncomfortable", "Slightly uncomfortable", "Neutral", "Mostly comfortable", "Expert"] },
-    { id: 6, text: "Has your team received any AI training?", options: ["None", "Self-directed only", "Some online courses", "Organized training", "Ongoing program"] },
-    { id: 7, text: "Do you have a budget allocated for AI tooling?", options: ["No", "Under $1k/mo", "$1k-5k/mo", "$5k-20k/mo", "$20k+/mo"] },
-    { id: 8, text: "How do you handle AI-generated content quality?", options: ["Don't use AI content", "Eyeball it", "Basic review", "Structured QA process", "Automated + human checks"] },
-    { id: 9, text: "Have you documented AI usage policies?", options: ["No", "Informal guidelines", "Draft policy", "Approved policy", "Enforced policy"] },
-    { id: 10, text: "How do you stay updated on AI developments?", options: ["Don't actively", "Social media", "Newsletters/blogs", "Industry events", "Academic papers"] },
-    { id: 11, text: "Rate your data readiness for AI integration:", options: ["Chaotic", "Some structured", "Mostly organized", "Well-structured", "AI-ready pipelines"] },
-    { id: 12, text: "Have you measured ROI on any AI implementation?", options: ["No implementations", "No ROI tracked", "Some informal tracking", "Basic ROI measurement", "Detailed ROI analysis"] },
-    { id: 13, text: "How does leadership view AI adoption?", options: ["Skeptical/hostile", "Indifferent", "Curious", "Supportive", "Championing"] },
-    { id: 14, text: "Do you have an AI ethics framework?", options: ["No", "Aware of issues", "Informal principles", "Documented framework", "Implemented + reviewed"] },
-    { id: 15, text: "How integrated is AI in your core workflows?", options: ["Not at all", "Experimental", "Some processes", "Many processes", "Core to operations"] },
-    { id: 16, text: "Can you explain AI limitations to stakeholders?", options: ["No", "Basic concepts", "Some depth", "Confident communicator", "Trusted advisor"] },
-    { id: 17, text: "Have you planned for AI failure modes?", options: ["No", "Vague awareness", "Some contingencies", "Documented plans", "Regular drills"] },
-    { id: 18, text: "How do you handle AI bias and fairness?", options: ["Not considered", "Aware of issue", "Basic checks", "Structured review", "Continuous monitoring"] },
-    { id: 19, text: "What's your AI talent situation?", options: ["No expertise", "One interested person", "Small team", "Dedicated team", "Center of excellence"] },
-    { id: 20, text: "How future-proof do you feel your skills are?", options: ["Very vulnerable", "Somewhat at risk", "Neutral", "Mostly secure", "Actively future-proofing"] }
-];
+const personas = {
+    explorer: {
+        title: "{% trans 'The Explorer' %}",
+        desc: "{% trans "You're at the beginning of the AI journey. That's actually an advantage — you can build right from the start. Chapters 1-5 are written for you." %}"
+    },
+    curious: {
+        title: "{% trans 'The Curious' %}",
+        desc: "{% trans 'You have some awareness but lack structure. Focus on the Partnership Framework (Chapters 6-9) and the Implementation Playbook (Chapters 10-13).' %}"
+    },
+    practitioner: {
+        title: "{% trans 'The Practitioner' %}",
+        desc: "{% trans "You're actively using AI but want to scale. The advanced chapters on governance, team building, and future-proofing (Chapters 14-19) will be most valuable." %}"
+    },
+    architect: {
+        title: "{% trans 'The Architect' %}",
+        desc: "{% trans "You're leading AI transformation. The book's skeptical frameworks will help you avoid the traps that even experienced teams fall into." %}"
+    }
+};
 
 let answers = {};
 let currentScore = 0;
 let currentPersona = "";
 
-function renderQuestions() {
-    const container = document.getElementById('quizContainer');
-    container.innerHTML = questions.map(q => `
-        <div class="question-card" data-id="${q.id}">
-            <h5 class="mb-3 text-navy">${q.id}. ${q.text}</h5>
-            <div class="row g-2">
-                ${q.options.map((opt, i) => `
-                    <div class="col-md-6 col-lg-4">
-                        <div class="option-btn w-100" data-q="${q.id}" data-val="${i+1}">${opt}</div>
-                    </div>
-                `).join('')}
-            </div>
-        </div>
-    `).join('');
-    
-    document.querySelectorAll('.option-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const qId = this.dataset.q;
-            const val = parseInt(this.dataset.val);
-            answers[qId] = val;
-            
-            document.querySelectorAll(`[data-q="${qId}"]`).forEach(b => b.classList.remove('selected'));
-            this.classList.add('selected');
-            
-            updateProgress();
-            if (Object.keys(answers).length === questions.length) {
-                showResults();
-            }
-        });
-    });
-}
+const totalQuestions = 20;
 
 function updateProgress() {
-    const pct = (Object.keys(answers).length / questions.length) * 100;
+    const pct = (Object.keys(answers).length / totalQuestions) * 100;
     document.getElementById('progressBar').style.width = pct + '%';
     document.getElementById('qNumber').textContent = Object.keys(answers).length;
 }
 
 function showResults() {
     const total = Object.values(answers).reduce((a, b) => a + b, 0);
-    const max = questions.length * 5;
+    const max = totalQuestions * 5;
     const score = Math.round((total / max) * 100);
     currentScore = score;
-    
+
     document.getElementById('quizContainer').classList.add('d-none');
     document.getElementById('resultContainer').classList.remove('d-none');
     document.getElementById('scoreDisplay').textContent = score;
-    
-    let title, desc;
+
+    let p;
     if (score < 30) {
-        title = "The Explorer";
-        desc = "You're at the beginning of the AI journey. That's actually an advantage — you can build right from the start. Chapters 1-5 are written for you.";
+        p = personas.explorer;
     } else if (score < 50) {
-        title = "The Curious";
-        desc = "You have some awareness but lack structure. Focus on the Partnership Framework (Chapters 6-9) and the Implementation Playbook (Chapters 10-13).";
+        p = personas.curious;
     } else if (score < 70) {
-        title = "The Practitioner";
-        desc = "You're actively using AI but want to scale. The advanced chapters on governance, team building, and future-proofing (Chapters 14-19) will be most valuable.";
+        p = personas.practitioner;
     } else {
-        title = "The Architect";
-        desc = "You're leading AI transformation. The book's skeptical frameworks will help you avoid the traps that even experienced teams fall into.";
+        p = personas.architect;
     }
-    currentPersona = title;
-    
-    document.getElementById('resultTitle').textContent = title;
-    document.getElementById('resultDescription').textContent = desc;
-    
+    currentPersona = p.title;
+
+    document.getElementById('resultTitle').textContent = p.title;
+    document.getElementById('resultDescription').textContent = p.desc;
+
     document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
 }
+
+// Bind click handlers
+document.querySelectorAll('.option-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const qId = this.dataset.q;
+        const val = parseInt(this.dataset.val);
+        answers[qId] = val;
+
+        document.querySelectorAll(`[data-q="${qId}"]`).forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+
+        updateProgress();
+        if (Object.keys(answers).length === totalQuestions) {
+            showResults();
+        }
+    });
+});
 
 // Handle email submission
 document.getElementById('sendResultsBtn').addEventListener('click', async function() {
     const email = document.getElementById('resultEmail').value.trim();
     const feedback = document.getElementById('emailFeedback');
-    
+
     if (!email || !email.includes('@')) {
-        feedback.innerHTML = '<span class="text-warning">Please enter a valid email.</span>';
+        feedback.innerHTML = '<span class="text-warning">{% trans "Please enter a valid email." %}</span>';
         return;
     }
-    
+
     this.disabled = true;
-    this.textContent = 'Sending...';
-    
+    this.textContent = '{% trans "Sending..." %}';
+
     try {
         const resp = await fetch('/api/scorecard/', {
             method: 'POST',
@@ -188,22 +179,20 @@ document.getElementById('sendResultsBtn').addEventListener('click', async functi
             })
         });
         const data = await resp.json();
-        
+
         if (data.success) {
             document.getElementById('emailCapture').classList.add('d-none');
             document.getElementById('resultSuccess').classList.remove('d-none');
         } else {
-            feedback.innerHTML = '<span class="text-warning">' + (data.error || 'Something went wrong.') + '</span>';
+            feedback.innerHTML = '<span class="text-warning">' + (data.error || '{% trans "Something went wrong." %}') + '</span>';
             this.disabled = false;
-            this.textContent = 'Get My Report';
+            this.textContent = '{% trans "Get My Report" %}';
         }
     } catch (e) {
-        feedback.innerHTML = '<span class="text-warning">Network error. Please try again.</span>';
+        feedback.innerHTML = '<span class="text-warning">{% trans "Network error. Please try again." %}</span>';
         this.disabled = false;
-        this.textContent = 'Get My Report';
+        this.textContent = '{% trans "Get My Report" %}';
     }
 });
-
-renderQuestions();
 </script>
 {% endblock %}

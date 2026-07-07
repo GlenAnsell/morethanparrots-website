@@ -19,11 +19,82 @@ def home(request):
 def book_detail(request):
     return render(request, 'book/book_detail.html')
 
+from django.utils.translation import gettext as _
+
 def readiness_scorecard(request):
-    return render(request, 'book/scorecard.html')
+    questions = [
+        {"id": 1, "text": _("How would you rate your current understanding of AI capabilities?"), "options": [_("No idea"), _("Basic awareness"), _("Can use ChatGPT"), _("Build with AI APIs"), _("Expert-level")]},
+        {"id": 2, "text": _("Does your organization have an AI strategy?"), "options": [_("No"), _("Informal discussions"), _("Draft strategy"), _("Approved strategy"), _("Executing strategy")]},
+        {"id": 3, "text": _("How many AI tools does your team use weekly?"), "options": [_("None"), _("1-2"), _("3-5"), _("5-10"), _("10+")]},
+        {"id": 4, "text": _("Have you identified which tasks AI could augment in your role?"), "options": [_("No idea"), _("Vague sense"), _("Some tasks mapped"), _("Detailed workflow analysis"), _("Implemented changes")]},
+        {"id": 5, "text": _("How comfortable are you evaluating AI vendor claims?"), "options": [_("Very uncomfortable"), _("Slightly uncomfortable"), _("Neutral"), _("Mostly comfortable"), _("Expert")]},
+        {"id": 6, "text": _("Has your team received any AI training?"), "options": [_("None"), _("Self-directed only"), _("Some online courses"), _("Organized training"), _("Ongoing program")]},
+        {"id": 7, "text": _("Do you have a budget allocated for AI tooling?"), "options": [_("No"), _("Under $1k/mo"), _("$1k-5k/mo"), _("$5k-20k/mo"), _("$20k+/mo")]},
+        {"id": 8, "text": _("How do you handle AI-generated content quality?"), "options": [_("Don't use AI content"), _("Eyeball it"), _("Basic review"), _("Structured QA process"), _("Automated + human checks")]},
+        {"id": 9, "text": _("Have you documented AI usage policies?"), "options": [_("No"), _("Informal guidelines"), _("Draft policy"), _("Approved policy"), _("Enforced policy")]},
+        {"id": 10, "text": _("How do you stay updated on AI developments?"), "options": [_("Don't actively"), _("Social media"), _("Newsletters/blogs"), _("Industry events"), _("Academic papers")]},
+        {"id": 11, "text": _("Rate your data readiness for AI integration:"), "options": [_("Chaotic"), _("Some structured"), _("Mostly organized"), _("Well-structured"), _("AI-ready pipelines")]},
+        {"id": 12, "text": _("Have you measured ROI on any AI implementation?"), "options": [_("No implementations"), _("No ROI tracked"), _("Some informal tracking"), _("Basic ROI measurement"), _("Detailed ROI analysis")]},
+        {"id": 13, "text": _("How does leadership view AI adoption?"), "options": [_("Skeptical/hostile"), _("Indifferent"), _("Curious"), _("Supportive"), _("Championing")]},
+        {"id": 14, "text": _("Do you have an AI ethics framework?"), "options": [_("No"), _("Aware of issues"), _("Informal principles"), _("Documented framework"), _("Implemented + reviewed")]},
+        {"id": 15, "text": _("How integrated is AI in your core workflows?"), "options": [_("Not at all"), _("Experimental"), _("Some processes"), _("Many processes"), _("Core to operations")]},
+        {"id": 16, "text": _("Can you explain AI limitations to stakeholders?"), "options": [_("No"), _("Basic concepts"), _("Some depth"), _("Confident communicator"), _("Trusted advisor")]},
+        {"id": 17, "text": _("Have you planned for AI failure modes?"), "options": [_("No"), _("Vague awareness"), _("Some contingencies"), _("Documented plans"), _("Regular drills")]},
+        {"id": 18, "text": _("How do you handle AI bias and fairness?"), "options": [_("Not considered"), _("Aware of issue"), _("Basic checks"), _("Structured review"), _("Continuous monitoring")]},
+        {"id": 19, "text": _("What's your AI talent situation?"), "options": [_("No expertise"), _("One interested person"), _("Small team"), _("Dedicated team"), _("Center of excellence")]},
+        {"id": 20, "text": _("How future-proof do you feel your skills are?"), "options": [_("Very vulnerable"), _("Somewhat at risk"), _("Neutral"), _("Mostly secure"), _("Actively future-proofing")]}
+    ]
+    return render(request, 'book/scorecard.html', {"questions": questions})
 
 def resource_calculator(request):
-    return render(request, 'book/calculator.html')
+    context = {
+        "role_options": [
+            ("solo", _("Solo entrepreneur / Freelancer")),
+            ("small", _("Small business owner (1-10 team)")),
+            ("medium", _("Mid-size company (11-50 team)")),
+            ("enterprise", _("Enterprise (50+ team)")),
+        ],
+        "capability_options": [
+            ("llm", _("Text generation (ChatGPT, Claude)")),
+            ("image", _("Image generation (Midjourney, DALL-E)")),
+            ("code", _("Code assistance (GitHub Copilot)")),
+            ("data", _("Data analysis (Tableau AI, Excel)")),
+            ("voice", _("Voice / speech (ElevenLabs, Whisper)")),
+            ("automation", _("Workflow automation (Zapier, Make)")),
+        ],
+        "budget_options": [
+            ("low", _("Under $100/month")),
+            ("mid", _("$100-500/month")),
+            ("high", _("$500-2,000/month")),
+            ("enterprise", _("$2,000+/month")),
+        ],
+        "output_options": [
+            ("10", _("10-25% faster")),
+            ("25", _("25-50% faster")),
+            ("50", _("50-100% faster")),
+            ("100", _("2x+ improvement")),
+        ],
+        "base_costs": {
+            "llm": {"solo": 20, "small": 60, "medium": 200, "enterprise": 800},
+            "image": {"solo": 30, "small": 80, "medium": 250, "enterprise": 1000},
+            "code": {"solo": 10, "small": 40, "medium": 150, "enterprise": 600},
+            "data": {"solo": 50, "small": 150, "medium": 500, "enterprise": 2000},
+            "voice": {"solo": 20, "small": 60, "medium": 200, "enterprise": 800},
+            "automation": {"solo": 20, "small": 80, "medium": 300, "enterprise": 1200}
+        },
+        "stack_names": {
+            "llm": "ChatGPT Team / Claude Pro",
+            "image": "Midjourney / DALL-E",
+            "code": "GitHub Copilot",
+            "data": "Tableau AI / Power BI",
+            "voice": "ElevenLabs / Whisper API",
+            "automation": "Zapier / Make"
+        },
+        "budget_multipliers": {"low": 0.7, "mid": 1.0, "high": 1.3, "enterprise": 1.8},
+        "output_multipliers": {"10": 0.8, "25": 1.0, "50": 1.3, "100": 1.8},
+        "hours_saved": {"10": 4, "25": 10, "50": 20, "100": 40}
+    }
+    return render(request, 'book/calculator.html', context)
 
 def prompt_library(request):
     return render(request, 'book/prompt_library.html')

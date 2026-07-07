@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% block title %}{{ post.meta_title|default:post.title }} — More Than Parrots{% endblock %}
+{% load i18n %}
+{% block title %}{{ post.meta_title|default:post.title }} — {% trans 'More Than Parrots' %}{% endblock %}
 
 {% block extra_meta %}
 <meta name="description" content="{{ post.meta_description|default:post.excerpt|truncatewords:30 }}">
@@ -13,7 +14,7 @@
                 <!-- Breadcrumb -->
                 <nav aria-label="breadcrumb" class="mb-3">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{% url 'blog:post_list' %}" class="text-copper">Blog</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'blog:post_list' %}" class="text-copper">{% trans 'Blog' %}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{ post.get_category_display }}</li>
                     </ol>
                 </nav>
@@ -23,8 +24,8 @@
                 <h1 class="display-4 display-font text-navy mb-3">{{ post.title }}</h1>
                 <div class="d-flex align-items-center text-muted small mb-4">
                     <span>{{ post.published_at|date:"F j, Y" }}</span>
-                    <span class="mx-2">&middot;</span>
-                    <span>{{ post.reading_time_minutes }} min read</span>
+                    <span class="mx-2">·</span>
+                    <span>{% blocktrans %}{{ post.reading_time_minutes }} min read{% endblocktrans %}</span>
                 </div>
 
                 {% if post.featured_image %}
@@ -38,15 +39,15 @@
 
                 <!-- CTA box -->
                 <div class="mt-5 p-4 rounded-3" style="background:linear-gradient(135deg,#1A234E 0%,#0F1635 100%);color:#fff;">
-                    <h4 class="display-font text-copper">Want the full map?</h4>
-                    <p class="mb-3">This blog post is a starting point. The book gives you the complete framework.</p>
-                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper">Pre-Order the Book</a>
+                    <h4 class="display-font text-copper">{% trans 'Want the full map?' %}</h4>
+                    <p class="mb-3">{% trans 'This blog post is a starting point. The book gives you the complete framework.' %}</p>
+                    <a href="{% url 'book:book_detail' %}" class="btn btn-copper">{% trans 'Pre-Order the Book' %}</a>
                 </div>
 
                 <!-- Related posts -->
                 {% if related_posts %}
                 <div class="mt-5">
-                    <h4 class="display-font text-navy mb-4">More in {{ post.get_category_display }}</h4>
+                    <h4 class="display-font text-navy mb-4">{% trans 'More in' %} {{ post.get_category_display }}</h4>
                     <div class="row g-3">
                         {% for rp in related_posts %}
                         <div class="col-md-4">
@@ -54,7 +55,7 @@
                                 <div class="card border-0 h-100" style="border-radius:8px;background:#F5F1EB;">
                                     <div class="card-body p-3">
                                         <h6 class="text-navy display-font mb-1">{{ rp.title }}</h6>
-                                        <small class="text-muted">{{ rp.reading_time_minutes }} min</small>
+                                        <small class="text-muted">{% blocktrans %}{{ rp.reading_time_minutes }} min{% endblocktrans %}</small>
                                     </div>
                                 </div>
                             </a>

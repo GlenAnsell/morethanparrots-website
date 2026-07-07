@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}{{ category_label }} — Blog — More Than Parrots{% endblock %}
+{% load i18n %}
+{% block title %}{{ category_label }} — {% trans 'Blog' %} — {% trans 'More Than Parrots' %}{% endblock %}
 
 {% block content %}
 <section class="section-padding">
     <div class="container">
         <div class="text-center mb-5">
             <h1 class="display-4 display-font text-navy">{{ category_label }}</h1>
-            <p class="text-muted"><a href="{% url 'blog:post_list' %}" class="text-copper">&larr; All posts</a></p>
+            <p class="text-muted"><a href="{% url 'blog:post_list' %}" class="text-copper">← {% trans 'All posts' %}</a></p>
             <div class="divider-copper mx-auto"></div>
         </div>
 
@@ -25,15 +26,15 @@
                         <h5 class="card-title display-font text-navy">{{ post.title }}</h5>
                         <p class="card-text text-muted small">{{ post.excerpt|truncatewords:20 }}</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <small class="text-muted">{{ post.reading_time_minutes }} min read</small>
-                            <a href="{{ post.get_absolute_url }}" class="text-copper fw-medium" style="text-decoration:none;">Read &rarr;</a>
+                            <small class="text-muted">{% blocktrans %}{{ post.reading_time_minutes }} min read{% endblocktrans %}</small>
+                            <a href="{{ post.get_absolute_url }}" class="text-copper fw-medium" style="text-decoration:none;">{% trans 'Read' %} →</a>
                         </div>
                     </div>
                 </div>
             </div>
             {% empty %}
             <div class="col-12 text-center py-5">
-                <p class="text-muted">No posts in this category yet.</p>
+                <p class="text-muted">{% trans 'No posts in this category yet.' %}</p>
             </div>
             {% endfor %}
         </div>
@@ -42,7 +43,7 @@
         <nav class="mt-5">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">«</a></li>
                 {% endif %}
                 {% for num in page_obj.paginator.page_range %}
                     <li class="page-item {% if page_obj.number == num %}active{% endif %}">
@@ -50,7 +51,7 @@
                     </li>
                 {% endfor %}
                 {% if page_obj.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">»</a></li>
                 {% endif %}
             </ul>
         </nav>

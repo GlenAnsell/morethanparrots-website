@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% block title %}{{ chapter_title }} — Preview — More Than Parrots, Less Than Gods{% endblock %}
+{% load i18n %}
+{% block title %}{{ chapter_title }} — {% trans "Preview" %} — {% trans "More Than Parrots, Less Than Gods" %}{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -26,9 +27,9 @@
 {% block content %}
 <section class="preview-banner">
     <div class="container">
-        <span class="badge bg-white text-navy mb-2">Free Preview</span>
+        <span class="badge bg-white text-navy mb-2">{% trans "Free Preview" %}</span>
         <h1 class="display-font">{{ chapter_title }}</h1>
-        <p class="lead mb-0">Chapter {{ chapter_number }} of <em>More Than Parrots, Less Than Gods</em></p>
+        <p class="lead mb-0">{% blocktrans %}Chapter {{ chapter_number }} of <em>More Than Parrots, Less Than Gods</em>{% endblocktrans %}</p>
     </div>
 </section>
 
@@ -36,19 +37,19 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <a href="{% url 'book:home' %}" class="text-decoration-none text-muted">← Back to Home</a>
+                <a href="{% url 'book:home' %}" class="text-decoration-none text-muted">← {% trans "Back to Home" %}</a>
             </div>
             <div class="text-muted small">
-                {{ chapter_number }} / 3 free preview chapters
+                {% blocktrans %}{{ chapter_number }} / 3 free preview chapters{% endblocktrans %}
             </div>
             <div>
                 {% if prev_chapter %}
-                <a href="{% url 'book:chapter_preview' prev_chapter %}" class="text-decoration-none text-muted me-3">← Previous</a>
+                <a href="{% url 'book:chapter_preview' prev_chapter %}" class="text-decoration-none text-muted me-3">← {% trans "Previous" %}</a>
                 {% endif %}
                 {% if next_chapter %}
-                <a href="{% url 'book:chapter_preview' next_chapter %}" class="text-decoration-none text-muted">Next →</a>
+                <a href="{% url 'book:chapter_preview' next_chapter %}" class="text-decoration-none text-muted">{% trans "Next" %} →</a>
                 {% else %}
-                <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-sm">Buy the Full Book</a>
+                <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-sm">{% trans "Buy the Full Book" %}</a>
                 {% endif %}
             </div>
         </div>
@@ -61,9 +62,9 @@
             {{ chapter_html|safe }}
             
             <div class="cta-banner">
-                <h3 class="display-font">Want the Rest?</h3>
-                <p class="mb-3">This was Chapter {{ chapter_number }} of 19. Get the complete book — ebook, paperback, or hardcover.</p>
-                <a href="{% url 'book:book_detail' %}" class="btn btn-light btn-lg text-navy fw-bold">Buy the Book</a>
+                <h3 class="display-font">{% trans "Want the Rest?" %}</h3>
+                <p class="mb-3">{% blocktrans %}This was Chapter {{ chapter_number }} of 19. Get the complete book — ebook, paperback, or hardcover.{% endblocktrans %}</p>
+                <a href="{% url 'book:book_detail' %}" class="btn btn-light btn-lg text-navy fw-bold">{% trans "Buy the Book" %}</a>
             </div>
         </div>
     </div>
