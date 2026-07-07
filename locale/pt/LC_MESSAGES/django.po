@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MTP 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 05:49+0000\n"
+"POT-Creation-Date: 2026-07-07 14:19+0000\n"
 "PO-Revision-Date: 2026-07-06 12:00+0000\n"
 "Last-Translator: Glen Ansell\n"
 "Language-Team: Portuguese\n"
@@ -28,8 +28,7 @@ msgstr "Mais que papagaios"
 msgid "All posts"
 msgstr "Todas as postagens"
 
-#: blog/templates/blog/category.html:29
-#: blog/templates/blog/post_detail.html:28
+#: blog/templates/blog/category.html:29 blog/templates/blog/post_detail.html:28
 #: blog/templates/blog/post_list.html:37
 #, python-format
 msgid "%(post.reading_time_minutes)s min read"
@@ -117,8 +116,8 @@ msgstr ""
 
 #: book/templates/book/about.html:21
 msgid ""
-"I've watched AI go from academic curiosity to boardroom buzzword. I've built"
-" systems that worked and systems that failed. I've seen vendors promise the "
+"I've watched AI go from academic curiosity to boardroom buzzword. I've built "
+"systems that worked and systems that failed. I've seen vendors promise the "
 "moon and deliver a rock."
 msgstr ""
 "Vi a IA passar de curiosidade acadêmica a buzzword da sala de reuniões. "
@@ -127,18 +126,18 @@ msgstr ""
 
 #: book/templates/book/about.html:22
 msgid ""
-"This book is what I wish someone had handed me five years ago — a skeptical,"
-" practical, deeply researched guide to working with AI without losing your "
+"This book is what I wish someone had handed me five years ago — a skeptical, "
+"practical, deeply researched guide to working with AI without losing your "
 "mind or your job."
 msgstr ""
-"Este livro é o que eu gostaria que alguém tivesse me dado há cinco anos — um"
-" guia cético, prático e profundamente pesquisado para trabalhar com IA sem "
+"Este livro é o que eu gostaria que alguém tivesse me dado há cinco anos — um "
+"guia cético, prático e profundamente pesquisado para trabalhar com IA sem "
 "perder a cabeça ou o emprego."
 
 #: book/templates/book/about.html:23
 msgid ""
-"I live in South Africa with my partner Donné, daughter Tayla, and four dogs."
-" I play tennis and padel. I wear an Apple Watch. I don't have a garden."
+"I live in South Africa with my partner Donné, daughter Tayla, and four dogs. "
+"I play tennis and padel. I wear an Apple Watch. I don't have a garden."
 msgstr ""
 "Moro na África do Sul com minha parceira Donné, filha Tayla e quatro "
 "cachorros. Jogo tênis e padel. Uso um Apple Watch. Não tenho jardim."
@@ -160,8 +159,8 @@ msgid ""
 "A 19-chapter manifesto for the human-AI partnership. Written for business "
 "leaders who are tired of AI hype and want real answers."
 msgstr ""
-"Um manifesto de 19 capítulos para a parceria humano-IA. Escrito para líderes"
-" empresariais cansados do hype de IA e que querem respostas reais."
+"Um manifesto de 19 capítulos para a parceria humano-IA. Escrito para líderes "
+"empresariais cansados do hype de IA e que querem respostas reais."
 
 #: book/templates/book/book_detail.html:17
 msgid "What's Inside"
@@ -170,7 +169,8 @@ msgstr "Conteúdo"
 #: book/templates/book/book_detail.html:21
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
 msgstr "O problema do papagaio – Por que a maior parte da IA ​​é mais burra do que parece"
-"O problema do papagaio — Por que a maioria das IAs é mais burra do que "
+"O problema do papagaio – Por que a maior parte da IA ​​é mais burra do que "
+"pareceO problema do papagaio — Por que a maioria das IAs é mais burra do que "
 "parece"
 
 #: book/templates/book/book_detail.html:22
@@ -262,7 +262,7 @@ msgstr "— não satisfeito? Reembolso total."
 msgid "Also available on:"
 msgstr "Também disponível em:"
 
-#: book/templates/book/calculator.html:3
+#: book/templates/book/calculator.html:3 book/templates/book/home.html:94
 #, fuzzy
 #| msgid "Calculator"
 msgid "Resource Calculator"
@@ -399,8 +399,8 @@ msgid ""
 "This was Chapter %(chapter_number)s of 19. Get the complete book — ebook, "
 "paperback, or hardcover."
 msgstr ""
-"Este foi o capítulo %(chapter_number)s de 19. Obtenha o livro completo – "
-"e-book, brochura ou capa dura."
+"Este foi o capítulo %(chapter_number)s de 19. Obtenha o livro completo – e-"
+"book, brochura ou capa dura."
 
 #: book/templates/book/chapter_preview.html:67
 #: book/templates/book/preview_index.html:54
@@ -434,7 +434,8 @@ msgstr "Servidor de discórdia"
 msgid "Daily discussions, Q&A, prompt sharing, and early access to new tools."
 msgstr "Discussões diárias, perguntas e respostas, compartilhamento imediato e acesso antecipado a novas ferramentas."
 "Discussões diárias, perguntas e respostas, compartilhamento imediato e "
-"acesso antecipado a novas ferramentas."
+"acesso antecipado a novas ferramentas.Discussões diárias, perguntas e "
+"respostas, compartilhamento imediato e acesso antecipado a novas ferramentas."
 
 #: book/templates/book/community.html:20
 msgid "Join Discord"
@@ -500,6 +501,7 @@ msgstr "Contato"
 #: book/templates/book/contact.html:13
 msgid "Questions, speaking requests, or just want to argue? Reach out."
 msgstr "Dúvidas, pedidos de palestra ou apenas quer discutir? Entre em contato."
+"Dúvidas, pedidos de palestra ou apenas quer discutir? Entre em contato."
 "Perguntas, convites para palestras, ou só quer discutir? Entre em contato."
 
 #: book/templates/book/contact.html:19
@@ -550,8 +552,7 @@ msgstr "Para consultas comerciais:"
 
 #: book/templates/book/home.html:5
 msgid ""
-"More Than Parrots, Less Than Gods — A Field Guide to the Human-AI "
-"Partnership"
+"More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership"
 msgstr "Mais que Papagaios, Menos que Deuses — Guia da Parceria Humano-IA"
 
 #: book/templates/book/home.html:6
@@ -560,12 +561,21 @@ msgid ""
 "19 chapters on jobs, ethics, and the future of human work. Pre-order now."
 msgstr ""
 "Um guia cético e prático para trabalhar com IA sem ficar obsoleto. 19 "
-"capítulos sobre empregos, ética e o futuro do trabalho humano. Reserve "
-"agora."
+"capítulos sobre empregos, ética e o futuro do trabalho humano. Reserve agora."
 
 #: book/templates/book/home.html:14
 msgid "Coming 2026"
 msgstr "Lançamento 2026"
+
+#: book/templates/book/home.html:15
+#, fuzzy
+#| msgid "More Than Parrots"
+msgid "More Than Parrots,"
+msgstr "Mais que papagaios"
+
+#: book/templates/book/home.html:15
+msgid "Less Than Gods"
+msgstr "Menos que Deuses"
 
 #: book/templates/book/home.html:16 templates/base.html:9
 msgid ""
@@ -586,6 +596,300 @@ msgstr "Fazer o Scorecard"
 #: book/templates/book/home.html:30
 msgid "More Than Parrots, Less Than Gods — Book Cover"
 msgstr "Mais que Papagaios, Menos que Deuses — Capa"
+
+#: book/templates/book/home.html:42
+msgid "What You'll Learn"
+msgstr "O que você aprenderá"
+
+#: book/templates/book/home.html:49
+#, fuzzy
+#| msgid "Partnership"
+msgid "The Partnership Model"
+msgstr "Parceria"
+
+#: book/templates/book/home.html:50
+msgid ""
+"Why \"replace humans\" is the wrong frame. How to structure workflows where "
+"AI amplifies human judgment."
+msgstr ""
+"Por que \\ é o quadro errado. Como estruturar fluxos de trabalho onde a IA a"
+"mplifica o julgamento humano."
+#: book/templates/book/home.html:56
+msgid "The Skeptic's Guide"
+msgstr "O Guia do Cético"
+
+#: book/templates/book/home.html:57
+msgid ""
+"What AI vendors won't tell you. How to evaluate claims, spot limitations, "
+"and avoid costly mistakes."
+msgstr ""
+"O que os fornecedores de IA não lhe contam. Como avaliar reivindicações, ide"
+"ntificar limitações e evitar erros dispendiosos."
+#: book/templates/book/home.html:63
+msgid "The Practical Playbook"
+msgstr "O manual prático"
+
+#: book/templates/book/home.html:64
+msgid ""
+"Real frameworks for integrating AI into your work, team, and business — "
+"today, not someday."
+msgstr ""
+"Estruturas reais para integrar IA ao seu trabalho, equipe e negócios — hoje,"
+" não algum dia."
+#: book/templates/book/home.html:75
+msgid "Free Interactive Tools"
+msgstr "Ferramentas interativas gratuitas"
+
+#: book/templates/book/home.html:76
+msgid "Start applying the book's concepts before you even buy it."
+msgstr "Comece a aplicar os conceitos do livro antes mesmo de comprá-lo."
+
+#: book/templates/book/home.html:84 book/templates/book/scorecard.html:3
+#: book/templates/book/scorecard.html:21
+#, fuzzy
+#| msgid "Take the Scorecard"
+msgid "AI Readiness Scorecard"
+msgstr "Fazer o Scorecard"
+
+#: book/templates/book/home.html:85
+#, fuzzy
+#| msgid "20 questions. 5 minutes. Know exactly where you stand."
+msgid "20 questions. Instant score. Personalized report on where you stand."
+msgstr "20 perguntas. 5 minutos. Saiba exatamente onde você está."
+
+#: book/templates/book/home.html:86
+msgid "Start Assessment"
+msgstr "Iniciar avaliação"
+
+#: book/templates/book/home.html:95
+#, fuzzy
+#| msgid ""
+#| "What should you actually budget for AI tools? Personalized estimate in 60 "
+#| "seconds."
+msgid ""
+"What should you budget for AI tools? Personalized estimate based on your "
+"role."
+msgstr ""
+"Quanto você realmente deveria orçar para ferramentas de IA? Estimativa "
+"personalizada em 60 segundos."
+
+#: book/templates/book/home.html:96
+#, fuzzy
+#| msgid "Calculator"
+msgid "Calculate"
+msgstr "Calculadora"
+
+#: book/templates/book/home.html:104 book/templates/book/prompt_library.html:3
+msgid "Prompt Library"
+msgstr "Biblioteca de prompts"
+
+#: book/templates/book/home.html:105
+#, fuzzy
+#| msgid ""
+#| "25 free prompts to use immediately. 200+ more in the full collection."
+msgid "25 free prompts to try immediately. 200+ in the paid collection."
+msgstr "25 solicitações gratuitas para tentar imediatamente. Mais de 200 na coleção paga."
+"25 instruções gratuitas para usar imediatamente. Mais de 200 na coleção "
+"completa.25 instruções gratuitas para usar imediatamente. Mais de 200 na "
+"coleção completa."
+
+#: book/templates/book/home.html:106
+#, fuzzy
+#| msgid "Prompts"
+msgid "Browse Prompts"
+msgstr "Prompts"
+
+#: book/templates/book/home.html:121
+#, fuzzy
+#| msgid "Read the First 3 Chapters"
+msgid "Read the First 3 Chapters Free"
+msgstr "Leia os 3 primeiros capítulos"
+
+#: book/templates/book/home.html:122
+#, fuzzy
+#| msgid ""
+#| "Get a taste of the skeptical, first-person voice that makes this book "
+#| "different."
+msgid ""
+"Get a taste of the skeptical, first-person voice that makes this book "
+"different from every other AI book on the shelf."
+msgstr ""
+"Experimente a voz cética em primeira pessoa que torna este livro diferente."
+
+#: book/templates/book/home.html:123
+#, fuzzy
+#| msgid "Overview"
+msgid "Read Free Preview"
+msgstr "Visão Geral"
+
+#: book/templates/book/home.html:127
+msgid "Not Another Hype Book"
+msgstr "Não é outro livro exagerado"
+
+#: book/templates/book/home.html:129
+msgid ""
+"You've read the AI books that promise utopia. You've seen the ones that "
+"predict doom. This is neither."
+msgstr ""
+"Você leu os livros sobre IA que prometem a utopia. Você já viu aqueles que p"
+"redizem a destruição. Isto não é nenhum dos dois."
+#: book/templates/book/home.html:130
+msgid ""
+"This is a practical, skeptical, deeply researched guide to working alongside "
+"AI — written by someone who\\"
+msgstr ""
+"Este é um guia prático, cético e profundamente pesquisado para trabalhar com"
+" IA — escrito por alguém que\\\\"
+#: book/templates/book/home.html:134
+msgid ""
+"19 chapters covering strategy, ethics, implementation, and future-proofing"
+msgstr ""
+"19 capítulos que cobrem estratégia, ética, implementação e preparação para o"
+" futuro"
+#: book/templates/book/home.html:138
+msgid "Numbered endnotes with verified sources — no fabricated stats"
+msgstr "Notas finais numeradas com fontes verificadas – sem estatísticas fabricadas"
+
+#: book/templates/book/home.html:142
+msgid "Written for business leaders, not engineers"
+msgstr "Escrito para líderes empresariais, não para engenheiros"
+
+#: book/templates/book/home.html:146
+msgid "Actionable frameworks you can use Monday morning"
+msgstr "Estruturas acionáveis ​​que você pode usar na segunda de manhã"
+
+#: book/templates/book/home.html:158
+msgid "Choose Your Format"
+msgstr "Escolha o seu formato"
+
+#: book/templates/book/home.html:165
+msgid "Ebook"
+msgstr "E-book"
+
+#: book/templates/book/home.html:168
+msgid "Instant download"
+msgstr "Download instantâneo"
+
+#: book/templates/book/home.html:169
+#, fuzzy
+#| msgid "Get All 19 Chapters"
+msgid "All 19 chapters"
+msgstr "Obtenha todos os 19 capítulos"
+
+#: book/templates/book/home.html:170
+msgid "Works on any device"
+msgstr "Funciona em qualquer dispositivo"
+
+#: book/templates/book/home.html:171
+msgid "Free updates for life"
+msgstr "Atualizações gratuitas para toda a vida"
+
+#: book/templates/book/home.html:173
+#, fuzzy
+#| msgid "The Book"
+msgid "Buy Ebook"
+msgstr "O Livro"
+
+#: book/templates/book/home.html:179
+msgid "Most Popular"
+msgstr "Mais populares"
+
+#: book/templates/book/home.html:181
+#, fuzzy
+#| msgid "Paperback — $18.99"
+msgid "Paperback"
+msgstr "Capa mole — $18,99"
+
+#: book/templates/book/home.html:184
+msgid "Printed on demand"
+msgstr "Impresso sob demanda"
+
+#: book/templates/book/home.html:185
+msgid "Premium matte cover"
+msgstr "Capa fosca premium"
+
+#: book/templates/book/home.html:186
+#, fuzzy
+#| msgid "Free shipping"
+msgid "Global shipping"
+msgstr "Envio grátis"
+
+#: book/templates/book/home.html:187
+msgid "+ Free ebook included"
+msgstr "+ E-book gratuito incluído"
+
+#: book/templates/book/home.html:189
+msgid "Buy Paperback"
+msgstr "Compre brochura"
+
+#: book/templates/book/home.html:196
+#, fuzzy
+#| msgid "Hardcover — $27.99"
+msgid "Hardcover"
+msgstr "Capa dura — $27,99"
+
+#: book/templates/book/home.html:199
+msgid "Collector's edition"
+msgstr "Edição de colecionador"
+
+#: book/templates/book/home.html:200
+msgid "Embossed cover detail"
+msgstr "Detalhe da capa em relevo"
+
+#: book/templates/book/home.html:201
+msgid "Signed by author"
+msgstr "Assinado pelo autor"
+
+#: book/templates/book/home.html:202
+msgid "+ All digital formats"
+msgstr "+ Todos os formatos digitais"
+
+#: book/templates/book/home.html:204
+msgid "Buy Hardcover"
+msgstr "Compre capa dura"
+
+#: book/templates/book/home.html:217
+#, fuzzy
+#| msgid "Read the First 3 Chapters"
+msgid "Get the First Chapter Free"
+msgstr "Leia os 3 primeiros capítulos"
+
+#: book/templates/book/home.html:218
+msgid ""
+"Join 2,000+ readers getting weekly insights on AI strategy. No hype, no spam "
+"— just useful stuff."
+msgstr ""
+"Junte-se a mais de 2.000 leitores para obter insights semanais sobre estraté"
+"gia de IA. Sem exageros, sem spam – apenas coisas úteis."
+#: book/templates/book/home.html:221
+#, fuzzy
+#| msgid "you@company.com"
+msgid "your@email.com"
+msgstr "você@empresa.com"
+
+#: book/templates/book/home.html:224 book/templates/book/home.html:250
+msgid "Subscribe"
+msgstr "Inscrever-se"
+
+#: book/templates/book/home.html:234
+msgid "Subscribing..."
+msgstr "Inscrevendo-se..."
+
+#: book/templates/book/home.html:246
+#, fuzzy
+#| msgid "Something went wrong."
+msgid "Something went wrong"
+msgstr "Algo deu errado."
+
+#: book/templates/book/home.html:249 book/templates/book/scorecard.html:192
+msgid "Network error. Please try again."
+msgstr "Erro de rede. Por favor, tente novamente."
+
+#: book/templates/book/home.html:253
+#, fuzzy
+#| msgid "No spam. Unsubscribe any time."
+msgid "Free chapter + scorecard access. Unsubscribe anytime."
+msgstr "Sem spam. Cancele a inscrição a qualquer momento."
 
 #: book/templates/book/preview_index.html:3
 msgid "Free Chapter Preview"
@@ -627,8 +931,8 @@ msgstr "Uma breve história da inteligência artificial"
 
 #: book/templates/book/preview_index.html:32
 msgid ""
-"Three waves of AI development. Two winters that nearly killed the field. Why"
-" the current wave is different — and why it's also the same."
+"Three waves of AI development. Two winters that nearly killed the field. Why "
+"the current wave is different — and why it's also the same."
 msgstr ""
 "Três ondas de desenvolvimento de IA. Dois invernos que quase mataram o "
 "campo. Por que a onda atual é diferente – e por que também é a mesma."
@@ -665,10 +969,6 @@ msgstr "Obtenha todos os 19 capítulos"
 msgid "Ebook $12.99 • Paperback $18.99 • Hardcover $27.99"
 msgstr "E-book $ 12,99 • Capa comum $ 18,99 • Capa dura $ 27,99"
 
-#: book/templates/book/prompt_library.html:3
-msgid "Prompt Library"
-msgstr "Biblioteca de prompts"
-
 #: book/templates/book/prompt_library.html:20
 msgid "AI Prompt Library"
 msgstr "Biblioteca de prompts de IA"
@@ -677,7 +977,8 @@ msgstr "Biblioteca de prompts de IA"
 msgid "25 free prompts to use immediately. 200+ more in the full collection."
 msgstr "25 instruções gratuitas para usar imediatamente. Mais de 200 na coleção completa."
 "25 instruções gratuitas para usar imediatamente. Mais de 200 na coleção "
-"completa."
+"completa.25 instruções gratuitas para usar imediatamente. Mais de 200 na "
+"coleção completa."
 
 #: book/templates/book/prompt_library.html:27
 msgid "Search prompts..."
@@ -714,6 +1015,7 @@ msgstr "Desbloqueie mais de 200 solicitações premium"
 #: book/templates/book/prompt_library.html:47
 msgid "Get the complete collection organized by industry, role, and use case."
 msgstr "Obtenha a coleção completa organizada por setor, função e caso de uso."
+"Obtenha a coleção completa organizada por setor, função e caso de uso."
 "Obtenha a coleção completa organizada por setor, função e caso de uso."
 
 #: book/templates/book/prompt_library.html:48
@@ -755,13 +1057,13 @@ msgstr "Roteiro de implementação"
 
 #: book/templates/book/prompt_library.html:59
 msgid ""
-"Create a 90-day AI implementation plan for [team/department]. Phase 1: quick"
-" wins (weeks 1-4). Phase 2: integration (weeks 5-8). Phase 3: optimization "
+"Create a 90-day AI implementation plan for [team/department]. Phase 1: quick "
+"wins (weeks 1-4). Phase 2: integration (weeks 5-8). Phase 3: optimization "
 "(weeks 9-12). Include budget estimates and risk mitigation."
 msgstr ""
 "Crie um plano de implementação de IA de 90 dias para [equipe/departamento]. "
-"Fase 1: ganhos rápidos (semanas 1-4). Fase 2: integração (semanas 5-8). Fase"
-" 3: otimização (semanas 9 a 12). Incluir estimativas orçamentárias e "
+"Fase 1: ganhos rápidos (semanas 1-4). Fase 2: integração (semanas 5-8). Fase "
+"3: otimização (semanas 9 a 12). Incluir estimativas orçamentárias e "
 "mitigação de riscos."
 
 #: book/templates/book/prompt_library.html:60
@@ -771,8 +1073,8 @@ msgstr "Primeiro rascunho cético"
 #: book/templates/book/prompt_library.html:60
 msgid ""
 "Write a first draft of [document type] about [topic]. Use a skeptical, "
-"conversational tone. Challenge one common assumption. Include one surprising"
-" statistic (flag it for fact-checking). Keep it under [word count]."
+"conversational tone. Challenge one common assumption. Include one surprising "
+"statistic (flag it for fact-checking). Keep it under [word count]."
 msgstr ""
 "Escreva um primeiro rascunho de [tipo de documento] sobre [tópico]. Use um "
 "tom cético e coloquial. Desafie uma suposição comum. Inclua uma estatística "
@@ -786,8 +1088,8 @@ msgstr "Colaboração IA-Humana"
 #: book/templates/book/prompt_library.html:61
 msgid ""
 "I wrote this: [paste your text]. Improve it without making it sound like AI "
-"wrote it. Keep my voice. Fix awkward phrasing. Add one subtle flourish. Mark"
-" what you changed and why."
+"wrote it. Keep my voice. Fix awkward phrasing. Add one subtle flourish. Mark "
+"what you changed and why."
 msgstr ""
 "Eu escrevi isto: [cole seu texto]. Melhore-o sem fazer parecer que foi "
 "escrito pela IA. Mantenha minha voz. Corrija frases estranhas. Adicione um "
@@ -800,8 +1102,8 @@ msgstr "Sumário executivo"
 #: book/templates/book/prompt_library.html:62
 msgid ""
 "Summarize this [report/document] into 3 bullet points for a CEO who has 30 "
-"seconds. Each bullet must include: (1) the finding, (2) the implication, (3)"
-" the recommended action."
+"seconds. Each bullet must include: (1) the finding, (2) the implication, (3) "
+"the recommended action."
 msgstr ""
 "Resuma este [relatório/documento] em três marcadores para um CEO que tem 30 "
 "segundos. Cada item deve incluir: (1) a conclusão, (2) a implicação, (3) a "
@@ -816,9 +1118,9 @@ msgid ""
 "I have this data: [paste or describe]. Turn it into a narrative that a non-"
 "technical stakeholder can act on. Include: (1) the headline, (2) the \\"
 msgstr ""
-"Eu tenho estes dados: [colar ou descrever]. Transforme-o em uma narrativa na"
-" qual uma parte interessada não técnica possa agir. Inclua: (1) o título, "
-"(2) o \\"
+"Eu tenho estes dados: [colar ou descrever]. Transforme-o em uma narrativa na "
+"qual uma parte interessada não técnica possa agir. Inclua: (1) o título, (2) "
+"o \\"
 
 #: book/templates/book/prompt_library.html:64
 msgid "Bias Detector"
@@ -830,9 +1132,9 @@ msgid ""
 "sampling bias, (2) measurement bias, (3) algorithmic bias risk, (4) one "
 "question the data cannot answer. Suggest one way to validate your concerns."
 msgstr ""
-"Analise este conjunto de dados/descrição para possíveis distorções: [colar]."
-" Identifique: (1) viés de amostragem, (2) viés de medição, (3) risco de viés"
-" algorítmico, (4) uma pergunta que os dados não conseguem responder. Sugira "
+"Analise este conjunto de dados/descrição para possíveis distorções: [colar]. "
+"Identifique: (1) viés de amostragem, (2) viés de medição, (3) risco de viés "
+"algorítmico, (4) uma pergunta que os dados não conseguem responder. Sugira "
 "uma maneira de validar suas preocupações."
 
 #: book/templates/book/prompt_library.html:65
@@ -855,9 +1157,9 @@ msgstr "Assistente de revisão de código"
 
 #: book/templates/book/prompt_library.html:66
 msgid ""
-"Review this code: [paste]. Identify: (1) bugs or edge cases, (2) performance"
-" issues, (3) security concerns, (4) whether this is even the right approach."
-" Be critical — assume I\\'m wrong until proven otherwise."
+"Review this code: [paste]. Identify: (1) bugs or edge cases, (2) performance "
+"issues, (3) security concerns, (4) whether this is even the right approach. "
+"Be critical — assume I\\'m wrong until proven otherwise."
 msgstr ""
 "Revise este código: [colar]. Identifique: (1) bugs ou casos extremos, (2) "
 "problemas de desempenho, (3) preocupações de segurança, (4) se esta é a "
@@ -886,12 +1188,12 @@ msgstr "Geração de Conceito"
 #: book/templates/book/prompt_library.html:68
 msgid ""
 "Generate 5 unconventional ideas for [project/goal]. Constraint: each idea "
-"must use AI in a way that amplifies human judgment rather than replacing it."
-" Rate each on: feasibility, originality, risk."
+"must use AI in a way that amplifies human judgment rather than replacing it. "
+"Rate each on: feasibility, originality, risk."
 msgstr ""
 "Gere 5 ideias não convencionais para [projeto/objetivo]. Restrição: cada "
-"ideia deve usar a IA de uma forma que amplifique o julgamento humano, em vez"
-" de substituí-lo. Avalie cada um em: viabilidade, originalidade, risco."
+"ideia deve usar a IA de uma forma que amplifique o julgamento humano, em vez "
+"de substituí-lo. Avalie cada um em: viabilidade, originalidade, risco."
 
 #: book/templates/book/prompt_library.html:69
 msgid "Analogy Builder"
@@ -904,8 +1206,8 @@ msgid ""
 "sometimes fails unexpectedly. Avoid \\"
 msgstr ""
 "Explique [conceito complexo de IA] usando uma analogia de [domínio "
-"familiar]. A analogia deve capturar: (1) como funciona, (2) suas limitações,"
-" (3) por que às vezes falha inesperadamente. Evitar \\"
+"familiar]. A analogia deve capturar: (1) como funciona, (2) suas limitações, "
+"(3) por que às vezes falha inesperadamente. Evitar \\"
 
 #: book/templates/book/prompt_library.html:70
 msgid "Team Upskill Plan"
@@ -918,8 +1220,8 @@ msgid ""
 "evaluation and ethics. Include 2 hours/week time commitment."
 msgstr ""
 "Elabore um plano de aprimoramento de IA de 4 semanas para [função da "
-"equipe]. Semana 1: fundamentos. Semana 2: prática com uma ferramenta. Semana"
-" 3: integração do fluxo de trabalho. Semana 4: avaliação e ética. Inclui "
+"equipe]. Semana 1: fundamentos. Semana 2: prática com uma ferramenta. Semana "
+"3: integração do fluxo de trabalho. Semana 4: avaliação e ética. Inclui "
 "compromisso de 2 horas/semana."
 
 #: book/templates/book/prompt_library.html:71
@@ -929,11 +1231,11 @@ msgid "ROI Calculator"
 msgstr "Calculadora"
 
 #: book/templates/book/prompt_library.html:71
+#, python-format
 msgid ""
 "Help me build an ROI model for [AI initiative]. Inputs: [current costs], "
-"[expected benefits], [implementation costs]. Output: (1) payback period, (2)"
-" 3-year NPV, (3) sensitivity analysis for 50%% and 150%% of expected "
-"benefits."
+"[expected benefits], [implementation costs]. Output: (1) payback period, (2) "
+"3-year NPV, (3) sensitivity analysis for 50%% and 150%% of expected benefits."
 msgstr ""
 "Ajude-me a construir um modelo de ROI para [iniciativa de IA]. Insumos: "
 "[custos atuais], [benefícios esperados], [custos de implementação]. "
@@ -950,8 +1252,7 @@ msgid ""
 "assertive but not aggressive. Must include: (1) clear ask, (2) the \\"
 msgstr ""
 "Elabore um e-mail diplomático para [destinatário] sobre [assunto delicado]. "
-"Tom: assertivo, mas não agressivo. Deve incluir: (1) pergunta clara, (2) o "
-"\\"
+"Tom: assertivo, mas não agressivo. Deve incluir: (1) pergunta clara, (2) o \\"
 
 #: book/templates/book/prompt_library.html:73
 msgid "Prompt Engineering"
@@ -963,8 +1264,8 @@ msgid ""
 "the base prompt, (2) 3 variations to test, (3) the evaluation criteria, (4) "
 "common failure modes and how to avoid them."
 msgstr ""
-"Preciso de um prompt que produza consistentemente [saída específica]. Dê-me:"
-" (1) o prompt básico, (2) 3 variações para testar, (3) os critérios de "
+"Preciso de um prompt que produza consistentemente [saída específica]. Dê-me: "
+"(1) o prompt básico, (2) 3 variações para testar, (3) os critérios de "
 "avaliação, (4) modos de falha comuns e como evitá-los."
 
 #: book/templates/book/prompt_library.html:74
@@ -1036,9 +1337,9 @@ msgid ""
 "debugging it. Don\\'t just give the answer — teach me the mental model. Ask "
 "me one question at a time."
 msgstr ""
-"Eu tenho este erro: [erro de colagem]. Sistema: [descrever]. Acompanhe-me na"
-" depuração. Não dê apenas a resposta – ensine-me o modelo mental. Faça-me "
-"uma pergunta de cada vez."
+"Eu tenho este erro: [erro de colagem]. Sistema: [descrever]. Acompanhe-me na "
+"depuração. Não dê apenas a resposta – ensine-me o modelo mental. Faça-me uma "
+"pergunta de cada vez."
 
 #: book/templates/book/prompt_library.html:79
 msgid "Narrative Arc"
@@ -1047,12 +1348,12 @@ msgstr "Arco Narrativo"
 #: book/templates/book/prompt_library.html:79
 msgid ""
 "Structure a [presentation type] about [topic] as a story. Opening hook, "
-"rising tension (the problem), climax (the insight), resolution (the action)."
-" 5 minutes max. One surprise moment."
+"rising tension (the problem), climax (the insight), resolution (the action). "
+"5 minutes max. One surprise moment."
 msgstr ""
-"Estruture um [tipo de apresentação] sobre [tópico] como uma história. Gancho"
-" de abertura, tensão crescente (o problema), clímax (o insight), resolução "
-"(a ação). 5 minutos no máximo. Um momento surpresa."
+"Estruture um [tipo de apresentação] sobre [tópico] como uma história. Gancho "
+"de abertura, tensão crescente (o problema), clímax (o insight), resolução (a "
+"ação). 5 minutos no máximo. Um momento surpresa."
 
 #: book/templates/book/prompt_library.html:80
 msgid "Exit Strategy"
@@ -1065,9 +1366,9 @@ msgid ""
 "reversal, (4) timeline, (5) what we keep vs. discard."
 msgstr ""
 "Se precisarmos reverter nosso investimento em IA em [área], qual será o "
-"caminho de saída? Inclui: (1) plano de portabilidade de dados, (2) transição"
-" de equipe, (3) custo de reversão, (4) cronograma, (5) o que mantemos versus"
-" descartamos."
+"caminho de saída? Inclui: (1) plano de portabilidade de dados, (2) transição "
+"de equipe, (3) custo de reversão, (4) cronograma, (5) o que mantemos versus "
+"descartamos."
 
 #: book/templates/book/prompt_library.html:81
 msgid "Signal vs. Noise"
@@ -1091,12 +1392,6 @@ msgstr "Cópia"
 msgid "Prompt copied!"
 msgstr "Alerta copiado!"
 
-#: book/templates/book/scorecard.html:3 book/templates/book/scorecard.html:21
-#, fuzzy
-#| msgid "Take the Scorecard"
-msgid "AI Readiness Scorecard"
-msgstr "Fazer o Scorecard"
-
 #: book/templates/book/scorecard.html:22
 msgid "20 questions. 5 minutes. Know exactly where you stand."
 msgstr "20 perguntas. 5 minutos. Saiba exatamente onde você está."
@@ -1117,8 +1412,7 @@ msgstr "Digite seu e-mail para receber seu relatório personalizado:"
 msgid "you@company.com"
 msgstr "você@empresa.com"
 
-#: book/templates/book/scorecard.html:60
-#: book/templates/book/scorecard.html:189
+#: book/templates/book/scorecard.html:60 book/templates/book/scorecard.html:189
 #: book/templates/book/scorecard.html:194
 msgid "Get My Report"
 msgstr "Obter meu relatório"
@@ -1166,8 +1460,8 @@ msgstr "O praticante"
 #: book/templates/book/scorecard.html:92
 msgid ""
 "You're actively using AI but want to scale. The advanced chapters on "
-"governance, team building, and future-proofing (Chapters 14-19) will be most"
-" valuable."
+"governance, team building, and future-proofing (Chapters 14-19) will be most "
+"valuable."
 msgstr ""
 "Você está usando IA ativamente, mas deseja escalar. Os capítulos avançados "
 "sobre governação, formação de equipas e preparação para o futuro (Capítulos "
@@ -1197,10 +1491,6 @@ msgstr "Enviando..."
 #: book/templates/book/scorecard.html:187
 msgid "Something went wrong."
 msgstr "Algo deu errado."
-
-#: book/templates/book/scorecard.html:192
-msgid "Network error. Please try again."
-msgstr "Erro de rede. Por favor, tente novamente."
 
 #: book/views.py:26
 msgid "How would you rate your current understanding of AI capabilities?"
@@ -1298,8 +1588,8 @@ msgstr "Mudanças implementadas"
 #: book/views.py:30
 msgid "How comfortable are you evaluating AI vendor claims?"
 msgstr "Você se sente confortável avaliando as reivindicações dos fornecedores de IA?"
-"Você se sente confortável avaliando as reivindicações dos fornecedores de "
-"IA?"
+"Você se sente confortável avaliando as reivindicações dos fornecedores de IA?"
+"Você se sente confortável avaliando as reivindicações dos fornecedores de IA?"
 
 #: book/views.py:30
 msgid "Very uncomfortable"
@@ -1710,14 +2000,20 @@ msgid "$2,000+/month"
 msgstr "$ 2.000 +/mês"
 
 #: book/views.py:72
+#, fuzzy, python-format
+#| msgid "10-25% faster"
 msgid "10-25% faster"
 msgstr "10-25% mais rápido"
 
 #: book/views.py:73
+#, fuzzy, python-format
+#| msgid "25-50% faster"
 msgid "25-50% faster"
 msgstr "25-50% mais rápido"
 
 #: book/views.py:74
+#, fuzzy, python-format
+#| msgid "50-100% faster"
 msgid "50-100% faster"
 msgstr "50-100% mais rápido"
 

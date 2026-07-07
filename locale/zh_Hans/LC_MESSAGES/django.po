@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MTP 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 05:49+0000\n"
+"POT-Creation-Date: 2026-07-07 14:19+0000\n"
 "PO-Revision-Date: 2026-07-06 12:00+0000\n"
 "Last-Translator: Glen Ansell\n"
 "Language-Team: Chinese\n"
@@ -28,8 +28,7 @@ msgstr "不仅仅是鹦鹉"
 msgid "All posts"
 msgstr "所有帖子"
 
-#: blog/templates/blog/category.html:29
-#: blog/templates/blog/post_detail.html:28
+#: blog/templates/blog/category.html:29 blog/templates/blog/post_detail.html:28
 #: blog/templates/blog/post_list.html:37
 #, python-format
 msgid "%(post.reading_time_minutes)s min read"
@@ -108,27 +107,35 @@ msgstr "关于作者"
 msgid ""
 "Coding since age 7. First IT business at 23. MSc in research psychology. "
 "Harvard AI certificate. 12+ years building AI and modeling systems."
-msgstr "7岁开始编程。23岁创办第一家IT公司。研究心理学硕士。哈佛AI证书。12年以上构建AI和建模系统经验。"
+msgstr ""
+"7岁开始编程。23岁创办第一家IT公司。研究心理学硕士。哈佛AI证书。12年以上构建AI"
+"和建模系统经验。"
 
 #: book/templates/book/about.html:21
 msgid ""
-"I've watched AI go from academic curiosity to boardroom buzzword. I've built"
-" systems that worked and systems that failed. I've seen vendors promise the "
+"I've watched AI go from academic curiosity to boardroom buzzword. I've built "
+"systems that worked and systems that failed. I've seen vendors promise the "
 "moon and deliver a rock."
-msgstr "我见证了AI从学术好奇到董事会流行词。我构建过成功的系统，也构建过失败的系统。我见过供应商承诺月亮却只交付石头。"
+msgstr ""
+"我见证了AI从学术好奇到董事会流行词。我构建过成功的系统，也构建过失败的系统。"
+"我见过供应商承诺月亮却只交付石头。"
 
 #: book/templates/book/about.html:22
 msgid ""
-"This book is what I wish someone had handed me five years ago — a skeptical,"
-" practical, deeply researched guide to working with AI without losing your "
+"This book is what I wish someone had handed me five years ago — a skeptical, "
+"practical, deeply researched guide to working with AI without losing your "
 "mind or your job."
-msgstr "这本书是我希望五年前有人能交给我的——一本怀疑论、实用、深度研究的指南，教你如何与AI共事而不丢掉理智或工作。"
+msgstr ""
+"这本书是我希望五年前有人能交给我的——一本怀疑论、实用、深度研究的指南，教你如"
+"何与AI共事而不丢掉理智或工作。"
 
 #: book/templates/book/about.html:23
 msgid ""
-"I live in South Africa with my partner Donné, daughter Tayla, and four dogs."
-" I play tennis and padel. I wear an Apple Watch. I don't have a garden."
-msgstr "我与伴侣Donné、女儿Tayla和四只狗住在南非。我打网球和板式网球。我戴Apple Watch。我没有花园。"
+"I live in South Africa with my partner Donné, daughter Tayla, and four dogs. "
+"I play tennis and padel. I wear an Apple Watch. I don't have a garden."
+msgstr ""
+"我与伴侣Donné、女儿Tayla和四只狗住在南非。我打网球和板式网球。我戴Apple "
+"Watch。我没有花园。"
 
 #: book/templates/book/about.html:25
 msgid "Get in Touch"
@@ -245,7 +252,7 @@ msgstr "——不满意？全额退款。"
 msgid "Also available on:"
 msgstr "也可在以下平台获取："
 
-#: book/templates/book/calculator.html:3
+#: book/templates/book/calculator.html:3 book/templates/book/home.html:94
 #, fuzzy
 #| msgid "Calculator"
 msgid "Resource Calculator"
@@ -313,7 +320,9 @@ msgstr "投资回报率预测"
 msgid ""
 "At your selected output increase, you should break even in <strong "
 "id=\"breakEven\">0</strong> months."
-msgstr "按照您选择的产量增长，您应该在 <strong id=\"breakEven\">0</strong> 个月内实现收支平衡。"
+msgstr ""
+"按照您选择的产量增长，您应该在 <strong id=\"breakEven\">0</strong> 个月内实现"
+"收支平衡。"
 
 #: book/templates/book/calculator.html:88
 msgid "Annual time savings: <strong id=\"timeSaved\">0</strong> hours"
@@ -377,7 +386,9 @@ msgstr "想要剩下的吗？"
 msgid ""
 "This was Chapter %(chapter_number)s of 19. Get the complete book — ebook, "
 "paperback, or hardcover."
-msgstr "这是第 %(chapter_number)s 章，共 19 章。获取完整的书 — 电子书、平装书或精装书。"
+msgstr ""
+"这是第 %(chapter_number)s 章，共 19 章。获取完整的书 — 电子书、平装书或精装"
+"书。"
 
 #: book/templates/book/chapter_preview.html:67
 #: book/templates/book/preview_index.html:54
@@ -518,19 +529,30 @@ msgstr "商务咨询："
 
 #: book/templates/book/home.html:5
 msgid ""
-"More Than Parrots, Less Than Gods — A Field Guide to the Human-AI "
-"Partnership"
+"More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership"
 msgstr "不只是鹦鹉，不及神祇——人机合作实战指南"
 
 #: book/templates/book/home.html:6
 msgid ""
 "A skeptical, practical guide to working with AI without becoming obsolete. "
 "19 chapters on jobs, ethics, and the future of human work. Pre-order now."
-msgstr "一本关于如何与AI共事而不被淘汰的怀疑论实用指南。19章探讨工作、伦理和人类工作的未来。立即预订。"
+msgstr ""
+"一本关于如何与AI共事而不被淘汰的怀疑论实用指南。19章探讨工作、伦理和人类工作"
+"的未来。立即预订。"
 
 #: book/templates/book/home.html:14
 msgid "Coming 2026"
 msgstr "2026年推出"
+
+#: book/templates/book/home.html:15
+#, fuzzy
+#| msgid "More Than Parrots"
+msgid "More Than Parrots,"
+msgstr "不仅仅是鹦鹉"
+
+#: book/templates/book/home.html:15
+msgid "Less Than Gods"
+msgstr "小于神"
 
 #: book/templates/book/home.html:16 templates/base.html:9
 msgid ""
@@ -551,6 +573,280 @@ msgstr "使用评分卡"
 #: book/templates/book/home.html:30
 msgid "More Than Parrots, Less Than Gods — Book Cover"
 msgstr "不只是鹦鹉，不及神祇——封面"
+
+#: book/templates/book/home.html:42
+msgid "What You'll Learn"
+msgstr "你将学到什么"
+
+#: book/templates/book/home.html:49
+#, fuzzy
+#| msgid "Partnership"
+msgid "The Partnership Model"
+msgstr "合作"
+
+#: book/templates/book/home.html:50
+msgid ""
+"Why \"replace humans\" is the wrong frame. How to structure workflows where "
+"AI amplifies human judgment."
+msgstr "为什么 \\ 是错误的框架。如何构建人工智能增强人类判断力的工作流程。"
+#: book/templates/book/home.html:56
+msgid "The Skeptic's Guide"
+msgstr "怀疑论者指南"
+
+#: book/templates/book/home.html:57
+msgid ""
+"What AI vendors won't tell you. How to evaluate claims, spot limitations, "
+"and avoid costly mistakes."
+msgstr "人工智能供应商不会告诉你的事情。如何评估索赔、发现局限性并避免代价高昂的错误。"
+#: book/templates/book/home.html:63
+msgid "The Practical Playbook"
+msgstr "实用手册"
+
+#: book/templates/book/home.html:64
+msgid ""
+"Real frameworks for integrating AI into your work, team, and business — "
+"today, not someday."
+msgstr "将人工智能集成到您的工作、团队和业务中的真正框架——今天，而不是有一天。"
+#: book/templates/book/home.html:75
+msgid "Free Interactive Tools"
+msgstr "免费互动工具"
+
+#: book/templates/book/home.html:76
+msgid "Start applying the book's concepts before you even buy it."
+msgstr "在购买之前就开始应用这本书的概念。"
+
+#: book/templates/book/home.html:84 book/templates/book/scorecard.html:3
+#: book/templates/book/scorecard.html:21
+#, fuzzy
+#| msgid "Take the Scorecard"
+msgid "AI Readiness Scorecard"
+msgstr "使用评分卡"
+
+#: book/templates/book/home.html:85
+#, fuzzy
+#| msgid "20 questions. 5 minutes. Know exactly where you stand."
+msgid "20 questions. Instant score. Personalized report on where you stand."
+msgstr "20 个问题。 5分钟。确切地知道你的立场。"
+
+#: book/templates/book/home.html:86
+msgid "Start Assessment"
+msgstr "开始评估"
+
+#: book/templates/book/home.html:95
+#, fuzzy
+#| msgid ""
+#| "What should you actually budget for AI tools? Personalized estimate in 60 "
+#| "seconds."
+msgid ""
+"What should you budget for AI tools? Personalized estimate based on your "
+"role."
+msgstr "您实际上应该为人工智能工具预算多少？ 60 秒内进行个性化估算。"
+
+#: book/templates/book/home.html:96
+#, fuzzy
+#| msgid "Calculator"
+msgid "Calculate"
+msgstr "计算器"
+
+#: book/templates/book/home.html:104 book/templates/book/prompt_library.html:3
+msgid "Prompt Library"
+msgstr "提示库"
+
+#: book/templates/book/home.html:105
+#, fuzzy
+#| msgid ""
+#| "25 free prompts to use immediately. 200+ more in the full collection."
+msgid "25 free prompts to try immediately. 200+ in the paid collection."
+msgstr "25 个免费提示立即使用。完整系列中有 200 多个。"
+
+#: book/templates/book/home.html:106
+#, fuzzy
+#| msgid "Prompts"
+msgid "Browse Prompts"
+msgstr "提示词"
+
+#: book/templates/book/home.html:121
+#, fuzzy
+#| msgid "Read the First 3 Chapters"
+msgid "Read the First 3 Chapters Free"
+msgstr "阅读前 3 章"
+
+#: book/templates/book/home.html:122
+#, fuzzy
+#| msgid ""
+#| "Get a taste of the skeptical, first-person voice that makes this book "
+#| "different."
+msgid ""
+"Get a taste of the skeptical, first-person voice that makes this book "
+"different from every other AI book on the shelf."
+msgstr "体验一下使这本书与众不同的怀疑的第一人称声音。"
+
+#: book/templates/book/home.html:123
+#, fuzzy
+#| msgid "Overview"
+msgid "Read Free Preview"
+msgstr "概述"
+
+#: book/templates/book/home.html:127
+msgid "Not Another Hype Book"
+msgstr "不是另一本炒作书"
+
+#: book/templates/book/home.html:129
+msgid ""
+"You've read the AI books that promise utopia. You've seen the ones that "
+"predict doom. This is neither."
+msgstr "你已经读过那些承诺乌托邦的人工智能书籍。你已经见过那些预言厄运的人了。这两者都不是。"
+#: book/templates/book/home.html:130
+msgid ""
+"This is a practical, skeptical, deeply researched guide to working alongside "
+"AI — written by someone who\\"
+msgstr "这是一本实用的、持怀疑态度的、经过深入研究的与人工智能一起工作的指南——由以下人编写："
+#: book/templates/book/home.html:134
+msgid ""
+"19 chapters covering strategy, ethics, implementation, and future-proofing"
+msgstr "19 章涵盖战略、道德、实施和面向未​​来"
+#: book/templates/book/home.html:138
+msgid "Numbered endnotes with verified sources — no fabricated stats"
+msgstr "带有经过验证来源的编号尾注——没有捏造的统计数据"
+
+#: book/templates/book/home.html:142
+msgid "Written for business leaders, not engineers"
+msgstr "为商业领袖而非工程师编写"
+
+#: book/templates/book/home.html:146
+msgid "Actionable frameworks you can use Monday morning"
+msgstr "周一早上可以使用的可行框架"
+
+#: book/templates/book/home.html:158
+msgid "Choose Your Format"
+msgstr "选择您的格式"
+
+#: book/templates/book/home.html:165
+msgid "Ebook"
+msgstr "电子书"
+
+#: book/templates/book/home.html:168
+msgid "Instant download"
+msgstr "即时下载"
+
+#: book/templates/book/home.html:169
+#, fuzzy
+#| msgid "Get All 19 Chapters"
+msgid "All 19 chapters"
+msgstr "获取全部 19 章"
+
+#: book/templates/book/home.html:170
+msgid "Works on any device"
+msgstr "适用于任何设备"
+
+#: book/templates/book/home.html:171
+msgid "Free updates for life"
+msgstr "终身免费更新"
+
+#: book/templates/book/home.html:173
+#, fuzzy
+#| msgid "The Book"
+msgid "Buy Ebook"
+msgstr "书籍"
+
+#: book/templates/book/home.html:179
+msgid "Most Popular"
+msgstr "最受欢迎"
+
+#: book/templates/book/home.html:181
+#, fuzzy
+#| msgid "Paperback — $18.99"
+msgid "Paperback"
+msgstr "平装本 — $18.99"
+
+#: book/templates/book/home.html:184
+msgid "Printed on demand"
+msgstr "按需印刷"
+
+#: book/templates/book/home.html:185
+msgid "Premium matte cover"
+msgstr "优质哑光封面"
+
+#: book/templates/book/home.html:186
+#, fuzzy
+#| msgid "Free shipping"
+msgid "Global shipping"
+msgstr "免费配送"
+
+#: book/templates/book/home.html:187
+msgid "+ Free ebook included"
+msgstr "+ 包含免费电子书"
+
+#: book/templates/book/home.html:189
+msgid "Buy Paperback"
+msgstr "购买平装本"
+
+#: book/templates/book/home.html:196
+#, fuzzy
+#| msgid "Hardcover — $27.99"
+msgid "Hardcover"
+msgstr "精装本 — $27.99"
+
+#: book/templates/book/home.html:199
+msgid "Collector's edition"
+msgstr "珍藏版"
+
+#: book/templates/book/home.html:200
+msgid "Embossed cover detail"
+msgstr "封面浮雕细节"
+
+#: book/templates/book/home.html:201
+msgid "Signed by author"
+msgstr "作者签名"
+
+#: book/templates/book/home.html:202
+msgid "+ All digital formats"
+msgstr "+ 所有数字格式"
+
+#: book/templates/book/home.html:204
+msgid "Buy Hardcover"
+msgstr "购买精装本"
+
+#: book/templates/book/home.html:217
+#, fuzzy
+#| msgid "Read the First 3 Chapters"
+msgid "Get the First Chapter Free"
+msgstr "阅读前 3 章"
+
+#: book/templates/book/home.html:218
+msgid ""
+"Join 2,000+ readers getting weekly insights on AI strategy. No hype, no spam "
+"— just useful stuff."
+msgstr "与 2,000 多名读者一起每周获取有关人工智能战略的见解。没有炒作，没有垃圾邮件——只有有用的东西。"
+#: book/templates/book/home.html:221
+#, fuzzy
+#| msgid "you@company.com"
+msgid "your@email.com"
+msgstr "你@company.com"
+
+#: book/templates/book/home.html:224 book/templates/book/home.html:250
+msgid "Subscribe"
+msgstr "订阅"
+
+#: book/templates/book/home.html:234
+msgid "Subscribing..."
+msgstr "正在订阅..."
+
+#: book/templates/book/home.html:246
+#, fuzzy
+#| msgid "Something went wrong."
+msgid "Something went wrong"
+msgstr "出了点问题。"
+
+#: book/templates/book/home.html:249 book/templates/book/scorecard.html:192
+msgid "Network error. Please try again."
+msgstr "网络错误。请再试一次。"
+
+#: book/templates/book/home.html:253
+#, fuzzy
+#| msgid "No spam. Unsubscribe any time."
+msgid "Free chapter + scorecard access. Unsubscribe anytime."
+msgstr "没有垃圾邮件。随时取消订阅。"
 
 #: book/templates/book/preview_index.html:3
 msgid "Free Chapter Preview"
@@ -574,7 +870,9 @@ msgstr "人工智能到底是什么（以及它不是什么）"
 msgid ""
 "Pattern recognition at scale. The five things people wrongly believe about "
 "AI. What AI does better than humans — and where it fails catastrophically."
-msgstr "大规模模式识别。人们对人工智能的五个错误看法。人工智能在哪些方面比人类做得更好，以及在哪些方面会出现灾难性的失败。"
+msgstr ""
+"大规模模式识别。人们对人工智能的五个错误看法。人工智能在哪些方面比人类做得更"
+"好，以及在哪些方面会出现灾难性的失败。"
 
 #: book/templates/book/preview_index.html:23
 #, fuzzy
@@ -588,9 +886,11 @@ msgstr "人工智能简史"
 
 #: book/templates/book/preview_index.html:32
 msgid ""
-"Three waves of AI development. Two winters that nearly killed the field. Why"
-" the current wave is different — and why it's also the same."
-msgstr "人工智能发展的三波浪潮。两个冬天几乎杀死了田地。为什么当前的浪潮有所不同——又为何又是相同的。"
+"Three waves of AI development. Two winters that nearly killed the field. Why "
+"the current wave is different — and why it's also the same."
+msgstr ""
+"人工智能发展的三波浪潮。两个冬天几乎杀死了田地。为什么当前的浪潮有所不同——又"
+"为何又是相同的。"
 
 #: book/templates/book/preview_index.html:33
 #, fuzzy
@@ -606,7 +906,9 @@ msgstr "变压器革命"
 msgid ""
 "The paper that changed everything. Self-attention explained without math. "
 "Why context is everything — and why this is still not magic."
-msgstr "这张纸改变了一切。自注意力无需数学即可解释。为什么上下文就是一切——以及为什么这仍然不神奇。"
+msgstr ""
+"这张纸改变了一切。自注意力无需数学即可解释。为什么上下文就是一切——以及为什么"
+"这仍然不神奇。"
 
 #: book/templates/book/preview_index.html:43
 #, fuzzy
@@ -621,10 +923,6 @@ msgstr "获取全部 19 章"
 #: book/templates/book/preview_index.html:53
 msgid "Ebook $12.99 • Paperback $18.99 • Hardcover $27.99"
 msgstr "电子书 12.99 美元 • 平装本 18.99 美元 • 精装本 27.99 美元"
-
-#: book/templates/book/prompt_library.html:3
-msgid "Prompt Library"
-msgstr "提示库"
 
 #: book/templates/book/prompt_library.html:20
 msgid "AI Prompt Library"
@@ -684,8 +982,8 @@ msgid ""
 "your setup]. Identify 3 red flags, 2 missed opportunities, and 1 thing we "
 "should stop doing immediately."
 msgstr ""
-"充当持怀疑态度的人工智能顾问。查看我们当前的 AI 使用情况：[描述您的设置]。确定 3 个危险信号、2 个错过的机会以及 1 "
-"件我们应该立即停止做的事情。"
+"充当持怀疑态度的人工智能顾问。查看我们当前的 AI 使用情况：[描述您的设置]。确"
+"定 3 个危险信号、2 个错过的机会以及 1 件我们应该立即停止做的事情。"
 
 #: book/templates/book/prompt_library.html:58
 msgid "Vendor Evaluation"
@@ -697,8 +995,9 @@ msgid ""
 "genuine strengths, (2) 3 limitations they won\\'t advertise, (3) 2 cheaper "
 "alternatives, (4) whether we actually need this or if we\\'re FOMO-buying."
 msgstr ""
-"针对我们的用例评估 [AI 供应商/产品]：[描述]。给我：(1) 3 个真正的优势，(2) 3 个他们不会做广告的限制，(3) 2 "
-"个更便宜的替代品，(4) 我们是否真的需要这个，或者我们是否在 FOMO 购买。"
+"针对我们的用例评估 [AI 供应商/产品]：[描述]。给我：(1) 3 个真正的优势，(2) 3 "
+"个他们不会做广告的限制，(3) 2 个更便宜的替代品，(4) 我们是否真的需要这个，或"
+"者我们是否在 FOMO 购买。"
 
 #: book/templates/book/prompt_library.html:59
 msgid "Implementation Roadmap"
@@ -706,12 +1005,13 @@ msgstr "实施路线图"
 
 #: book/templates/book/prompt_library.html:59
 msgid ""
-"Create a 90-day AI implementation plan for [team/department]. Phase 1: quick"
-" wins (weeks 1-4). Phase 2: integration (weeks 5-8). Phase 3: optimization "
+"Create a 90-day AI implementation plan for [team/department]. Phase 1: quick "
+"wins (weeks 1-4). Phase 2: integration (weeks 5-8). Phase 3: optimization "
 "(weeks 9-12). Include budget estimates and risk mitigation."
 msgstr ""
-"为[团队/部门]制定 90 天的人工智能实施计划。第一阶段：快速获胜（第 1-4 周）。第 2 阶段：整合（第 5-8 周）。第 3 阶段：优化（第 "
-"9-12 周）。包括预算估算和风险缓解。"
+"为[团队/部门]制定 90 天的人工智能实施计划。第一阶段：快速获胜（第 1-4 周）。"
+"第 2 阶段：整合（第 5-8 周）。第 3 阶段：优化（第 9-12 周）。包括预算估算和风"
+"险缓解。"
 
 #: book/templates/book/prompt_library.html:60
 msgid "Skeptical First Draft"
@@ -720,10 +1020,11 @@ msgstr "初稿存疑"
 #: book/templates/book/prompt_library.html:60
 msgid ""
 "Write a first draft of [document type] about [topic]. Use a skeptical, "
-"conversational tone. Challenge one common assumption. Include one surprising"
-" statistic (flag it for fact-checking). Keep it under [word count]."
+"conversational tone. Challenge one common assumption. Include one surprising "
+"statistic (flag it for fact-checking). Keep it under [word count]."
 msgstr ""
-"撰写关于[主题]的[文档类型]初稿。使用怀疑的、对话的语气。挑战一个常见的假设。包括一项令人惊讶的统计数据（将其标记为事实检查）。将其保留在[字数统计]下。"
+"撰写关于[主题]的[文档类型]初稿。使用怀疑的、对话的语气。挑战一个常见的假设。"
+"包括一项令人惊讶的统计数据（将其标记为事实检查）。将其保留在[字数统计]下。"
 
 #: book/templates/book/prompt_library.html:61
 msgid "AI-Human Collaboration"
@@ -732,10 +1033,11 @@ msgstr "人工智能与人类协作"
 #: book/templates/book/prompt_library.html:61
 msgid ""
 "I wrote this: [paste your text]. Improve it without making it sound like AI "
-"wrote it. Keep my voice. Fix awkward phrasing. Add one subtle flourish. Mark"
-" what you changed and why."
+"wrote it. Keep my voice. Fix awkward phrasing. Add one subtle flourish. Mark "
+"what you changed and why."
 msgstr ""
-"我写了这个：[粘贴您的文字]。改进它，但不要让它听起来像人工智能写的那样。保留我的声音。修正尴尬的措辞。添加一种微妙的装饰。标记您更改的内容以及原因。"
+"我写了这个：[粘贴您的文字]。改进它，但不要让它听起来像人工智能写的那样。保留"
+"我的声音。修正尴尬的措辞。添加一种微妙的装饰。标记您更改的内容以及原因。"
 
 #: book/templates/book/prompt_library.html:62
 msgid "Executive Summary"
@@ -744,10 +1046,11 @@ msgstr "执行摘要"
 #: book/templates/book/prompt_library.html:62
 msgid ""
 "Summarize this [report/document] into 3 bullet points for a CEO who has 30 "
-"seconds. Each bullet must include: (1) the finding, (2) the implication, (3)"
-" the recommended action."
+"seconds. Each bullet must include: (1) the finding, (2) the implication, (3) "
+"the recommended action."
 msgstr ""
-"为 CEO 提供 30 秒的时间，将此 [报告/文档] 总结为 3 个要点。每个项目符号必须包括：(1) 结果，(2) 含义，(3) 建议采取的行动。"
+"为 CEO 提供 30 秒的时间，将此 [报告/文档] 总结为 3 个要点。每个项目符号必须包"
+"括：(1) 结果，(2) 含义，(3) 建议采取的行动。"
 
 #: book/templates/book/prompt_library.html:63
 msgid "Data Storytelling"
@@ -757,7 +1060,9 @@ msgstr "数据讲故事"
 msgid ""
 "I have this data: [paste or describe]. Turn it into a narrative that a non-"
 "technical stakeholder can act on. Include: (1) the headline, (2) the \\"
-msgstr "我有这个数据：[粘贴或描述]。将其变成非技术利益相关者可以采取行动的叙述。包括：（1）标题，（2）\\"
+msgstr ""
+"我有这个数据：[粘贴或描述]。将其变成非技术利益相关者可以采取行动的叙述。包"
+"括：（1）标题，（2）\\"
 
 #: book/templates/book/prompt_library.html:64
 msgid "Bias Detector"
@@ -769,8 +1074,8 @@ msgid ""
 "sampling bias, (2) measurement bias, (3) algorithmic bias risk, (4) one "
 "question the data cannot answer. Suggest one way to validate your concerns."
 msgstr ""
-"分析此数据集/描述是否存在潜在偏差：[粘贴]。识别：(1) 抽样偏差，(2) 测量偏差，(3) 算法偏差风险，(4) "
-"数据无法回答的一个问题。建议一种方法来验证您的担忧。"
+"分析此数据集/描述是否存在潜在偏差：[粘贴]。识别：(1) 抽样偏差，(2) 测量偏差，"
+"(3) 算法偏差风险，(4) 数据无法回答的一个问题。建议一种方法来验证您的担忧。"
 
 #: book/templates/book/prompt_library.html:65
 msgid "Decision Framework"
@@ -782,8 +1087,8 @@ msgid ""
 "Build a weighted decision matrix with 5 criteria. Suggest weights based on "
 "our priorities: [describe]. Include one \\"
 msgstr ""
-"我们正在针对 [决策上下文] 在 [选项 A] 和 [选项 B] 之间做出决定。构建具有 5 "
-"个标准的加权决策矩阵。根据我们的优先级建议权重：[描述]。包括一个\\"
+"我们正在针对 [决策上下文] 在 [选项 A] 和 [选项 B] 之间做出决定。构建具有 5 个"
+"标准的加权决策矩阵。根据我们的优先级建议权重：[描述]。包括一个\\"
 
 #: book/templates/book/prompt_library.html:66
 msgid "Code Review Assistant"
@@ -791,12 +1096,12 @@ msgstr "代码审查助理"
 
 #: book/templates/book/prompt_library.html:66
 msgid ""
-"Review this code: [paste]. Identify: (1) bugs or edge cases, (2) performance"
-" issues, (3) security concerns, (4) whether this is even the right approach."
-" Be critical — assume I\\'m wrong until proven otherwise."
+"Review this code: [paste]. Identify: (1) bugs or edge cases, (2) performance "
+"issues, (3) security concerns, (4) whether this is even the right approach. "
+"Be critical — assume I\\'m wrong until proven otherwise."
 msgstr ""
-"查看此代码：[粘贴]。确定：(1) 错误或边缘情况，(2) 性能问题，(3) 安全问题，(4) "
-"这是否是正确的方法。保持批判性——假设我错了，直到事实证明并非如此。"
+"查看此代码：[粘贴]。确定：(1) 错误或边缘情况，(2) 性能问题，(3) 安全问题，"
+"(4) 这是否是正确的方法。保持批判性——假设我错了，直到事实证明并非如此。"
 
 #: book/templates/book/prompt_library.html:67
 msgid "API Integration Plan"
@@ -808,8 +1113,8 @@ msgid ""
 "Include: (1) authentication approach, (2) error handling strategy, (3) rate "
 "limiting plan, (4) fallback when the API fails, (5) cost monitoring."
 msgstr ""
-"我需要将[AI "
-"API]集成到[系统]中。设计架构。包括：（1）身份验证方法，（2）错误处理策略，（3）速率限制计划，（4）API失败时的回退，（5）成本监控。"
+"我需要将[AI API]集成到[系统]中。设计架构。包括：（1）身份验证方法，（2）错误"
+"处理策略，（3）速率限制计划，（4）API失败时的回退，（5）成本监控。"
 
 #: book/templates/book/prompt_library.html:68
 msgid "Concept Generation"
@@ -818,10 +1123,11 @@ msgstr "概念生成"
 #: book/templates/book/prompt_library.html:68
 msgid ""
 "Generate 5 unconventional ideas for [project/goal]. Constraint: each idea "
-"must use AI in a way that amplifies human judgment rather than replacing it."
-" Rate each on: feasibility, originality, risk."
+"must use AI in a way that amplifies human judgment rather than replacing it. "
+"Rate each on: feasibility, originality, risk."
 msgstr ""
-"为[项目/目标]产生 5 个非常规的想法。限制：每个想法都必须以增强人类判断力而不是取代它的方式使用人工智能。对以下各项进行评分：可行性、原创性、风险。"
+"为[项目/目标]产生 5 个非常规的想法。限制：每个想法都必须以增强人类判断力而不"
+"是取代它的方式使用人工智能。对以下各项进行评分：可行性、原创性、风险。"
 
 #: book/templates/book/prompt_library.html:69
 msgid "Analogy Builder"
@@ -833,7 +1139,8 @@ msgid ""
 "analogy must capture: (1) how it works, (2) its limitations, (3) why it "
 "sometimes fails unexpectedly. Avoid \\"
 msgstr ""
-"使用[熟悉的领域]的类比解释[复杂的人工智能概念]。这个类比必须体现：（1）它是如何工作的，（2）它的局限性，（3）为什么它有时会意外失败。避免 \\"
+"使用[熟悉的领域]的类比解释[复杂的人工智能概念]。这个类比必须体现：（1）它是如"
+"何工作的，（2）它的局限性，（3）为什么它有时会意外失败。避免 \\"
 
 #: book/templates/book/prompt_library.html:70
 msgid "Team Upskill Plan"
@@ -845,8 +1152,9 @@ msgid ""
 "Week 2: hands-on with one tool. Week 3: workflow integration. Week 4: "
 "evaluation and ethics. Include 2 hours/week time commitment."
 msgstr ""
-"为[团队角色]设计为期 4 周的人工智能技能提升计划。第一周：基础知识。第 2 周：实践使用一种工具。第 3 "
-"周：工作流程集成。第四周：评估和道德。包括每周 2 小时的时间投入。"
+"为[团队角色]设计为期 4 周的人工智能技能提升计划。第一周：基础知识。第 2 周："
+"实践使用一种工具。第 3 周：工作流程集成。第四周：评估和道德。包括每周 2 小时"
+"的时间投入。"
 
 #: book/templates/book/prompt_library.html:71
 #, fuzzy
@@ -855,14 +1163,15 @@ msgid "ROI Calculator"
 msgstr "计算器"
 
 #: book/templates/book/prompt_library.html:71
+#, python-format
 msgid ""
 "Help me build an ROI model for [AI initiative]. Inputs: [current costs], "
-"[expected benefits], [implementation costs]. Output: (1) payback period, (2)"
-" 3-year NPV, (3) sensitivity analysis for 50%% and 150%% of expected "
-"benefits."
+"[expected benefits], [implementation costs]. Output: (1) payback period, (2) "
+"3-year NPV, (3) sensitivity analysis for 50%% and 150%% of expected benefits."
 msgstr ""
-"帮助我为 [AI 计划] 构建投资回报率模型。输入：[当前成本]、[预期收益]、[实施成本]。输出：(1) 投资回收期，(2) 3 年 NPV，(3) "
-"50%% 和 150%% 预期收益的敏感性分析。"
+"帮助我为 [AI 计划] 构建投资回报率模型。输入：[当前成本]、[预期收益]、[实施成"
+"本]。输出：(1) 投资回收期，(2) 3 年 NPV，(3) 50%% 和 150%% 预期收益的敏感性分"
+"析。"
 
 #: book/templates/book/prompt_library.html:72
 msgid "Email Diplomat"
@@ -872,7 +1181,9 @@ msgstr "电子邮件外交官"
 msgid ""
 "Draft a diplomatic email to [recipient] about [sensitive topic]. Tone: "
 "assertive but not aggressive. Must include: (1) clear ask, (2) the \\"
-msgstr "起草一封关于[敏感话题]的外交电子邮件给[收件人]。语气：自信但不咄咄逼人。必须包括：（1）明确询问，（2）\\"
+msgstr ""
+"起草一封关于[敏感话题]的外交电子邮件给[收件人]。语气：自信但不咄咄逼人。必须"
+"包括：（1）明确询问，（2）\\"
 
 #: book/templates/book/prompt_library.html:73
 msgid "Prompt Engineering"
@@ -884,7 +1195,8 @@ msgid ""
 "the base prompt, (2) 3 variations to test, (3) the evaluation criteria, (4) "
 "common failure modes and how to avoid them."
 msgstr ""
-"我需要一个能够持续产生[特定输出]的提示。给我：（1）基本提示，（2）要测试的 3 个变体，（3）评估标准，（4）常见故障模式以及如何避免它们。"
+"我需要一个能够持续产生[特定输出]的提示。给我：（1）基本提示，（2）要测试的 3 "
+"个变体，（3）评估标准，（4）常见故障模式以及如何避免它们。"
 
 #: book/templates/book/prompt_library.html:74
 msgid "Scenario Planning"
@@ -896,8 +1208,8 @@ msgid ""
 "realistic, (3) pessimistic. Each must include: key assumptions, early "
 "warning signals, and the first action to take if this scenario unfolds."
 msgstr ""
-"为 2 年后的[业务状况]构建 3 个情景：(1) 乐观，(2) 现实，(3) "
-"悲观。每项都必须包括：关键假设、预警信号以及出现这种情况时应采取的第一个行动。"
+"为 2 年后的[业务状况]构建 3 个情景：(1) 乐观，(2) 现实，(3) 悲观。每项都必须"
+"包括：关键假设、预警信号以及出现这种情况时应采取的第一个行动。"
 
 #: book/templates/book/prompt_library.html:75
 msgid "Ethics Checklist"
@@ -908,7 +1220,9 @@ msgid ""
 "Create an ethics checklist for [AI use case]. Must cover: data privacy, "
 "fairness/bias, transparency, human oversight, environmental impact, and "
 "stakeholder communication. Flag any \\"
-msgstr "为[人工智能用例]创建道德清单。必须涵盖：数据隐私、公平/偏见、透明度、人类监督、环境影响和利益相关者沟通。标记任何\\"
+msgstr ""
+"为[人工智能用例]创建道德清单。必须涵盖：数据隐私、公平/偏见、透明度、人类监"
+"督、环境影响和利益相关者沟通。标记任何\\"
 
 #: book/templates/book/prompt_library.html:76
 msgid "Competitive Intel"
@@ -920,7 +1234,9 @@ msgid ""
 "their likely AI investments, (2) our vulnerability, (3) our counter-move, "
 "(4) whether we should match or differentiate. No fluff."
 msgstr ""
-"分析[竞争对手]可能如何在[市场]中利用人工智能来对抗我们。确定：（1）他们可能的人工智能投资，（2）我们的弱点，（3）我们的对策，（4）我们是否应该匹配或差异化。没有绒毛。"
+"分析[竞争对手]可能如何在[市场]中利用人工智能来对抗我们。确定：（1）他们可能的"
+"人工智能投资，（2）我们的弱点，（3）我们的对策，（4）我们是否应该匹配或差异"
+"化。没有绒毛。"
 
 #: book/templates/book/prompt_library.html:77
 msgid "Meeting Prep"
@@ -932,8 +1248,8 @@ msgid ""
 "questions they\\'ll ask, (2) 2 objections they\\'ll raise, (3) one piece of "
 "evidence that settles the debate, (4) my opening 30 seconds."
 msgstr ""
-"我与[与会者]召开了一个关于[主题]的会议。让我做好准备：(1) 他们会问 3 个问题，(2) 他们会提出 2 个反对意见，(3) "
-"解决辩论的一项证据，(4) 我的开场 30 秒。"
+"我与[与会者]召开了一个关于[主题]的会议。让我做好准备：(1) 他们会问 3 个问题，"
+"(2) 他们会提出 2 个反对意见，(3) 解决辩论的一项证据，(4) 我的开场 30 秒。"
 
 #: book/templates/book/prompt_library.html:78
 msgid "Debug Partner"
@@ -944,7 +1260,9 @@ msgid ""
 "I have this error: [paste error]. System: [describe]. Walk me through "
 "debugging it. Don\\'t just give the answer — teach me the mental model. Ask "
 "me one question at a time."
-msgstr "我有这个错误：[粘贴错误]。系统：[描述]。引导我调试它。不要只是给出答案——教我思维模型。一次问我一个问题。"
+msgstr ""
+"我有这个错误：[粘贴错误]。系统：[描述]。引导我调试它。不要只是给出答案——教我"
+"思维模型。一次问我一个问题。"
 
 #: book/templates/book/prompt_library.html:79
 msgid "Narrative Arc"
@@ -953,10 +1271,11 @@ msgstr "叙事弧"
 #: book/templates/book/prompt_library.html:79
 msgid ""
 "Structure a [presentation type] about [topic] as a story. Opening hook, "
-"rising tension (the problem), climax (the insight), resolution (the action)."
-" 5 minutes max. One surprise moment."
+"rising tension (the problem), climax (the insight), resolution (the action). "
+"5 minutes max. One surprise moment."
 msgstr ""
-"将有关[主题]的[演示类型]构建为一个故事。开头的钩子，不断上升的张力（问题），高潮（洞察力），解决方案（行动）。最多 5 分钟一个惊喜的时刻。"
+"将有关[主题]的[演示类型]构建为一个故事。开头的钩子，不断上升的张力（问题），"
+"高潮（洞察力），解决方案（行动）。最多 5 分钟一个惊喜的时刻。"
 
 #: book/templates/book/prompt_library.html:80
 msgid "Exit Strategy"
@@ -968,8 +1287,8 @@ msgid ""
 "Include: (1) data portability plan, (2) team transition, (3) cost of "
 "reversal, (4) timeline, (5) what we keep vs. discard."
 msgstr ""
-"如果我们需要扭转在[领域]的人工智能投资，那么出口是什么？包括：(1) 数据可移植性计划，(2) 团队过渡，(3) 逆转成本，(4) 时间表，(5) "
-"我们保留什么与丢弃什么。"
+"如果我们需要扭转在[领域]的人工智能投资，那么出口是什么？包括：(1) 数据可移植"
+"性计划，(2) 团队过渡，(3) 逆转成本，(4) 时间表，(5) 我们保留什么与丢弃什么。"
 
 #: book/templates/book/prompt_library.html:81
 msgid "Signal vs. Noise"
@@ -980,7 +1299,9 @@ msgid ""
 "I\\'m overwhelmed by [data stream/source]. Help me build a filter: what "
 "signals matter vs. what\\'s noise? Include: (1) 3 key metrics, (2) one "
 "leading indicator, (3) the \\"
-msgstr "我对[数据流/源]不知所措。帮助我建立一个过滤器：哪些信号重要，哪些信号是噪音？包括：（1）3个关键指标，（2）1个领先指标，（3）\\"
+msgstr ""
+"我对[数据流/源]不知所措。帮助我建立一个过滤器：哪些信号重要，哪些信号是噪音？"
+"包括：（1）3个关键指标，（2）1个领先指标，（3）\\"
 
 #: book/templates/book/prompt_library.html:95
 msgid "Copy"
@@ -989,12 +1310,6 @@ msgstr "复制"
 #: book/templates/book/prompt_library.html:109
 msgid "Prompt copied!"
 msgstr "提示已复制！"
-
-#: book/templates/book/scorecard.html:3 book/templates/book/scorecard.html:21
-#, fuzzy
-#| msgid "Take the Scorecard"
-msgid "AI Readiness Scorecard"
-msgstr "使用评分卡"
 
 #: book/templates/book/scorecard.html:22
 msgid "20 questions. 5 minutes. Know exactly where you stand."
@@ -1016,8 +1331,7 @@ msgstr "输入您的电子邮件以接收您的个性化报告："
 msgid "you@company.com"
 msgstr "你@company.com"
 
-#: book/templates/book/scorecard.html:60
-#: book/templates/book/scorecard.html:189
+#: book/templates/book/scorecard.html:60 book/templates/book/scorecard.html:189
 #: book/templates/book/scorecard.html:194
 msgid "Get My Report"
 msgstr "获取我的报告"
@@ -1042,7 +1356,9 @@ msgstr "探索者号"
 msgid ""
 "You're at the beginning of the AI journey. That's actually an advantage — "
 "you can build right from the start. Chapters 1-5 are written for you."
-msgstr "您正处于人工智能之旅的开始阶段。这实际上是一个优势——您可以从一开始就进行构建。第 1 章至第 5 章是为您编写的。"
+msgstr ""
+"您正处于人工智能之旅的开始阶段。这实际上是一个优势——您可以从一开始就进行构"
+"建。第 1 章至第 5 章是为您编写的。"
 
 #: book/templates/book/scorecard.html:87
 msgid "The Curious"
@@ -1052,7 +1368,9 @@ msgstr "好奇者"
 msgid ""
 "You have some awareness but lack structure. Focus on the Partnership "
 "Framework (Chapters 6-9) and the Implementation Playbook (Chapters 10-13)."
-msgstr "你有一些意识，但缺乏结构。重点关注合作伙伴框架（第 6-9 章）和实施手册（第 10-13 章）。"
+msgstr ""
+"你有一些意识，但缺乏结构。重点关注合作伙伴框架（第 6-9 章）和实施手册（第 "
+"10-13 章）。"
 
 #: book/templates/book/scorecard.html:91
 msgid "The Practitioner"
@@ -1061,9 +1379,11 @@ msgstr "实践者"
 #: book/templates/book/scorecard.html:92
 msgid ""
 "You're actively using AI but want to scale. The advanced chapters on "
-"governance, team building, and future-proofing (Chapters 14-19) will be most"
-" valuable."
-msgstr "您正在积极使用人工智能，但希望扩大规模。关于治理、团队建设和面向未来的高级章节（第 14-19 章）将是最有价值的。"
+"governance, team building, and future-proofing (Chapters 14-19) will be most "
+"valuable."
+msgstr ""
+"您正在积极使用人工智能，但希望扩大规模。关于治理、团队建设和面向未来的高级章"
+"节（第 14-19 章）将是最有价值的。"
 
 #: book/templates/book/scorecard.html:95
 msgid "The Architect"
@@ -1073,7 +1393,9 @@ msgstr "建筑师"
 msgid ""
 "You're leading AI transformation. The book's skeptical frameworks will help "
 "you avoid the traps that even experienced teams fall into."
-msgstr "您正在引领人工智能转型。本书的怀疑框架将帮助您避免即使是经验丰富的团队也会陷入的陷阱。"
+msgstr ""
+"您正在引领人工智能转型。本书的怀疑框架将帮助您避免即使是经验丰富的团队也会陷"
+"入的陷阱。"
 
 #: book/templates/book/scorecard.html:163
 msgid "Please enter a valid email."
@@ -1086,10 +1408,6 @@ msgstr "正在发送..."
 #: book/templates/book/scorecard.html:187
 msgid "Something went wrong."
 msgstr "出了点问题。"
-
-#: book/templates/book/scorecard.html:192
-msgid "Network error. Please try again."
-msgstr "网络错误。请再试一次。"
 
 #: book/views.py:26
 msgid "How would you rate your current understanding of AI capabilities?"
@@ -1597,14 +1915,20 @@ msgid "$2,000+/month"
 msgstr "$2,000+/月"
 
 #: book/views.py:72
+#, fuzzy, python-format
+#| msgid "10-25% faster"
 msgid "10-25% faster"
 msgstr "速度提高 10-25%"
 
 #: book/views.py:73
+#, fuzzy, python-format
+#| msgid "25-50% faster"
 msgid "25-50% faster"
 msgstr "速度提高 25-50%"
 
 #: book/views.py:74
+#, fuzzy, python-format
+#| msgid "50-100% faster"
 msgid "50-100% faster"
 msgstr "速度提高 50-100%"
 
