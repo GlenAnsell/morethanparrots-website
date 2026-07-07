@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MTP 1.0\n"
-"Report-Msgid-Bugs-To: hello@morethanparrots.com\n"
-"POT-Creation-Date: 2026-07-06 12:00+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-07 05:49+0000\n"
 "PO-Revision-Date: 2026-07-06 12:00+0000\n"
 "Last-Translator: Glen Ansell\n"
 "Language-Team: Chinese\n"
@@ -14,214 +14,1652 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-
-msgid "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
-msgstr "A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything."
-
-msgid "Home"
-msgstr "首页"
-
-msgid "The Book"
-msgstr "书籍"
-
+#: blog/templates/blog/category.html:3 blog/templates/blog/post_detail.html:17
+#: blog/templates/blog/post_list.html:3 templates/base.html:116
+#: templates/base.html:168
 msgid "Blog"
 msgstr "博客"
 
-msgid "Scorecard"
-msgstr "评分卡"
+#: blog/templates/blog/category.html:3 blog/templates/blog/post_detail.html:3
+msgid "More Than Parrots"
+msgstr "不仅仅是鹦鹉"
 
-msgid "Calculator"
-msgstr "计算器"
+#: blog/templates/blog/category.html:10
+msgid "All posts"
+msgstr "所有帖子"
 
-msgid "Prompts"
-msgstr "提示词"
+#: blog/templates/blog/category.html:29
+#: blog/templates/blog/post_detail.html:28
+#: blog/templates/blog/post_list.html:37
+#, python-format
+msgid "%(post.reading_time_minutes)s min read"
+msgstr "%(post.reading_time_minutes)s 分钟阅读时间"
 
-msgid "Community"
-msgstr "社区"
+#: blog/templates/blog/category.html:30 blog/templates/blog/post_list.html:38
+msgid "Read"
+msgstr "读"
 
-msgid "Buy Now"
-msgstr "立即购买"
+#: blog/templates/blog/category.html:37
+msgid "No posts in this category yet."
+msgstr "该类别还没有帖子。"
 
-msgid "A field guide to the human-AI partnership."
-msgstr "人机合作实战指南。"
+#: blog/templates/blog/post_detail.html:42
+msgid "Want the full map?"
+msgstr "想要完整地图吗？"
 
-msgid "Book"
-msgstr "书籍"
+#: blog/templates/blog/post_detail.html:43
+msgid ""
+"This blog post is a starting point. The book gives you the complete "
+"framework."
+msgstr "这篇博文是一个起点。本书为您提供了完整的框架。"
 
-msgid "Overview"
-msgstr "概述"
-
-msgid "Chapters"
-msgstr "章节"
-
-msgid "Buy"
-msgstr "购买"
-
-msgid "Resources"
-msgstr "资源"
-
-msgid "Connect"
-msgstr "联系"
-
-msgid "About"
-msgstr "关于"
-
-msgid "Contact"
-msgstr "联系方式"
-
-msgid "© 2026 Glen Ansell. All rights reserved."
-msgstr "© 2026 Glen Ansell。保留所有权利。"
-
-msgid "More Than Parrots, Less Than Gods — A Field Guide to the Human-AI Partnership"
-msgstr "不只是鹦鹉，不及神祇——人机合作实战指南"
-
-msgid "A skeptical, practical guide to working with AI without becoming obsolete. 19 chapters on jobs, ethics, and the future of human work. Pre-order now."
-msgstr "一本关于如何与AI共事而不被淘汰的怀疑论实用指南。19章探讨工作、伦理和人类工作的未来。立即预订。"
-
-msgid "Coming 2026"
-msgstr "2026年推出"
-
-msgid "Pre-Order Now"
+#: blog/templates/blog/post_detail.html:44
+#: book/templates/book/scorecard.html:70
+#, fuzzy
+#| msgid "Pre-Order Now"
+msgid "Pre-Order the Book"
 msgstr "立即预订"
 
-msgid "Take the Scorecard"
-msgstr "使用评分卡"
+#: blog/templates/blog/post_detail.html:50
+msgid "More in"
+msgstr "更多内容请参见"
 
-msgid "Words"
-msgstr "字数"
+#: blog/templates/blog/post_detail.html:58
+#, python-format
+msgid "%(rp.reading_time_minutes)s min"
+msgstr "%(rp.reading_time_minutes)s 分钟"
 
-msgid "Sources"
-msgstr "来源"
+#: blog/templates/blog/post_list.html:3 book/templates/book/calculator.html:3
+#: book/templates/book/chapter_preview.html:3
+#: book/templates/book/community.html:3
+#: book/templates/book/preview_index.html:3
+#: book/templates/book/prompt_library.html:3
+#: book/templates/book/scorecard.html:3
+#, fuzzy
+#| msgid "About — More Than Parrots, Less Than Gods"
+msgid "More Than Parrots, Less Than Gods"
+msgstr "关于 — 不只是鹦鹉，不及神祇"
 
-msgid "More Than Parrots, Less Than Gods — Book Cover"
-msgstr "不只是鹦鹉，不及神祇——封面"
+#: blog/templates/blog/post_list.html:9
+msgid "The Waiting Room"
+msgstr "候诊室"
 
-msgid "The Book — More Than Parrots, Less Than Gods"
-msgstr "书籍 — 不只是鹦鹉，不及神祇"
+#: blog/templates/blog/post_list.html:10
+msgid "Skeptical analysis. Practical frameworks. No hype."
+msgstr "持怀疑态度的分析。实用的框架。没有炒作。"
 
-msgid "A 19-chapter manifesto for the human-AI partnership. Written for business leaders who are tired of AI hype and want real answers."
-msgstr "19章人机合作宣言。为厌倦AI炒作、寻求真知灼见的企业领袖而作。"
+#: blog/templates/blog/post_list.html:45
+msgid "No posts published yet. Check back soon."
+msgstr "尚未发布帖子。请尽快回来查看。"
 
-msgid "What's Inside"
-msgstr "内容一览"
-
-msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr "鹦鹉问题——为什么大多数AI比看起来笨"
-
-msgid "The Partnership — A framework for human-AI collaboration"
-msgstr "合作关系——人机协作框架"
-
-msgid "The Skeptic's Toolkit — How to evaluate any AI claim"
-msgstr "怀疑者工具箱——如何评估任何AI说法"
-
-msgid "Implementation Playbook — From pilot to production"
-msgstr "实施手册——从试点到投产"
-
-msgid "The Team Chapter — Upskilling without replacement"
-msgstr "团队篇——提升技能而非替代"
-
-msgid "Ethics & Governance — Staying on the right side of history"
-msgstr "伦理与治理——站在历史正确的一边"
-
-msgid "Future-Proofing — 10-year career strategy"
-msgstr "面向未来——10年职业规划"
-
-msgid "By The Numbers"
-msgstr "数据一览"
-
-msgid "Years Research"
-msgstr "年研究"
-
-msgid "Order Now"
-msgstr "立即订购"
-
-msgid "Book Cover"
-msgstr "封面"
-
-msgid "Buy Ebook — $12.99"
-msgstr "电子书 — $12.99"
-
-msgid "Paperback — $18.99"
-msgstr "平装本 — $18.99"
-
-msgid "Hardcover — $27.99"
-msgstr "精装本 — $27.99"
-
-msgid "Free shipping"
-msgstr "免费配送"
-
-msgid "on orders over $35"
-msgstr "订单满$35"
-
-msgid "30-day guarantee"
-msgstr "30天保障"
-
-msgid "— not satisfied? Full refund."
-msgstr "——不满意？全额退款。"
-
-msgid "Also available on:"
-msgstr "也可在以下平台获取："
-
-msgid "Contact — More Than Parrots, Less Than Gods"
-msgstr "联系方式 — 不只是鹦鹉，不及神祇"
-
-msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr "有问题、演讲邀请，或只是想争论？联系我。"
-
-msgid "Name"
-msgstr "姓名"
-
-msgid "Email"
-msgstr "邮箱"
-
-msgid "Topic"
-msgstr "主题"
-
-msgid "General inquiry"
-msgstr "一般咨询"
-
-msgid "Speaking request"
-msgstr "演讲邀请"
-
-msgid "Press"
-msgstr "媒体"
-
-msgid "Partnership"
-msgstr "合作"
-
-msgid "Found a typo (you're the best)"
-msgstr "发现错别字（你是最棒的）"
-
-msgid "Message"
-msgstr "留言"
-
-msgid "Send Message"
-msgstr "发送"
-
-msgid "For business inquiries:"
-msgstr "商务咨询："
-
+#: book/templates/book/about.html:4
 msgid "About — More Than Parrots, Less Than Gods"
 msgstr "关于 — 不只是鹦鹉，不及神祇"
 
-msgid "About the Author"
-msgstr "关于作者"
-
+#: book/templates/book/about.html:14
 msgid "Author, AI Strategist, Skeptic"
 msgstr "作者、AI战略家、怀疑论者"
 
-msgid "Coding since age 7. First IT business at 23. MSc in research psychology. Harvard AI certificate. 12+ years building AI and modeling systems."
+#: book/templates/book/about.html:18
+msgid "About the Author"
+msgstr "关于作者"
+
+#: book/templates/book/about.html:20
+msgid ""
+"Coding since age 7. First IT business at 23. MSc in research psychology. "
+"Harvard AI certificate. 12+ years building AI and modeling systems."
 msgstr "7岁开始编程。23岁创办第一家IT公司。研究心理学硕士。哈佛AI证书。12年以上构建AI和建模系统经验。"
 
-msgid "I've watched AI go from academic curiosity to boardroom buzzword. I've built systems that worked and systems that failed. I've seen vendors promise the moon and deliver a rock."
+#: book/templates/book/about.html:21
+msgid ""
+"I've watched AI go from academic curiosity to boardroom buzzword. I've built"
+" systems that worked and systems that failed. I've seen vendors promise the "
+"moon and deliver a rock."
 msgstr "我见证了AI从学术好奇到董事会流行词。我构建过成功的系统，也构建过失败的系统。我见过供应商承诺月亮却只交付石头。"
 
-msgid "This book is what I wish someone had handed me five years ago — a skeptical, practical, deeply researched guide to working with AI without losing your mind or your job."
+#: book/templates/book/about.html:22
+msgid ""
+"This book is what I wish someone had handed me five years ago — a skeptical,"
+" practical, deeply researched guide to working with AI without losing your "
+"mind or your job."
 msgstr "这本书是我希望五年前有人能交给我的——一本怀疑论、实用、深度研究的指南，教你如何与AI共事而不丢掉理智或工作。"
 
-msgid "I live in South Africa with my partner Donné, daughter Tayla, and four dogs. I play tennis and padel. I wear an Apple Watch. I don't have a garden."
+#: book/templates/book/about.html:23
+msgid ""
+"I live in South Africa with my partner Donné, daughter Tayla, and four dogs."
+" I play tennis and padel. I wear an Apple Watch. I don't have a garden."
 msgstr "我与伴侣Donné、女儿Tayla和四只狗住在南非。我打网球和板式网球。我戴Apple Watch。我没有花园。"
 
+#: book/templates/book/about.html:25
 msgid "Get in Touch"
 msgstr "取得联系"
 
+#: book/templates/book/book_detail.html:5
+msgid "The Book — More Than Parrots, Less Than Gods"
+msgstr "书籍 — 不只是鹦鹉，不及神祇"
+
+#: book/templates/book/book_detail.html:12 templates/base.html:115
+msgid "The Book"
+msgstr "书籍"
+
+#: book/templates/book/book_detail.html:15
+msgid ""
+"A 19-chapter manifesto for the human-AI partnership. Written for business "
+"leaders who are tired of AI hype and want real answers."
+msgstr "19章人机合作宣言。为厌倦AI炒作、寻求真知灼见的企业领袖而作。"
+
+#: book/templates/book/book_detail.html:17
+msgid "What's Inside"
+msgstr "内容一览"
+
+#: book/templates/book/book_detail.html:21
+msgid "The Parrot Problem — Why most AI is dumber than it looks"
+msgstr "鹦鹉问题——为什么大多数AI比看起来笨"
+
+#: book/templates/book/book_detail.html:22
+msgid "The God Complex — Why \"AGI imminent\" is a dangerous distraction"
+msgstr "上帝情结——为什么“通用人工智能迫在眉睫”是一种危险的干扰"
+
+#: book/templates/book/book_detail.html:23
+msgid "The Partnership — A framework for human-AI collaboration"
+msgstr "合作关系——人机协作框架"
+
+#: book/templates/book/book_detail.html:24
+msgid "The Skeptic's Toolkit — How to evaluate any AI claim"
+msgstr "怀疑者工具箱——如何评估任何AI说法"
+
+#: book/templates/book/book_detail.html:29
+msgid "Implementation Playbook — From pilot to production"
+msgstr "实施手册——从试点到投产"
+
+#: book/templates/book/book_detail.html:30
+msgid "The Team Chapter — Upskilling without replacement"
+msgstr "团队篇——提升技能而非替代"
+
+#: book/templates/book/book_detail.html:31
+msgid "Ethics & Governance — Staying on the right side of history"
+msgstr "伦理与治理——站在历史正确的一边"
+
+#: book/templates/book/book_detail.html:32
+msgid "Future-Proofing — 10-year career strategy"
+msgstr "面向未来——10年职业规划"
+
+#: book/templates/book/book_detail.html:37
+msgid "By The Numbers"
+msgstr "数据一览"
+
+#: book/templates/book/book_detail.html:42 book/templates/book/home.html:22
+#: templates/base.html:161
+msgid "Chapters"
+msgstr "章节"
+
+#: book/templates/book/book_detail.html:48 book/templates/book/home.html:23
+msgid "Words"
+msgstr "字数"
+
+#: book/templates/book/book_detail.html:54 book/templates/book/home.html:24
+msgid "Sources"
+msgstr "来源"
+
+#: book/templates/book/book_detail.html:60
+msgid "Years Research"
+msgstr "年研究"
+
+#: book/templates/book/book_detail.html:70
+msgid "Book Cover"
+msgstr "封面"
+
+#: book/templates/book/book_detail.html:72
+msgid "Order Now"
+msgstr "立即订购"
+
+#: book/templates/book/book_detail.html:74
+msgid "Buy Ebook — $12.99"
+msgstr "电子书 — $12.99"
+
+#: book/templates/book/book_detail.html:75
+msgid "Paperback — $18.99"
+msgstr "平装本 — $18.99"
+
+#: book/templates/book/book_detail.html:76
+msgid "Hardcover — $27.99"
+msgstr "精装本 — $27.99"
+
+#: book/templates/book/book_detail.html:80
+msgid "Free shipping"
+msgstr "免费配送"
+
+#: book/templates/book/book_detail.html:80
+msgid "on orders over $35"
+msgstr "订单满$35"
+
+#: book/templates/book/book_detail.html:81
+msgid "30-day guarantee"
+msgstr "30天保障"
+
+#: book/templates/book/book_detail.html:81
+msgid "— not satisfied? Full refund."
+msgstr "——不满意？全额退款。"
+
+#: book/templates/book/book_detail.html:87
+msgid "Also available on:"
+msgstr "也可在以下平台获取："
+
+#: book/templates/book/calculator.html:3
+#, fuzzy
+#| msgid "Calculator"
+msgid "Resource Calculator"
+msgstr "计算器"
+
+#: book/templates/book/calculator.html:17
+#, fuzzy
+#| msgid "Calculator"
+msgid "AI Resource Calculator"
+msgstr "计算器"
+
+#: book/templates/book/calculator.html:18
+msgid ""
+"What should you actually budget for AI tools? Personalized estimate in 60 "
+"seconds."
+msgstr "您实际上应该为人工智能工具预算多少？ 60 秒内进行个性化估算。"
+
+#: book/templates/book/calculator.html:25
+msgid "What best describes your role?"
+msgstr "什么最能描述您的角色？"
+
+#: book/templates/book/calculator.html:27
+#: book/templates/book/calculator.html:51
+#: book/templates/book/calculator.html:61
+msgid "Select..."
+msgstr "选择..."
+
+#: book/templates/book/calculator.html:35
+msgid "Which AI capabilities do you need?"
+msgstr "您需要哪些人工智能能力？"
+
+#: book/templates/book/calculator.html:35
+msgid "Select all"
+msgstr "选择全部"
+
+#: book/templates/book/calculator.html:49
+msgid "What's your current monthly software budget?"
+msgstr "您当前每月的软件预算是多少？"
+
+#: book/templates/book/calculator.html:59
+msgid "How much do you expect AI to increase your output?"
+msgstr "您期望人工智能能够为您的产出增加多少？"
+
+#: book/templates/book/calculator.html:68
+msgid "Calculate My Budget"
+msgstr "计算我的预算"
+
+#: book/templates/book/calculator.html:74
+msgid "Recommended Budget"
+msgstr "推荐预算"
+
+#: book/templates/book/calculator.html:76
+msgid "per month"
+msgstr "每月"
+
+#: book/templates/book/calculator.html:80
+msgid "Suggested Stack"
+msgstr "建议堆栈"
+
+#: book/templates/book/calculator.html:86
+msgid "ROI Projection"
+msgstr "投资回报率预测"
+
+#: book/templates/book/calculator.html:87
+msgid ""
+"At your selected output increase, you should break even in <strong "
+"id=\"breakEven\">0</strong> months."
+msgstr "按照您选择的产量增长，您应该在 <strong id=\"breakEven\">0</strong> 个月内实现收支平衡。"
+
+#: book/templates/book/calculator.html:88
+msgid "Annual time savings: <strong id=\"timeSaved\">0</strong> hours"
+msgstr "每年节省时间：<strong id=\"timeSaved\">0</strong> 小时"
+
+#: book/templates/book/calculator.html:94
+msgid "Answer the questions to get your personalized estimate."
+msgstr "回答问题以获得您的个性化估算。"
+
+#: book/templates/book/calculator.html:119
+msgid "Please answer all questions"
+msgstr "请回答所有问题"
+
+#: book/templates/book/chapter_preview.html:3
+#, fuzzy
+#| msgid "Overview"
+msgid "Preview"
+msgstr "概述"
+
+#: book/templates/book/chapter_preview.html:30
+#: book/templates/book/preview_index.html:8
+#, fuzzy
+#| msgid "Overview"
+msgid "Free Preview"
+msgstr "概述"
+
+#: book/templates/book/chapter_preview.html:32
+#, fuzzy, python-format
+#| msgid "Contact — More Than Parrots, Less Than Gods"
+msgid ""
+"Chapter %(chapter_number)s of <em>More Than Parrots, Less Than Gods</em>"
+msgstr "联系方式 — 不只是鹦鹉，不及神祇"
+
+#: book/templates/book/chapter_preview.html:40
+msgid "Back to Home"
+msgstr "返回首页"
+
+#: book/templates/book/chapter_preview.html:43
+#, python-format
+msgid "%(chapter_number)s / 3 free preview chapters"
+msgstr "%(chapter_number)s / 3 个免费预览章节"
+
+#: book/templates/book/chapter_preview.html:47
+msgid "Previous"
+msgstr "以前的"
+
+#: book/templates/book/chapter_preview.html:50
+msgid "Next"
+msgstr "下一个"
+
+#: book/templates/book/chapter_preview.html:52
+msgid "Buy the Full Book"
+msgstr "购买整本书"
+
+#: book/templates/book/chapter_preview.html:65
+msgid "Want the Rest?"
+msgstr "想要剩下的吗？"
+
+#: book/templates/book/chapter_preview.html:66
+#, python-format
+msgid ""
+"This was Chapter %(chapter_number)s of 19. Get the complete book — ebook, "
+"paperback, or hardcover."
+msgstr "这是第 %(chapter_number)s 章，共 19 章。获取完整的书 — 电子书、平装书或精装书。"
+
+#: book/templates/book/chapter_preview.html:67
+#: book/templates/book/preview_index.html:54
+#, fuzzy
+#| msgid "The Book"
+msgid "Buy the Book"
+msgstr "书籍"
+
+#: book/templates/book/community.html:3 templates/base.html:120
+#: templates/base.html:177
+msgid "Community"
+msgstr "社区"
+
+#: book/templates/book/community.html:9
+#, fuzzy
+#| msgid "Community"
+msgid "The Community"
+msgstr "社区"
+
+#: book/templates/book/community.html:10
+#, fuzzy
+#| msgid "A field guide to the human-AI partnership."
+msgid "Join readers building the human-AI partnership."
+msgstr "人机合作实战指南。"
+
+#: book/templates/book/community.html:18
+msgid "Discord Server"
+msgstr "不和谐服务器"
+
+#: book/templates/book/community.html:19
+msgid "Daily discussions, Q&A, prompt sharing, and early access to new tools."
+msgstr "每日讨论、问答、及时分享以及抢先使用新工具。"
+
+#: book/templates/book/community.html:20
+msgid "Join Discord"
+msgstr "加入不和谐"
+
+#: book/templates/book/community.html:26
+msgid "Monthly AMAs"
+msgstr "每月 AMA"
+
+#: book/templates/book/community.html:27
+msgid ""
+"Live video calls with Glen Ansell. Bring your AI questions, skepticism "
+"welcome."
+msgstr "与 Glen Ansell 进行实时视频通话。提出你的人工智能问题，欢迎质疑。"
+
+#: book/templates/book/community.html:28
+msgid "View Schedule"
+msgstr "查看时间表"
+
+#: book/templates/book/community.html:37
+#, fuzzy
+#| msgid "Book Cover"
+msgid "Book Club"
+msgstr "封面"
+
+#: book/templates/book/community.html:38
+msgid ""
+"Read one chapter per week. Structured discussions. Accountability partners."
+msgstr "每周阅读一章。结构化讨论。问责合作伙伴。"
+
+#: book/templates/book/community.html:39
+msgid "Join Waitlist"
+msgstr "加入候补名单"
+
+#: book/templates/book/community.html:45
+msgid "Tool Reviews"
+msgstr "工具评论"
+
+#: book/templates/book/community.html:46
+msgid ""
+"Honest, unfiltered reviews of AI tools. No affiliate links, no sponsored "
+"content."
+msgstr "对人工智能工具的诚实、未经过滤的评论。没有附属链接，没有赞助内容。"
+
+#: book/templates/book/community.html:47
+msgid "Browse Reviews"
+msgstr "浏览评论"
+
+#: book/templates/book/contact.html:4
+msgid "Contact — More Than Parrots, Less Than Gods"
+msgstr "联系方式 — 不只是鹦鹉，不及神祇"
+
+#: book/templates/book/contact.html:12 templates/base.html:179
+msgid "Contact"
+msgstr "联系方式"
+
+#: book/templates/book/contact.html:13
+msgid "Questions, speaking requests, or just want to argue? Reach out."
+msgstr "有问题、演讲邀请，或只是想争论？联系我。"
+
+#: book/templates/book/contact.html:19
+msgid "Name"
+msgstr "姓名"
+
+#: book/templates/book/contact.html:23
+msgid "Email"
+msgstr "邮箱"
+
+#: book/templates/book/contact.html:27
+msgid "Topic"
+msgstr "主题"
+
+#: book/templates/book/contact.html:29
+msgid "General inquiry"
+msgstr "一般咨询"
+
+#: book/templates/book/contact.html:30
+msgid "Speaking request"
+msgstr "演讲邀请"
+
+#: book/templates/book/contact.html:31
+msgid "Press"
+msgstr "媒体"
+
+#: book/templates/book/contact.html:32
+msgid "Partnership"
+msgstr "合作"
+
+#: book/templates/book/contact.html:33
+#, fuzzy
+#| msgid "Found a typo (you're the best)"
+msgid "Found a typo (you"
+msgstr "发现错别字（你是最棒的）"
+
+#: book/templates/book/contact.html:37
+msgid "Message"
+msgstr "留言"
+
+#: book/templates/book/contact.html:40
+msgid "Send Message"
+msgstr "发送"
+
+#: book/templates/book/contact.html:44
+msgid "For business inquiries:"
+msgstr "商务咨询："
+
+#: book/templates/book/home.html:5
+msgid ""
+"More Than Parrots, Less Than Gods — A Field Guide to the Human-AI "
+"Partnership"
+msgstr "不只是鹦鹉，不及神祇——人机合作实战指南"
+
+#: book/templates/book/home.html:6
+msgid ""
+"A skeptical, practical guide to working with AI without becoming obsolete. "
+"19 chapters on jobs, ethics, and the future of human work. Pre-order now."
+msgstr "一本关于如何与AI共事而不被淘汰的怀疑论实用指南。19章探讨工作、伦理和人类工作的未来。立即预订。"
+
+#: book/templates/book/home.html:14
+msgid "Coming 2026"
+msgstr "2026年推出"
+
+#: book/templates/book/home.html:16 templates/base.html:9
+msgid ""
+"A field guide to the human-AI partnership. How to stay relevant, valuable, "
+"and deeply human in a world that wants to automate everything."
+msgstr ""
+"A field guide to the human-AI partnership. How to stay relevant, valuable, "
+"and deeply human in a world that wants to automate everything."
+
+#: book/templates/book/home.html:18
+msgid "Pre-Order Now"
+msgstr "立即预订"
+
+#: book/templates/book/home.html:19
+msgid "Take the Scorecard"
+msgstr "使用评分卡"
+
+#: book/templates/book/home.html:30
+msgid "More Than Parrots, Less Than Gods — Book Cover"
+msgstr "不只是鹦鹉，不及神祇——封面"
+
+#: book/templates/book/preview_index.html:3
+msgid "Free Chapter Preview"
+msgstr "免费章节预览"
+
+#: book/templates/book/preview_index.html:9
+msgid "Read the First 3 Chapters"
+msgstr "阅读前 3 章"
+
+#: book/templates/book/preview_index.html:10
+msgid ""
+"Get a taste of the skeptical, first-person voice that makes this book "
+"different."
+msgstr "体验一下使这本书与众不同的怀疑的第一人称声音。"
+
+#: book/templates/book/preview_index.html:21
+msgid "What AI Actually Is (And What It Isn't)"
+msgstr "人工智能到底是什么（以及它不是什么）"
+
+#: book/templates/book/preview_index.html:22
+msgid ""
+"Pattern recognition at scale. The five things people wrongly believe about "
+"AI. What AI does better than humans — and where it fails catastrophically."
+msgstr "大规模模式识别。人们对人工智能的五个错误看法。人工智能在哪些方面比人类做得更好，以及在哪些方面会出现灾难性的失败。"
+
+#: book/templates/book/preview_index.html:23
+#, fuzzy
+#| msgid "Chapters"
+msgid "Read Chapter 1"
+msgstr "章节"
+
+#: book/templates/book/preview_index.html:31
+msgid "A Short History of Artificial Intelligence"
+msgstr "人工智能简史"
+
+#: book/templates/book/preview_index.html:32
+msgid ""
+"Three waves of AI development. Two winters that nearly killed the field. Why"
+" the current wave is different — and why it's also the same."
+msgstr "人工智能发展的三波浪潮。两个冬天几乎杀死了田地。为什么当前的浪潮有所不同——又为何又是相同的。"
+
+#: book/templates/book/preview_index.html:33
+#, fuzzy
+#| msgid "Chapters"
+msgid "Read Chapter 2"
+msgstr "章节"
+
+#: book/templates/book/preview_index.html:41
+msgid "The Transformer Revolution"
+msgstr "变压器革命"
+
+#: book/templates/book/preview_index.html:42
+msgid ""
+"The paper that changed everything. Self-attention explained without math. "
+"Why context is everything — and why this is still not magic."
+msgstr "这张纸改变了一切。自注意力无需数学即可解释。为什么上下文就是一切——以及为什么这仍然不神奇。"
+
+#: book/templates/book/preview_index.html:43
+#, fuzzy
+#| msgid "Chapters"
+msgid "Read Chapter 3"
+msgstr "章节"
+
+#: book/templates/book/preview_index.html:52
+msgid "Get All 19 Chapters"
+msgstr "获取全部 19 章"
+
+#: book/templates/book/preview_index.html:53
+msgid "Ebook $12.99 • Paperback $18.99 • Hardcover $27.99"
+msgstr "电子书 12.99 美元 • 平装本 18.99 美元 • 精装本 27.99 美元"
+
+#: book/templates/book/prompt_library.html:3
+msgid "Prompt Library"
+msgstr "提示库"
+
+#: book/templates/book/prompt_library.html:20
+msgid "AI Prompt Library"
+msgstr "AI提示库"
+
+#: book/templates/book/prompt_library.html:21
+msgid "25 free prompts to use immediately. 200+ more in the full collection."
+msgstr "25 个免费提示立即使用。完整系列中有 200 多个。"
+
+#: book/templates/book/prompt_library.html:27
+msgid "Search prompts..."
+msgstr "搜索提示..."
+
+#: book/templates/book/prompt_library.html:31
+msgid "All"
+msgstr "全部"
+
+#: book/templates/book/prompt_library.html:32
+msgid "Strategy"
+msgstr "战略"
+
+#: book/templates/book/prompt_library.html:33
+msgid "Writing"
+msgstr "写作"
+
+#: book/templates/book/prompt_library.html:34
+msgid "Analysis"
+msgstr "分析"
+
+#: book/templates/book/prompt_library.html:35
+msgid "Coding"
+msgstr "编码"
+
+#: book/templates/book/prompt_library.html:36
+msgid "Creative"
+msgstr "有创造力的"
+
+#: book/templates/book/prompt_library.html:46
+msgid "Unlock 200+ Premium Prompts"
+msgstr "解锁 200 多个高级提示"
+
+#: book/templates/book/prompt_library.html:47
+msgid "Get the complete collection organized by industry, role, and use case."
+msgstr "获取按行业、角色和用例组织的完整集合。"
+
+#: book/templates/book/prompt_library.html:48
+msgid "Get Full Collection — $9"
+msgstr "获取完整收藏 — 9 美元"
+
+#: book/templates/book/prompt_library.html:57
+msgid "AI Strategy Audit"
+msgstr "人工智能战略审核"
+
+#: book/templates/book/prompt_library.html:57
+msgid ""
+"Act as a skeptical AI consultant. Review our current AI usage: [describe "
+"your setup]. Identify 3 red flags, 2 missed opportunities, and 1 thing we "
+"should stop doing immediately."
+msgstr ""
+"充当持怀疑态度的人工智能顾问。查看我们当前的 AI 使用情况：[描述您的设置]。确定 3 个危险信号、2 个错过的机会以及 1 "
+"件我们应该立即停止做的事情。"
+
+#: book/templates/book/prompt_library.html:58
+msgid "Vendor Evaluation"
+msgstr "供应商评估"
+
+#: book/templates/book/prompt_library.html:58
+msgid ""
+"Evaluate [AI vendor/product] for our use case: [describe]. Give me: (1) 3 "
+"genuine strengths, (2) 3 limitations they won\\'t advertise, (3) 2 cheaper "
+"alternatives, (4) whether we actually need this or if we\\'re FOMO-buying."
+msgstr ""
+"针对我们的用例评估 [AI 供应商/产品]：[描述]。给我：(1) 3 个真正的优势，(2) 3 个他们不会做广告的限制，(3) 2 "
+"个更便宜的替代品，(4) 我们是否真的需要这个，或者我们是否在 FOMO 购买。"
+
+#: book/templates/book/prompt_library.html:59
+msgid "Implementation Roadmap"
+msgstr "实施路线图"
+
+#: book/templates/book/prompt_library.html:59
+msgid ""
+"Create a 90-day AI implementation plan for [team/department]. Phase 1: quick"
+" wins (weeks 1-4). Phase 2: integration (weeks 5-8). Phase 3: optimization "
+"(weeks 9-12). Include budget estimates and risk mitigation."
+msgstr ""
+"为[团队/部门]制定 90 天的人工智能实施计划。第一阶段：快速获胜（第 1-4 周）。第 2 阶段：整合（第 5-8 周）。第 3 阶段：优化（第 "
+"9-12 周）。包括预算估算和风险缓解。"
+
+#: book/templates/book/prompt_library.html:60
+msgid "Skeptical First Draft"
+msgstr "初稿存疑"
+
+#: book/templates/book/prompt_library.html:60
+msgid ""
+"Write a first draft of [document type] about [topic]. Use a skeptical, "
+"conversational tone. Challenge one common assumption. Include one surprising"
+" statistic (flag it for fact-checking). Keep it under [word count]."
+msgstr ""
+"撰写关于[主题]的[文档类型]初稿。使用怀疑的、对话的语气。挑战一个常见的假设。包括一项令人惊讶的统计数据（将其标记为事实检查）。将其保留在[字数统计]下。"
+
+#: book/templates/book/prompt_library.html:61
+msgid "AI-Human Collaboration"
+msgstr "人工智能与人类协作"
+
+#: book/templates/book/prompt_library.html:61
+msgid ""
+"I wrote this: [paste your text]. Improve it without making it sound like AI "
+"wrote it. Keep my voice. Fix awkward phrasing. Add one subtle flourish. Mark"
+" what you changed and why."
+msgstr ""
+"我写了这个：[粘贴您的文字]。改进它，但不要让它听起来像人工智能写的那样。保留我的声音。修正尴尬的措辞。添加一种微妙的装饰。标记您更改的内容以及原因。"
+
+#: book/templates/book/prompt_library.html:62
+msgid "Executive Summary"
+msgstr "执行摘要"
+
+#: book/templates/book/prompt_library.html:62
+msgid ""
+"Summarize this [report/document] into 3 bullet points for a CEO who has 30 "
+"seconds. Each bullet must include: (1) the finding, (2) the implication, (3)"
+" the recommended action."
+msgstr ""
+"为 CEO 提供 30 秒的时间，将此 [报告/文档] 总结为 3 个要点。每个项目符号必须包括：(1) 结果，(2) 含义，(3) 建议采取的行动。"
+
+#: book/templates/book/prompt_library.html:63
+msgid "Data Storytelling"
+msgstr "数据讲故事"
+
+#: book/templates/book/prompt_library.html:63
+msgid ""
+"I have this data: [paste or describe]. Turn it into a narrative that a non-"
+"technical stakeholder can act on. Include: (1) the headline, (2) the \\"
+msgstr "我有这个数据：[粘贴或描述]。将其变成非技术利益相关者可以采取行动的叙述。包括：（1）标题，（2）\\"
+
+#: book/templates/book/prompt_library.html:64
+msgid "Bias Detector"
+msgstr "偏置检测器"
+
+#: book/templates/book/prompt_library.html:64
+msgid ""
+"Analyze this dataset/description for potential bias: [paste]. Identify: (1) "
+"sampling bias, (2) measurement bias, (3) algorithmic bias risk, (4) one "
+"question the data cannot answer. Suggest one way to validate your concerns."
+msgstr ""
+"分析此数据集/描述是否存在潜在偏差：[粘贴]。识别：(1) 抽样偏差，(2) 测量偏差，(3) 算法偏差风险，(4) "
+"数据无法回答的一个问题。建议一种方法来验证您的担忧。"
+
+#: book/templates/book/prompt_library.html:65
+msgid "Decision Framework"
+msgstr "决策框架"
+
+#: book/templates/book/prompt_library.html:65
+msgid ""
+"We\\'re deciding between [Option A] and [Option B] for [decision context]. "
+"Build a weighted decision matrix with 5 criteria. Suggest weights based on "
+"our priorities: [describe]. Include one \\"
+msgstr ""
+"我们正在针对 [决策上下文] 在 [选项 A] 和 [选项 B] 之间做出决定。构建具有 5 "
+"个标准的加权决策矩阵。根据我们的优先级建议权重：[描述]。包括一个\\"
+
+#: book/templates/book/prompt_library.html:66
+msgid "Code Review Assistant"
+msgstr "代码审查助理"
+
+#: book/templates/book/prompt_library.html:66
+msgid ""
+"Review this code: [paste]. Identify: (1) bugs or edge cases, (2) performance"
+" issues, (3) security concerns, (4) whether this is even the right approach."
+" Be critical — assume I\\'m wrong until proven otherwise."
+msgstr ""
+"查看此代码：[粘贴]。确定：(1) 错误或边缘情况，(2) 性能问题，(3) 安全问题，(4) "
+"这是否是正确的方法。保持批判性——假设我错了，直到事实证明并非如此。"
+
+#: book/templates/book/prompt_library.html:67
+msgid "API Integration Plan"
+msgstr "API集成计划"
+
+#: book/templates/book/prompt_library.html:67
+msgid ""
+"I need to integrate [AI API] into [system]. Design the architecture. "
+"Include: (1) authentication approach, (2) error handling strategy, (3) rate "
+"limiting plan, (4) fallback when the API fails, (5) cost monitoring."
+msgstr ""
+"我需要将[AI "
+"API]集成到[系统]中。设计架构。包括：（1）身份验证方法，（2）错误处理策略，（3）速率限制计划，（4）API失败时的回退，（5）成本监控。"
+
+#: book/templates/book/prompt_library.html:68
+msgid "Concept Generation"
+msgstr "概念生成"
+
+#: book/templates/book/prompt_library.html:68
+msgid ""
+"Generate 5 unconventional ideas for [project/goal]. Constraint: each idea "
+"must use AI in a way that amplifies human judgment rather than replacing it."
+" Rate each on: feasibility, originality, risk."
+msgstr ""
+"为[项目/目标]产生 5 个非常规的想法。限制：每个想法都必须以增强人类判断力而不是取代它的方式使用人工智能。对以下各项进行评分：可行性、原创性、风险。"
+
+#: book/templates/book/prompt_library.html:69
+msgid "Analogy Builder"
+msgstr "类比生成器"
+
+#: book/templates/book/prompt_library.html:69
+msgid ""
+"Explain [complex AI concept] using an analogy from [familiar domain]. The "
+"analogy must capture: (1) how it works, (2) its limitations, (3) why it "
+"sometimes fails unexpectedly. Avoid \\"
+msgstr ""
+"使用[熟悉的领域]的类比解释[复杂的人工智能概念]。这个类比必须体现：（1）它是如何工作的，（2）它的局限性，（3）为什么它有时会意外失败。避免 \\"
+
+#: book/templates/book/prompt_library.html:70
+msgid "Team Upskill Plan"
+msgstr "团队技能提升计划"
+
+#: book/templates/book/prompt_library.html:70
+msgid ""
+"Design a 4-week AI upskilling plan for [team role]. Week 1: fundamentals. "
+"Week 2: hands-on with one tool. Week 3: workflow integration. Week 4: "
+"evaluation and ethics. Include 2 hours/week time commitment."
+msgstr ""
+"为[团队角色]设计为期 4 周的人工智能技能提升计划。第一周：基础知识。第 2 周：实践使用一种工具。第 3 "
+"周：工作流程集成。第四周：评估和道德。包括每周 2 小时的时间投入。"
+
+#: book/templates/book/prompt_library.html:71
+#, fuzzy
+#| msgid "Calculator"
+msgid "ROI Calculator"
+msgstr "计算器"
+
+#: book/templates/book/prompt_library.html:71
+msgid ""
+"Help me build an ROI model for [AI initiative]. Inputs: [current costs], "
+"[expected benefits], [implementation costs]. Output: (1) payback period, (2)"
+" 3-year NPV, (3) sensitivity analysis for 50%% and 150%% of expected "
+"benefits."
+msgstr ""
+"帮助我为 [AI 计划] 构建投资回报率模型。输入：[当前成本]、[预期收益]、[实施成本]。输出：(1) 投资回收期，(2) 3 年 NPV，(3) "
+"50%% 和 150%% 预期收益的敏感性分析。"
+
+#: book/templates/book/prompt_library.html:72
+msgid "Email Diplomat"
+msgstr "电子邮件外交官"
+
+#: book/templates/book/prompt_library.html:72
+msgid ""
+"Draft a diplomatic email to [recipient] about [sensitive topic]. Tone: "
+"assertive but not aggressive. Must include: (1) clear ask, (2) the \\"
+msgstr "起草一封关于[敏感话题]的外交电子邮件给[收件人]。语气：自信但不咄咄逼人。必须包括：（1）明确询问，（2）\\"
+
+#: book/templates/book/prompt_library.html:73
+msgid "Prompt Engineering"
+msgstr "及时工程"
+
+#: book/templates/book/prompt_library.html:73
+msgid ""
+"I need a prompt that consistently produces [specific output]. Give me: (1) "
+"the base prompt, (2) 3 variations to test, (3) the evaluation criteria, (4) "
+"common failure modes and how to avoid them."
+msgstr ""
+"我需要一个能够持续产生[特定输出]的提示。给我：（1）基本提示，（2）要测试的 3 个变体，（3）评估标准，（4）常见故障模式以及如何避免它们。"
+
+#: book/templates/book/prompt_library.html:74
+msgid "Scenario Planning"
+msgstr "场景规划"
+
+#: book/templates/book/prompt_library.html:74
+msgid ""
+"Build 3 scenarios for [business situation] 2 years out: (1) optimistic, (2) "
+"realistic, (3) pessimistic. Each must include: key assumptions, early "
+"warning signals, and the first action to take if this scenario unfolds."
+msgstr ""
+"为 2 年后的[业务状况]构建 3 个情景：(1) 乐观，(2) 现实，(3) "
+"悲观。每项都必须包括：关键假设、预警信号以及出现这种情况时应采取的第一个行动。"
+
+#: book/templates/book/prompt_library.html:75
+msgid "Ethics Checklist"
+msgstr "道德清单"
+
+#: book/templates/book/prompt_library.html:75
+msgid ""
+"Create an ethics checklist for [AI use case]. Must cover: data privacy, "
+"fairness/bias, transparency, human oversight, environmental impact, and "
+"stakeholder communication. Flag any \\"
+msgstr "为[人工智能用例]创建道德清单。必须涵盖：数据隐私、公平/偏见、透明度、人类监督、环境影响和利益相关者沟通。标记任何\\"
+
+#: book/templates/book/prompt_library.html:76
+msgid "Competitive Intel"
+msgstr "具有竞争力的英特尔"
+
+#: book/templates/book/prompt_library.html:76
+msgid ""
+"Analyze how [competitor] might use AI against us in [market]. Identify: (1) "
+"their likely AI investments, (2) our vulnerability, (3) our counter-move, "
+"(4) whether we should match or differentiate. No fluff."
+msgstr ""
+"分析[竞争对手]可能如何在[市场]中利用人工智能来对抗我们。确定：（1）他们可能的人工智能投资，（2）我们的弱点，（3）我们的对策，（4）我们是否应该匹配或差异化。没有绒毛。"
+
+#: book/templates/book/prompt_library.html:77
+msgid "Meeting Prep"
+msgstr "会议准备"
+
+#: book/templates/book/prompt_library.html:77
+msgid ""
+"I have a meeting about [topic] with [attendees]. Prep me with: (1) 3 "
+"questions they\\'ll ask, (2) 2 objections they\\'ll raise, (3) one piece of "
+"evidence that settles the debate, (4) my opening 30 seconds."
+msgstr ""
+"我与[与会者]召开了一个关于[主题]的会议。让我做好准备：(1) 他们会问 3 个问题，(2) 他们会提出 2 个反对意见，(3) "
+"解决辩论的一项证据，(4) 我的开场 30 秒。"
+
+#: book/templates/book/prompt_library.html:78
+msgid "Debug Partner"
+msgstr "调试伙伴"
+
+#: book/templates/book/prompt_library.html:78
+msgid ""
+"I have this error: [paste error]. System: [describe]. Walk me through "
+"debugging it. Don\\'t just give the answer — teach me the mental model. Ask "
+"me one question at a time."
+msgstr "我有这个错误：[粘贴错误]。系统：[描述]。引导我调试它。不要只是给出答案——教我思维模型。一次问我一个问题。"
+
+#: book/templates/book/prompt_library.html:79
+msgid "Narrative Arc"
+msgstr "叙事弧"
+
+#: book/templates/book/prompt_library.html:79
+msgid ""
+"Structure a [presentation type] about [topic] as a story. Opening hook, "
+"rising tension (the problem), climax (the insight), resolution (the action)."
+" 5 minutes max. One surprise moment."
+msgstr ""
+"将有关[主题]的[演示类型]构建为一个故事。开头的钩子，不断上升的张力（问题），高潮（洞察力），解决方案（行动）。最多 5 分钟一个惊喜的时刻。"
+
+#: book/templates/book/prompt_library.html:80
+msgid "Exit Strategy"
+msgstr "退出策略"
+
+#: book/templates/book/prompt_library.html:80
+msgid ""
+"If we need to reverse our AI investment in [area], what\\'s the off-ramp? "
+"Include: (1) data portability plan, (2) team transition, (3) cost of "
+"reversal, (4) timeline, (5) what we keep vs. discard."
+msgstr ""
+"如果我们需要扭转在[领域]的人工智能投资，那么出口是什么？包括：(1) 数据可移植性计划，(2) 团队过渡，(3) 逆转成本，(4) 时间表，(5) "
+"我们保留什么与丢弃什么。"
+
+#: book/templates/book/prompt_library.html:81
+msgid "Signal vs. Noise"
+msgstr "信号与噪声"
+
+#: book/templates/book/prompt_library.html:81
+msgid ""
+"I\\'m overwhelmed by [data stream/source]. Help me build a filter: what "
+"signals matter vs. what\\'s noise? Include: (1) 3 key metrics, (2) one "
+"leading indicator, (3) the \\"
+msgstr "我对[数据流/源]不知所措。帮助我建立一个过滤器：哪些信号重要，哪些信号是噪音？包括：（1）3个关键指标，（2）1个领先指标，（3）\\"
+
+#: book/templates/book/prompt_library.html:95
+msgid "Copy"
+msgstr "复制"
+
+#: book/templates/book/prompt_library.html:109
+msgid "Prompt copied!"
+msgstr "提示已复制！"
+
+#: book/templates/book/scorecard.html:3 book/templates/book/scorecard.html:21
+#, fuzzy
+#| msgid "Take the Scorecard"
+msgid "AI Readiness Scorecard"
+msgstr "使用评分卡"
+
+#: book/templates/book/scorecard.html:22
+msgid "20 questions. 5 minutes. Know exactly where you stand."
+msgstr "20 个问题。 5分钟。确切地知道你的立场。"
+
+#: book/templates/book/scorecard.html:30
+msgid "answered"
+msgstr "回答了"
+
+#: book/templates/book/scorecard.html:50
+msgid "Your Result"
+msgstr "你的结果"
+
+#: book/templates/book/scorecard.html:55
+msgid "Enter your email to receive your personalized report:"
+msgstr "输入您的电子邮件以接收您的个性化报告："
+
+#: book/templates/book/scorecard.html:59
+msgid "you@company.com"
+msgstr "你@company.com"
+
+#: book/templates/book/scorecard.html:60
+#: book/templates/book/scorecard.html:189
+#: book/templates/book/scorecard.html:194
+msgid "Get My Report"
+msgstr "获取我的报告"
+
+#: book/templates/book/scorecard.html:65
+msgid "No spam. Unsubscribe any time."
+msgstr "没有垃圾邮件。随时取消订阅。"
+
+#: book/templates/book/scorecard.html:69
+msgid "Your report is on its way. In the meantime:"
+msgstr "您的报告正在发送中。同时："
+
+#: book/templates/book/scorecard.html:71
+msgid "Read the Blog"
+msgstr "阅读博客"
+
+#: book/templates/book/scorecard.html:83
+msgid "The Explorer"
+msgstr "探索者号"
+
+#: book/templates/book/scorecard.html:84
+msgid ""
+"You're at the beginning of the AI journey. That's actually an advantage — "
+"you can build right from the start. Chapters 1-5 are written for you."
+msgstr "您正处于人工智能之旅的开始阶段。这实际上是一个优势——您可以从一开始就进行构建。第 1 章至第 5 章是为您编写的。"
+
+#: book/templates/book/scorecard.html:87
+msgid "The Curious"
+msgstr "好奇者"
+
+#: book/templates/book/scorecard.html:88
+msgid ""
+"You have some awareness but lack structure. Focus on the Partnership "
+"Framework (Chapters 6-9) and the Implementation Playbook (Chapters 10-13)."
+msgstr "你有一些意识，但缺乏结构。重点关注合作伙伴框架（第 6-9 章）和实施手册（第 10-13 章）。"
+
+#: book/templates/book/scorecard.html:91
+msgid "The Practitioner"
+msgstr "实践者"
+
+#: book/templates/book/scorecard.html:92
+msgid ""
+"You're actively using AI but want to scale. The advanced chapters on "
+"governance, team building, and future-proofing (Chapters 14-19) will be most"
+" valuable."
+msgstr "您正在积极使用人工智能，但希望扩大规模。关于治理、团队建设和面向未来的高级章节（第 14-19 章）将是最有价值的。"
+
+#: book/templates/book/scorecard.html:95
+msgid "The Architect"
+msgstr "建筑师"
+
+#: book/templates/book/scorecard.html:96
+msgid ""
+"You're leading AI transformation. The book's skeptical frameworks will help "
+"you avoid the traps that even experienced teams fall into."
+msgstr "您正在引领人工智能转型。本书的怀疑框架将帮助您避免即使是经验丰富的团队也会陷入的陷阱。"
+
+#: book/templates/book/scorecard.html:163
+msgid "Please enter a valid email."
+msgstr "请输入有效的电子邮件。"
+
+#: book/templates/book/scorecard.html:168
+msgid "Sending..."
+msgstr "正在发送..."
+
+#: book/templates/book/scorecard.html:187
+msgid "Something went wrong."
+msgstr "出了点问题。"
+
+#: book/templates/book/scorecard.html:192
+msgid "Network error. Please try again."
+msgstr "网络错误。请再试一次。"
+
+#: book/views.py:26
+msgid "How would you rate your current understanding of AI capabilities?"
+msgstr "您如何评价您目前对人工智能能力的理解？"
+
+#: book/views.py:26 book/views.py:29
+msgid "No idea"
+msgstr "不知道"
+
+#: book/views.py:26
+msgid "Basic awareness"
+msgstr "基本意识"
+
+#: book/views.py:26
+msgid "Can use ChatGPT"
+msgstr "可以使用ChatGPT"
+
+#: book/views.py:26
+msgid "Build with AI APIs"
+msgstr "使用 AI API 进行构建"
+
+#: book/views.py:26
+msgid "Expert-level"
+msgstr "专家级"
+
+#: book/views.py:27
+msgid "Does your organization have an AI strategy?"
+msgstr "您的组织有人工智能战略吗？"
+
+#: book/views.py:27 book/views.py:32 book/views.py:34 book/views.py:39
+#: book/views.py:41 book/views.py:42
+msgid "No"
+msgstr "不"
+
+#: book/views.py:27
+msgid "Informal discussions"
+msgstr "非正式讨论"
+
+#: book/views.py:27
+msgid "Draft strategy"
+msgstr "战略草案"
+
+#: book/views.py:27
+msgid "Approved strategy"
+msgstr "批准的策略"
+
+#: book/views.py:27
+msgid "Executing strategy"
+msgstr "执行策略"
+
+#: book/views.py:28
+msgid "How many AI tools does your team use weekly?"
+msgstr "您的团队每周使用多少个人工智能工具？"
+
+#: book/views.py:28 book/views.py:31
+msgid "None"
+msgstr "没有任何"
+
+#: book/views.py:28
+msgid "1-2"
+msgstr "1-2"
+
+#: book/views.py:28
+msgid "3-5"
+msgstr "3-5"
+
+#: book/views.py:28
+msgid "5-10"
+msgstr "5-10"
+
+#: book/views.py:28
+msgid "10+"
+msgstr "10+"
+
+#: book/views.py:29
+msgid "Have you identified which tasks AI could augment in your role?"
+msgstr "您是否已确定人工智能可以增强您的角色的哪些任务？"
+
+#: book/views.py:29
+msgid "Vague sense"
+msgstr "模糊的感觉"
+
+#: book/views.py:29
+msgid "Some tasks mapped"
+msgstr "映射的一些任务"
+
+#: book/views.py:29
+msgid "Detailed workflow analysis"
+msgstr "详细的工作流程分析"
+
+#: book/views.py:29
+msgid "Implemented changes"
+msgstr "实施的变更"
+
+#: book/views.py:30
+msgid "How comfortable are you evaluating AI vendor claims?"
+msgstr "您对评估人工智能供应商的声明是否满意？"
+
+#: book/views.py:30
+msgid "Very uncomfortable"
+msgstr "很不舒服"
+
+#: book/views.py:30
+msgid "Slightly uncomfortable"
+msgstr "有点不舒服"
+
+#: book/views.py:30 book/views.py:45
+msgid "Neutral"
+msgstr "中性的"
+
+#: book/views.py:30
+msgid "Mostly comfortable"
+msgstr "大多舒适"
+
+#: book/views.py:30
+msgid "Expert"
+msgstr "专家"
+
+#: book/views.py:31
+msgid "Has your team received any AI training?"
+msgstr "您的团队接受过人工智能培训吗？"
+
+#: book/views.py:31
+msgid "Self-directed only"
+msgstr "仅限自导自演"
+
+#: book/views.py:31
+msgid "Some online courses"
+msgstr "一些在线课程"
+
+#: book/views.py:31
+msgid "Organized training"
+msgstr "组织培训"
+
+#: book/views.py:31
+msgid "Ongoing program"
+msgstr "正在进行的计划"
+
+#: book/views.py:32
+msgid "Do you have a budget allocated for AI tooling?"
+msgstr "您是否为人工智能工具分配了预算？"
+
+#: book/views.py:32
+msgid "Under $1k/mo"
+msgstr "低于 1,000 美元/月"
+
+#: book/views.py:32
+msgid "$1k-5k/mo"
+msgstr "$1k-5k/月"
+
+#: book/views.py:32
+msgid "$5k-20k/mo"
+msgstr "$5k-20k/月"
+
+#: book/views.py:32
+msgid "$20k+/mo"
+msgstr "$20k+/月"
+
+#: book/views.py:33
+msgid "How do you handle AI-generated content quality?"
+msgstr "您如何处理人工智能生成的内容质量？"
+
+#: book/views.py:33
+msgid "Don't use AI content"
+msgstr "不要使用人工智能内容"
+
+#: book/views.py:33
+msgid "Eyeball it"
+msgstr "盯着它"
+
+#: book/views.py:33
+msgid "Basic review"
+msgstr "基本回顾"
+
+#: book/views.py:33
+msgid "Structured QA process"
+msgstr "结构化的质量保证流程"
+
+#: book/views.py:33
+msgid "Automated + human checks"
+msgstr "自动化+人工检查"
+
+#: book/views.py:34
+msgid "Have you documented AI usage policies?"
+msgstr "您是否记录了人工智能使用政策？"
+
+#: book/views.py:34
+msgid "Informal guidelines"
+msgstr "非正式指南"
+
+#: book/views.py:34
+msgid "Draft policy"
+msgstr "政策草案"
+
+#: book/views.py:34
+msgid "Approved policy"
+msgstr "批准的政策"
+
+#: book/views.py:34
+msgid "Enforced policy"
+msgstr "强制政策"
+
+#: book/views.py:35
+msgid "How do you stay updated on AI developments?"
+msgstr "您如何及时了解人工智能的发展？"
+
+#: book/views.py:35
+msgid "Don't actively"
+msgstr "不主动"
+
+#: book/views.py:35
+msgid "Social media"
+msgstr "社交媒体"
+
+#: book/views.py:35
+msgid "Newsletters/blogs"
+msgstr "时事通讯/博客"
+
+#: book/views.py:35
+msgid "Industry events"
+msgstr "行业活动"
+
+#: book/views.py:35
+msgid "Academic papers"
+msgstr "学术论文"
+
+#: book/views.py:36
+msgid "Rate your data readiness for AI integration:"
+msgstr "评估您的 AI 集成数据准备情况："
+
+#: book/views.py:36
+msgid "Chaotic"
+msgstr "混乱"
+
+#: book/views.py:36
+msgid "Some structured"
+msgstr "一些结构化的"
+
+#: book/views.py:36
+msgid "Mostly organized"
+msgstr "大部分有组织"
+
+#: book/views.py:36
+msgid "Well-structured"
+msgstr "结构良好"
+
+#: book/views.py:36
+msgid "AI-ready pipelines"
+msgstr "AI 就绪管道"
+
+#: book/views.py:37
+msgid "Have you measured ROI on any AI implementation?"
+msgstr "您是否衡量过任何人工智能实施的投资回报率？"
+
+#: book/views.py:37
+msgid "No implementations"
+msgstr "没有实施"
+
+#: book/views.py:37
+msgid "No ROI tracked"
+msgstr "没有跟踪投资回报率"
+
+#: book/views.py:37
+msgid "Some informal tracking"
+msgstr "一些非正式的跟踪"
+
+#: book/views.py:37
+msgid "Basic ROI measurement"
+msgstr "基本投资回报率测量"
+
+#: book/views.py:37
+msgid "Detailed ROI analysis"
+msgstr "详细的投资回报率分析"
+
+#: book/views.py:38
+msgid "How does leadership view AI adoption?"
+msgstr "领导层如何看待人工智能的采用？"
+
+#: book/views.py:38
+msgid "Skeptical/hostile"
+msgstr "怀疑/敌对"
+
+#: book/views.py:38
+msgid "Indifferent"
+msgstr "冷漠"
+
+#: book/views.py:38
+msgid "Curious"
+msgstr "好奇的"
+
+#: book/views.py:38
+msgid "Supportive"
+msgstr "支持"
+
+#: book/views.py:38
+msgid "Championing"
+msgstr "冠军"
+
+#: book/views.py:39
+msgid "Do you have an AI ethics framework?"
+msgstr "你们有人工智能道德框架吗？"
+
+#: book/views.py:39
+msgid "Aware of issues"
+msgstr "意识到问题"
+
+#: book/views.py:39
+msgid "Informal principles"
+msgstr "非正式原则"
+
+#: book/views.py:39
+msgid "Documented framework"
+msgstr "记录框架"
+
+#: book/views.py:39
+msgid "Implemented + reviewed"
+msgstr "实施+审查"
+
+#: book/views.py:40
+msgid "How integrated is AI in your core workflows?"
+msgstr "人工智能在您的核心工作流程中的集成程度如何？"
+
+#: book/views.py:40
+msgid "Not at all"
+msgstr "一点也不"
+
+#: book/views.py:40
+msgid "Experimental"
+msgstr "实验性的"
+
+#: book/views.py:40
+msgid "Some processes"
+msgstr "一些流程"
+
+#: book/views.py:40
+msgid "Many processes"
+msgstr "工序多"
+
+#: book/views.py:40
+msgid "Core to operations"
+msgstr "运营核心"
+
+#: book/views.py:41
+msgid "Can you explain AI limitations to stakeholders?"
+msgstr "您能否向利益相关者解释人工智能的局限性？"
+
+#: book/views.py:41
+msgid "Basic concepts"
+msgstr "基本概念"
+
+#: book/views.py:41
+msgid "Some depth"
+msgstr "有一定的深度"
+
+#: book/views.py:41
+msgid "Confident communicator"
+msgstr "自信的沟通者"
+
+#: book/views.py:41
+msgid "Trusted advisor"
+msgstr "值得信赖的顾问"
+
+#: book/views.py:42
+msgid "Have you planned for AI failure modes?"
+msgstr "您是否针对 AI 故障模式做好了规划？"
+
+#: book/views.py:42
+msgid "Vague awareness"
+msgstr "意识模糊"
+
+#: book/views.py:42
+msgid "Some contingencies"
+msgstr "一些意外情况"
+
+#: book/views.py:42
+msgid "Documented plans"
+msgstr "记录的计划"
+
+#: book/views.py:42
+msgid "Regular drills"
+msgstr "定期演习"
+
+#: book/views.py:43
+msgid "How do you handle AI bias and fairness?"
+msgstr "您如何处理人工智能的偏见和公平性？"
+
+#: book/views.py:43
+msgid "Not considered"
+msgstr "不考虑"
+
+#: book/views.py:43
+msgid "Aware of issue"
+msgstr "意识到问题"
+
+#: book/views.py:43
+msgid "Basic checks"
+msgstr "基本检查"
+
+#: book/views.py:43
+msgid "Structured review"
+msgstr "结构化审查"
+
+#: book/views.py:43
+msgid "Continuous monitoring"
+msgstr "持续监控"
+
+#: book/views.py:44
+msgid "What's your AI talent situation?"
+msgstr "您的AI人才情况如何？"
+
+#: book/views.py:44
+msgid "No expertise"
+msgstr "没有专业知识"
+
+#: book/views.py:44
+msgid "One interested person"
+msgstr "一位感兴趣的人"
+
+#: book/views.py:44
+msgid "Small team"
+msgstr "小团队"
+
+#: book/views.py:44
+msgid "Dedicated team"
+msgstr "敬业的团队"
+
+#: book/views.py:44
+msgid "Center of excellence"
+msgstr "卓越中心"
+
+#: book/views.py:45
+msgid "How future-proof do you feel your skills are?"
+msgstr "您认为自己的技能是否面向未来？"
+
+#: book/views.py:45
+msgid "Very vulnerable"
+msgstr "非常脆弱"
+
+#: book/views.py:45
+msgid "Somewhat at risk"
+msgstr "有一定风险"
+
+#: book/views.py:45
+msgid "Mostly secure"
+msgstr "基本安全"
+
+#: book/views.py:45
+msgid "Actively future-proofing"
+msgstr "积极应对未来"
+
+#: book/views.py:52
+msgid "Solo entrepreneur / Freelancer"
+msgstr "个体企业家/自由职业者"
+
+#: book/views.py:53
+msgid "Small business owner (1-10 team)"
+msgstr "小型企业主（1-10 团队）"
+
+#: book/views.py:54
+msgid "Mid-size company (11-50 team)"
+msgstr "中型公司（11-50 人团队）"
+
+#: book/views.py:55
+msgid "Enterprise (50+ team)"
+msgstr "企业（50+团队）"
+
+#: book/views.py:58
+msgid "Text generation (ChatGPT, Claude)"
+msgstr "文本生成（ChatGPT，Claude）"
+
+#: book/views.py:59
+msgid "Image generation (Midjourney, DALL-E)"
+msgstr "图像生成（中途、DALL-E）"
+
+#: book/views.py:60
+msgid "Code assistance (GitHub Copilot)"
+msgstr "代码帮助 (GitHub Copilot)"
+
+#: book/views.py:61
+msgid "Data analysis (Tableau AI, Excel)"
+msgstr "数据分析（Tableau AI、Excel）"
+
+#: book/views.py:62
+msgid "Voice / speech (ElevenLabs, Whisper)"
+msgstr "语音/语音（ElevenLabs、Whisper）"
+
+#: book/views.py:63
+msgid "Workflow automation (Zapier, Make)"
+msgstr "工作流程自动化（Zapier、Make）"
+
+#: book/views.py:66
+msgid "Under $100/month"
+msgstr "每月 100 美元以下"
+
+#: book/views.py:67
+msgid "$100-500/month"
+msgstr "$100-500/月"
+
+#: book/views.py:68
+msgid "$500-2,000/month"
+msgstr "$500-2,000/月"
+
+#: book/views.py:69
+msgid "$2,000+/month"
+msgstr "$2,000+/月"
+
+#: book/views.py:72
+msgid "10-25% faster"
+msgstr "速度提高 10-25%"
+
+#: book/views.py:73
+msgid "25-50% faster"
+msgstr "速度提高 25-50%"
+
+#: book/views.py:74
+msgid "50-100% faster"
+msgstr "速度提高 50-100%"
+
+#: book/views.py:75
+msgid "2x+ improvement"
+msgstr "2 倍以上改进"
+
+#: templates/base.html:114
+msgid "Home"
+msgstr "首页"
+
+#: templates/base.html:117 templates/base.html:169
+msgid "Scorecard"
+msgstr "评分卡"
+
+#: templates/base.html:118 templates/base.html:170
+msgid "Calculator"
+msgstr "计算器"
+
+#: templates/base.html:119 templates/base.html:171
+msgid "Prompts"
+msgstr "提示词"
+
+#: templates/base.html:121
+msgid "Buy Now"
+msgstr "立即购买"
+
+#: templates/base.html:155
+msgid "A field guide to the human-AI partnership."
+msgstr "人机合作实战指南。"
+
+#: templates/base.html:158
+msgid "Book"
+msgstr "书籍"
+
+#: templates/base.html:160
+msgid "Overview"
+msgstr "概述"
+
+#: templates/base.html:162
+msgid "Buy"
+msgstr "购买"
+
+#: templates/base.html:166
+msgid "Resources"
+msgstr "资源"
+
+#: templates/base.html:175
+msgid "Connect"
+msgstr "联系"
+
+#: templates/base.html:178
+msgid "About"
+msgstr "关于"
+
+#: templates/base.html:185
+msgid "© 2026 Glen Ansell. All rights reserved."
+msgstr "© 2026 Glen Ansell。保留所有权利。"
