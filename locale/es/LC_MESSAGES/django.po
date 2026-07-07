@@ -169,7 +169,7 @@ msgstr "Contenido"
 
 #: book/templates/book/book_detail.html:21
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr ""
+msgstr "El problema de los loros: por qué la mayoría de las IA son más tontas de lo que parece"
 "El problema del loro — Por qué la mayoría de las IA son más tontas de lo que"
 " parecen"
 
@@ -185,7 +185,7 @@ msgstr "El partnership — Un marco para la colaboración humano-IA"
 
 #: book/templates/book/book_detail.html:24
 msgid "The Skeptic's Toolkit — How to evaluate any AI claim"
-msgstr ""
+msgstr "El kit de herramientas del escéptico: cómo evaluar cualquier afirmación sobre IA"
 "El kit de herramientas del escéptico — Cómo evaluar cualquier promesa de IA"
 
 #: book/templates/book/book_detail.html:29
@@ -435,7 +435,7 @@ msgstr "Servidor de discordia"
 
 #: book/templates/book/community.html:19
 msgid "Daily discussions, Q&A, prompt sharing, and early access to new tools."
-msgstr ""
+msgstr "Debates diarios, preguntas y respuestas, intercambio rápido y acceso temprano a nuevas herramientas."
 "Debates diarios, preguntas y respuestas, intercambio rápido y acceso "
 "temprano a nuevas herramientas."
 
@@ -501,7 +501,7 @@ msgstr "Contacto"
 
 #: book/templates/book/contact.html:13
 msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr ""
+msgstr "¿Preguntas, solicitudes de palabra o simplemente quiere discutir? Extiende la mano."
 "¿Preguntas, solicitudes de charlas, o solo ganas de discutir? Contáctame."
 
 #: book/templates/book/contact.html:19
@@ -678,7 +678,7 @@ msgstr "Biblioteca de mensajes de IA"
 
 #: book/templates/book/prompt_library.html:21
 msgid "25 free prompts to use immediately. 200+ more in the full collection."
-msgstr ""
+msgstr "25 indicaciones gratuitas para usar de inmediato. Más de 200 más en la colección completa."
 "25 indicaciones gratuitas para usar de inmediato. Más de 200 más en la "
 "colección completa."
 
@@ -716,7 +716,7 @@ msgstr "Desbloquea más de 200 mensajes premium"
 
 #: book/templates/book/prompt_library.html:47
 msgid "Get the complete collection organized by industry, role, and use case."
-msgstr ""
+msgstr "Obtenga la colección completa organizada por industria, función y caso de uso."
 "Obtenga la colección completa organizada por industria, función y caso de "
 "uso."
 
@@ -1117,7 +1117,7 @@ msgstr "Tu resultado"
 
 #: book/templates/book/scorecard.html:55
 msgid "Enter your email to receive your personalized report:"
-msgstr ""
+msgstr "Introduce tu correo electrónico para recibir tu informe personalizado:"
 "Introduce tu correo electrónico para recibir tu informe personalizado:"
 
 #: book/templates/book/scorecard.html:59
@@ -1305,7 +1305,7 @@ msgstr "Cambios implementados"
 
 #: book/views.py:30
 msgid "How comfortable are you evaluating AI vendor claims?"
-msgstr ""
+msgstr "¿Qué tan cómodo se siente al evaluar las afirmaciones de los proveedores de IA?"
 "¿Qué tan cómodo se siente al evaluar las afirmaciones de los proveedores de "
 "IA?"
 
@@ -1643,7 +1643,7 @@ msgstr "Centro de excelencia"
 
 #: book/views.py:45
 msgid "How future-proof do you feel your skills are?"
-msgstr ""
+msgstr "¿Hasta qué punto crees que tus habilidades están preparadas para el futuro?"
 "¿Hasta qué punto crees que tus habilidades están preparadas para el futuro?"
 
 #: book/views.py:45

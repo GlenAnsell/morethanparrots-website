@@ -169,7 +169,7 @@ msgstr "Conteúdo"
 
 #: book/templates/book/book_detail.html:21
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr ""
+msgstr "O problema do papagaio – Por que a maior parte da IA ​​é mais burra do que parece"
 "O problema do papagaio — Por que a maioria das IAs é mais burra do que "
 "parece"
 
@@ -432,7 +432,7 @@ msgstr "Servidor de discórdia"
 
 #: book/templates/book/community.html:19
 msgid "Daily discussions, Q&A, prompt sharing, and early access to new tools."
-msgstr ""
+msgstr "Discussões diárias, perguntas e respostas, compartilhamento imediato e acesso antecipado a novas ferramentas."
 "Discussões diárias, perguntas e respostas, compartilhamento imediato e "
 "acesso antecipado a novas ferramentas."
 
@@ -499,7 +499,7 @@ msgstr "Contato"
 
 #: book/templates/book/contact.html:13
 msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr ""
+msgstr "Dúvidas, pedidos de palestra ou apenas quer discutir? Entre em contato."
 "Perguntas, convites para palestras, ou só quer discutir? Entre em contato."
 
 #: book/templates/book/contact.html:19
@@ -675,7 +675,7 @@ msgstr "Biblioteca de prompts de IA"
 
 #: book/templates/book/prompt_library.html:21
 msgid "25 free prompts to use immediately. 200+ more in the full collection."
-msgstr ""
+msgstr "25 instruções gratuitas para usar imediatamente. Mais de 200 na coleção completa."
 "25 instruções gratuitas para usar imediatamente. Mais de 200 na coleção "
 "completa."
 
@@ -713,7 +713,7 @@ msgstr "Desbloqueie mais de 200 solicitações premium"
 
 #: book/templates/book/prompt_library.html:47
 msgid "Get the complete collection organized by industry, role, and use case."
-msgstr ""
+msgstr "Obtenha a coleção completa organizada por setor, função e caso de uso."
 "Obtenha a coleção completa organizada por setor, função e caso de uso."
 
 #: book/templates/book/prompt_library.html:48
@@ -1297,7 +1297,7 @@ msgstr "Mudanças implementadas"
 
 #: book/views.py:30
 msgid "How comfortable are you evaluating AI vendor claims?"
-msgstr ""
+msgstr "Você se sente confortável avaliando as reivindicações dos fornecedores de IA?"
 "Você se sente confortável avaliando as reivindicações dos fornecedores de "
 "IA?"
 

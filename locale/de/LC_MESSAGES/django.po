@@ -172,7 +172,7 @@ msgstr "Inhalt"
 
 #: book/templates/book/book_detail.html:21
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr ""
+msgstr "Das Papageienproblem – Warum die meiste KI dümmer ist, als sie aussieht"
 "Das Papageienproblem — Warum die meiste KI dümmer ist, als sie aussieht"
 
 #: book/templates/book/book_detail.html:22
@@ -346,7 +346,7 @@ msgstr "Jährliche Zeitersparnis: <strong id=\"timeSaved\">0</strong> Stunden"
 
 #: book/templates/book/calculator.html:94
 msgid "Answer the questions to get your personalized estimate."
-msgstr ""
+msgstr "Beantworten Sie die Fragen, um Ihren individuellen Kostenvoranschlag zu erhalten."
 "Beantworten Sie die Fragen, um Ihren individuellen Kostenvoranschlag zu "
 "erhalten."
 
@@ -438,7 +438,7 @@ msgstr "Discord-Server"
 
 #: book/templates/book/community.html:19
 msgid "Daily discussions, Q&A, prompt sharing, and early access to new tools."
-msgstr ""
+msgstr "Tägliche Diskussionen, Fragen und Antworten, zeitnaher Austausch und frühzeitiger Zugriff auf neue Tools."
 "Tägliche Diskussionen, Fragen und Antworten, zeitnaher Austausch und "
 "frühzeitiger Zugriff auf neue Tools."
 
@@ -505,7 +505,7 @@ msgstr "Kontakt"
 
 #: book/templates/book/contact.html:13
 msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr ""
+msgstr "Fragen, Wortmeldungen oder einfach nur Streit? Greifen Sie zu."
 "Fragen, Vortragsanfragen oder einfach Lust zu diskutieren? Melden Sie sich."
 
 #: book/templates/book/contact.html:19
@@ -685,7 +685,7 @@ msgstr "KI-Eingabeaufforderungsbibliothek"
 
 #: book/templates/book/prompt_library.html:21
 msgid "25 free prompts to use immediately. 200+ more in the full collection."
-msgstr ""
+msgstr "25 kostenlose Eingabeaufforderungen zur sofortigen Verwendung. Mehr als 200 weitere in der gesamten Sammlung."
 "25 kostenlose Eingabeaufforderungen zur sofortigen Verwendung. Mehr als 200 "
 "weitere in der gesamten Sammlung."
 
@@ -723,7 +723,7 @@ msgstr "Schalten Sie über 200 Premium-Eingabeaufforderungen frei"
 
 #: book/templates/book/prompt_library.html:47
 msgid "Get the complete collection organized by industry, role, and use case."
-msgstr ""
+msgstr "Erhalten Sie die komplette Sammlung nach Branche, Rolle und Anwendungsfall geordnet."
 "Erhalten Sie die komplette Sammlung nach Branche, Rolle und Anwendungsfall "
 "geordnet."
 
@@ -1130,7 +1130,7 @@ msgstr "Ihr Ergebnis"
 
 #: book/templates/book/scorecard.html:55
 msgid "Enter your email to receive your personalized report:"
-msgstr ""
+msgstr "Geben Sie Ihre E-Mail-Adresse ein, um Ihren personalisierten Bericht zu erhalten:"
 "Geben Sie Ihre E-Mail-Adresse ein, um Ihren personalisierten Bericht zu "
 "erhalten:"
 
@@ -1250,9 +1250,8 @@ msgstr "Expertenniveau"
 
 #: book/views.py:27
 msgid "Does your organization have an AI strategy?"
-msgstr ""
-
-#: book/views.py:27 book/views.py:32 book/views.py:34 book/views.py:39
+msgstr "Verfügt Ihr Unternehmen über eine KI-Strategie?"
+msgstr "Verfügt Ihr Unternehmen über eine KI-Strategie?"#: book/views.py:27 book/views.py:32 book/views.py:34 book/views.py:39
 #: book/views.py:41 book/views.py:42
 msgid "No"
 msgstr "NEIN"
@@ -1299,7 +1298,7 @@ msgstr "10+"
 
 #: book/views.py:29
 msgid "Have you identified which tasks AI could augment in your role?"
-msgstr ""
+msgstr "Haben Sie herausgefunden, welche Aufgaben KI in Ihrer Rolle unterstützen könnte?"
 "Haben Sie herausgefunden, welche Aufgaben KI in Ihrer Rolle unterstützen "
 "könnte?"
 

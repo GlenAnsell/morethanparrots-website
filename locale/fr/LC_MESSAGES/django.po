@@ -170,7 +170,7 @@ msgstr "Table des matières"
 
 #: book/templates/book/book_detail.html:21
 msgid "The Parrot Problem — Why most AI is dumber than it looks"
-msgstr ""
+msgstr "Le problème du perroquet – Pourquoi la plupart des IA sont plus bêtes qu’il n’y paraît"
 "Le problème du perroquet — Pourquoi la plupart des IA sont plus bêtes "
 "qu'elles n'en ont l'air"
 
@@ -434,7 +434,7 @@ msgstr "Serveur Discorde"
 
 #: book/templates/book/community.html:19
 msgid "Daily discussions, Q&A, prompt sharing, and early access to new tools."
-msgstr ""
+msgstr "Discussions quotidiennes, questions-réponses, partage rapide et accès anticipé à de nouveaux outils."
 "Discussions quotidiennes, questions-réponses, partage rapide et accès "
 "anticipé à de nouveaux outils."
 
@@ -501,7 +501,7 @@ msgstr "Contact"
 
 #: book/templates/book/contact.html:13
 msgid "Questions, speaking requests, or just want to argue? Reach out."
-msgstr ""
+msgstr "Des questions, des demandes de parole ou simplement envie d’argumenter ? Contactez-nous."
 "Questions, demandes de conférences, ou juste envie de discuter ? Contactez-"
 "moi."
 
@@ -683,7 +683,7 @@ msgstr "Bibliothèque d'invites IA"
 
 #: book/templates/book/prompt_library.html:21
 msgid "25 free prompts to use immediately. 200+ more in the full collection."
-msgstr ""
+msgstr "25 invites gratuites à utiliser immédiatement. Plus de 200 autres dans la collection complète."
 "25 invites gratuites à utiliser immédiatement. Plus de 200 autres dans la "
 "collection complète."
 
@@ -721,7 +721,7 @@ msgstr "Débloquez plus de 200 invites Premium"
 
 #: book/templates/book/prompt_library.html:47
 msgid "Get the complete collection organized by industry, role, and use case."
-msgstr ""
+msgstr "Obtenez la collection complète organisée par secteur d’activité, rôle et cas d’utilisation."
 "Obtenez la collection complète organisée par secteur d’activité, rôle et cas"
 " d’utilisation."
 
@@ -1219,7 +1219,7 @@ msgstr "Erreur réseau. Veuillez réessayer."
 
 #: book/views.py:26
 msgid "How would you rate your current understanding of AI capabilities?"
-msgstr ""
+msgstr "Comment évalueriez-vous votre compréhension actuelle des capacités de l’IA ?"
 "Comment évalueriez-vous votre compréhension actuelle des capacités de l’IA ?"
 
 #: book/views.py:26 book/views.py:29
@@ -1293,7 +1293,7 @@ msgstr "10+"
 
 #: book/views.py:29
 msgid "Have you identified which tasks AI could augment in your role?"
-msgstr ""
+msgstr "Avez-vous identifié les tâches que l’IA pourrait augmenter dans votre rôle ?"
 "Avez-vous identifié les tâches que l’IA pourrait augmenter dans votre rôle ?"
 
 #: book/views.py:29
@@ -1314,7 +1314,7 @@ msgstr "Modifications mises en œuvre"
 
 #: book/views.py:30
 msgid "How comfortable are you evaluating AI vendor claims?"
-msgstr ""
+msgstr "Dans quelle mesure êtes-vous à l’aise pour évaluer les réclamations des fournisseurs d’IA ?"
 "Dans quelle mesure êtes-vous à l’aise pour évaluer les réclamations des "
 "fournisseurs d’IA ?"
 
@@ -1448,7 +1448,7 @@ msgstr "Articles académiques"
 
 #: book/views.py:36
 msgid "Rate your data readiness for AI integration:"
-msgstr ""
+msgstr "Évaluez l'état de préparation de vos données pour l'intégration de l'IA :"
 "Évaluez l'état de préparation de vos données pour l'intégration de l'IA :"
 
 #: book/views.py:36
@@ -1473,7 +1473,7 @@ msgstr "Pipelines prêts pour l'IA"
 
 #: book/views.py:37
 msgid "Have you measured ROI on any AI implementation?"
-msgstr ""
+msgstr "Avez-vous mesuré le retour sur investissement d'une implémentation d'IA ?"
 "Avez-vous mesuré le retour sur investissement d'une implémentation d'IA ?"
 
 #: book/views.py:37
@@ -1542,7 +1542,7 @@ msgstr "Mis en œuvre + révisé"
 
 #: book/views.py:40
 msgid "How integrated is AI in your core workflows?"
-msgstr ""
+msgstr "Dans quelle mesure l’IA est-elle intégrée dans vos flux de travail principaux ?"
 "Dans quelle mesure l’IA est-elle intégrée dans vos flux de travail "
 "principaux ?"
 
@@ -1656,7 +1656,7 @@ msgstr "Centre d'excellence"
 
 #: book/views.py:45
 msgid "How future-proof do you feel your skills are?"
-msgstr ""
+msgstr "Dans quelle mesure pensez-vous que vos compétences sont à l’épreuve du temps ?"
 "Dans quelle mesure pensez-vous que vos compétences sont à l’épreuve du "
 "temps ?"
 
