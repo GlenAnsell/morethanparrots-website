@@ -1251,7 +1251,7 @@ msgstr "Expertenniveau"
 #: book/views.py:27
 msgid "Does your organization have an AI strategy?"
 msgstr "Verfügt Ihr Unternehmen über eine KI-Strategie?"
-msgstr "Verfügt Ihr Unternehmen über eine KI-Strategie?"#: book/views.py:27 book/views.py:32 book/views.py:34 book/views.py:39
+#: book/views.py:27
 #: book/views.py:41 book/views.py:42
 msgid "No"
 msgstr "NEIN"
