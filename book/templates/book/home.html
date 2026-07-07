@@ -12,7 +12,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <span class="badge bg-copper text-white mb-3 px-3 py-2">{% trans 'Coming 2026' %}</span>
-                <h1 class="display-2 text-white mb-4 display-font">More Than Parrots,<br>Less Than Gods</h1>
+                <h1 class="display-2 text-white mb-4 display-font">{% trans "More Than Parrots," %}<br>{% trans "Less Than Gods" %}</h1>
                 <p class="lead text-white-50 mb-4 fs-5">{% trans 'A field guide to the human-AI partnership. How to stay relevant, valuable, and deeply human in a world that wants to automate everything.' %}</p>
                 <div class="d-flex gap-3 flex-wrap">
                     <a href="{% url 'book:book_detail' %}" class="btn btn-copper btn-lg">{% trans 'Pre-Order Now' %}</a>
@@ -39,29 +39,29 @@
 <section class="section-padding bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 display-font text-navy mb-3">What You'll Learn</h2>
+            <h2 class="display-5 display-font text-navy mb-3">{% trans "What You'll Learn" %}</h2>
             <div class="divider-copper mx-auto"></div>
         </div>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm card-hover p-4">
                     <div class="text-copper display-4 mb-3">01</div>
-                    <h4 class="display-font text-navy">The Partnership Model</h4>
-                    <p class="text-muted">Why "replace humans" is the wrong frame. How to structure workflows where AI amplifies human judgment.</p>
+                    <h4 class="display-font text-navy">{% trans "The Partnership Model" %}</h4>
+                    <p class="text-muted">{% trans 'Why "replace humans" is the wrong frame. How to structure workflows where AI amplifies human judgment.' %}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm card-hover p-4">
                     <div class="text-copper display-4 mb-3">02</div>
-                    <h4 class="display-font text-navy">The Skeptic's Guide</h4>
-                    <p class="text-muted">What AI vendors won't tell you. How to evaluate claims, spot limitations, and avoid costly mistakes.</p>
+                    <h4 class="display-font text-navy">{% trans "The Skeptic's Guide" %}</h4>
+                    <p class="text-muted">{% trans "What AI vendors won't tell you. How to evaluate claims, spot limitations, and avoid costly mistakes." %}</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm card-hover p-4">
                     <div class="text-copper display-4 mb-3">03</div>
-                    <h4 class="display-font text-navy">The Practical Playbook</h4>
-                    <p class="text-muted">Real frameworks for integrating AI into your work, team, and business — today, not someday.</p>
+                    <h4 class="display-font text-navy">{% trans "The Practical Playbook" %}</h4>
+                    <p class="text-muted">{% trans 'Real frameworks for integrating AI into your work, team, and business — today, not someday.' %}</p>
                 </div>
             </div>
         </div>
@@ -72,8 +72,8 @@
 <section class="section-padding bg-navy">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 display-font text-white mb-3">Free Interactive Tools</h2>
-            <p class="text-white-50 lead">Start applying the book's concepts before you even buy it.</p>
+            <h2 class="display-5 display-font text-white mb-3">{% trans "Free Interactive Tools" %}</h2>
+            <p class="text-white-50 lead">{% trans "Start applying the book's concepts before you even buy it." %}</p>
             <div class="divider-copper mx-auto"></div>
         </div>
         <div class="row g-4">
@@ -81,9 +81,9 @@
                 <div class="card bg-white bg-opacity-10 border-0 h-100">
                     <div class="card-body text-center p-4">
                         <div class="display-4 text-copper mb-3">📊</div>
-                        <h4 class="text-white display-font">AI Readiness Scorecard</h4>
-                        <p class="text-white-50">20 questions. Instant score. Personalized report on where you stand.</p>
-                        <a href="{% url 'book:scorecard' %}" class="btn btn-outline-copper mt-3">Start Assessment</a>
+                        <h4 class="text-white display-font">{% trans "AI Readiness Scorecard" %}</h4>
+                        <p class="text-white-50">{% trans '20 questions. Instant score. Personalized report on where you stand.' %}</p>
+                        <a href="{% url 'book:scorecard' %}" class="btn btn-outline-copper mt-3">{% trans 'Start Assessment' %}</a>
                     </div>
                 </div>
             </div>
@@ -91,9 +91,9 @@
                 <div class="card bg-white bg-opacity-10 border-0 h-100">
                     <div class="card-body text-center p-4">
                         <div class="display-4 text-copper mb-3">💰</div>
-                        <h4 class="text-white display-font">Resource Calculator</h4>
-                        <p class="text-white-50">What should you budget for AI tools? Personalized estimate based on your role.</p>
-                        <a href="{% url 'book:calculator' %}" class="btn btn-outline-copper mt-3">Calculate</a>
+                        <h4 class="text-white display-font">{% trans "Resource Calculator" %}</h4>
+                        <p class="text-white-50">{% trans 'What should you budget for AI tools? Personalized estimate based on your role.' %}</p>
+                        <a href="{% url 'book:calculator' %}" class="btn btn-outline-copper mt-3">{% trans 'Calculate' %}</a>
                     </div>
                 </div>
             </div>
@@ -101,9 +101,9 @@
                 <div class="card bg-white bg-opacity-10 border-0 h-100">
                     <div class="card-body text-center p-4">
                         <div class="display-4 text-copper mb-3">💡</div>
-                        <h4 class="text-white display-font">Prompt Library</h4>
-                        <p class="text-white-50">25 free prompts to try immediately. 200+ in the paid collection.</p>
-                        <a href="{% url 'book:prompt_library' %}" class="btn btn-outline-copper mt-3">Browse Prompts</a>
+                        <h4 class="text-white display-font">{% trans "Prompt Library" %}</h4>
+                        <p class="text-white-50">{% trans '25 free prompts to try immediately. 200+ in the paid collection.' %}</p>
+                        <a href="{% url 'book:prompt_library' %}" class="btn btn-outline-copper mt-3">{% trans 'Browse Prompts' %}</a>
                     </div>
                 </div>
             </div>
@@ -118,32 +118,32 @@
             <div class="col-lg-5">
                 <div class="bg-navy rounded-4 p-5 text-center shadow-lg">
                     <div class="display-font text-copper display-1 mb-3">📖</div>
-                    <h3 class="text-white display-font">Read the First 3 Chapters Free</h3>
-                    <p class="text-white-50 mt-3">Get a taste of the skeptical, first-person voice that makes this book different from every other AI book on the shelf.</p>
-                    <a href="{% url 'book:preview_index' %}" class="btn btn-copper mt-3">Read Free Preview</a>
+                    <h3 class="text-white display-font">{% trans 'Read the First 3 Chapters Free' %}</h3>
+                    <p class="text-white-50 mt-3">{% trans 'Get a taste of the skeptical, first-person voice that makes this book different from every other AI book on the shelf.' %}</p>
+                    <a href="{% url 'book:preview_index' %}" class="btn btn-copper mt-3">{% trans 'Read Free Preview' %}</a>
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
-                <h2 class="display-5 display-font text-navy mb-3">Not Another Hype Book</h2>
+                <h2 class="display-5 display-font text-navy mb-3">{% trans "Not Another Hype Book" %}</h2>
                 <div class="divider-copper mb-4"></div>
-                <p class="lead text-muted">You've read the AI books that promise utopia. You've seen the ones that predict doom. This is neither.</p>
-                <p class="text-muted">This is a practical, skeptical, deeply researched guide to working alongside AI — written by someone who's been building AI systems for 12+ years and still thinks most AI marketing is bullshit.</p>
+                <p class="lead text-muted">{% trans "You've read the AI books that promise utopia. You've seen the ones that predict doom. This is neither." %}</p>
+                <p class="text-muted">{% trans 'This is a practical, skeptical, deeply researched guide to working alongside AI — written by someone who\'s been building AI systems for 12+ years and still thinks most AI marketing is bullshit.' %}</p>
                 <div class="mt-4">
                     <div class="d-flex align-items-center gap-2 mb-2">
                         <span class="text-copper">✓</span>
-                        <span>19 chapters covering strategy, ethics, implementation, and future-proofing</span>
+                        <span>{% trans '19 chapters covering strategy, ethics, implementation, and future-proofing' %}</span>
                     </div>
                     <div class="d-flex align-items-center gap-2 mb-2">
                         <span class="text-copper">✓</span>
-                        <span>Numbered endnotes with verified sources — no fabricated stats</span>
+                        <span>{% trans 'Numbered endnotes with verified sources — no fabricated stats' %}</span>
                     </div>
                     <div class="d-flex align-items-center gap-2 mb-2">
                         <span class="text-copper">✓</span>
-                        <span>Written for business leaders, not engineers</span>
+                        <span>{% trans 'Written for business leaders, not engineers' %}</span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                         <span class="text-copper">✓</span>
-                        <span>Actionable frameworks you can use Monday morning</span>
+                        <span>{% trans 'Actionable frameworks you can use Monday morning' %}</span>
                     </div>
                 </div>
             </div>
@@ -155,53 +155,53 @@
 <section class="section-padding bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 display-font text-navy mb-3">Choose Your Format</h2>
+            <h2 class="display-5 display-font text-navy mb-3">{% trans 'Choose Your Format' %}</h2>
             <div class="divider-copper mx-auto"></div>
         </div>
         <div class="row g-4 justify-content-center">
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm text-center">
                     <div class="card-body p-4">
-                        <h5 class="text-muted text-uppercase small fw-bold">Ebook</h5>
+                        <h5 class="text-muted text-uppercase small fw-bold">{% trans 'Ebook' %}</h5>
                         <div class="display-4 display-font text-navy my-3">$12.99</div>
                         <ul class="list-unstyled text-muted small mb-4">
-                            <li class="mb-2">Instant download</li>
-                            <li class="mb-2">All 19 chapters</li>
-                            <li class="mb-2">Works on any device</li>
-                            <li>Free updates for life</li>
+                            <li class="mb-2">{% trans 'Instant download' %}</li>
+                            <li class="mb-2">{% trans 'All 19 chapters' %}</li>
+                            <li class="mb-2">{% trans 'Works on any device' %}</li>
+                            <li>{% trans 'Free updates for life' %}</li>
                         </ul>
-                        <a href="{% url 'book:book_detail' %}#ebook" class="btn btn-outline-copper w-100">Buy Ebook</a>
+                        <a href="{% url 'book:book_detail' %}#ebook" class="btn btn-outline-copper w-100">{% trans 'Buy Ebook' %}</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100 border-2 border-copper shadow text-center position-relative">
-                    <span class="position-absolute top-0 start-50 translate-middle badge bg-copper px-3 py-2">Most Popular</span>
+                    <span class="position-absolute top-0 start-50 translate-middle badge bg-copper px-3 py-2">{% trans 'Most Popular' %}</span>
                     <div class="card-body p-4">
-                        <h5 class="text-muted text-uppercase small fw-bold">Paperback</h5>
+                        <h5 class="text-muted text-uppercase small fw-bold">{% trans 'Paperback' %}</h5>
                         <div class="display-4 display-font text-navy my-3">$18.99</div>
                         <ul class="list-unstyled text-muted small mb-4">
-                            <li class="mb-2">Printed on demand</li>
-                            <li class="mb-2">Premium matte cover</li>
-                            <li class="mb-2">Global shipping</li>
-                            <li>+ Free ebook included</li>
+                            <li class="mb-2">{% trans 'Printed on demand' %}</li>
+                            <li class="mb-2">{% trans 'Premium matte cover' %}</li>
+                            <li class="mb-2">{% trans 'Global shipping' %}</li>
+                            <li>{% trans '+ Free ebook included' %}</li>
                         </ul>
-                        <a href="{% url 'book:book_detail' %}#paperback" class="btn btn-copper w-100">Buy Paperback</a>
+                        <a href="{% url 'book:book_detail' %}#paperback" class="btn btn-copper w-100">{% trans 'Buy Paperback' %}</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm text-center">
                     <div class="card-body p-4">
-                        <h5 class="text-muted text-uppercase small fw-bold">Hardcover</h5>
+                        <h5 class="text-muted text-uppercase small fw-bold">{% trans 'Hardcover' %}</h5>
                         <div class="display-4 display-font text-navy my-3">$27.99</div>
                         <ul class="list-unstyled text-muted small mb-4">
-                            <li class="mb-2">Collector's edition</li>
-                            <li class="mb-2">Embossed cover detail</li>
-                            <li class="mb-2">Signed by author</li>
-                            <li>+ All digital formats</li>
+                            <li class="mb-2">{% trans "Collector's edition" %}</li>
+                            <li class="mb-2">{% trans 'Embossed cover detail' %}</li>
+                            <li class="mb-2">{% trans 'Signed by author' %}</li>
+                            <li>{% trans '+ All digital formats' %}</li>
                         </ul>
-                        <a href="{% url 'book:book_detail' %}#hardcover" class="btn btn-outline-copper w-100">Buy Hardcover</a>
+                        <a href="{% url 'book:book_detail' %}#hardcover" class="btn btn-outline-copper w-100">{% trans 'Buy Hardcover' %}</a>
                     </div>
                 </div>
             </div>
@@ -214,14 +214,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <h2 class="display-5 display-font text-white mb-3">Get the First Chapter Free</h2>
-                <p class="text-white-50 lead mb-4">Join 2,000+ readers getting weekly insights on AI strategy. No hype, no spam — just useful stuff.</p>
+                <h2 class="display-5 display-font text-white mb-3">{% trans 'Get the First Chapter Free' %}</h2>
+                <p class="text-white-50 lead mb-4">{% trans 'Join 2,000+ readers getting weekly insights on AI strategy. No hype, no spam — just useful stuff.' %}</p>
                 <form id="newsletterForm" class="row g-2 justify-content-center">
                     <div class="col-md-6">
-                        <input type="email" id="newsletterEmail" class="form-control form-control-lg" placeholder="your@email.com" required>
+                        <input type="email" id="newsletterEmail" class="form-control form-control-lg" placeholder="{% trans 'your@email.com' %}" required>
                     </div>
                     <div class="col-md-3">
-                        <button type="submit" class="btn btn-copper btn-lg w-100" id="subscribeBtn">Subscribe</button>
+                        <button type="submit" class="btn btn-copper btn-lg w-100" id="subscribeBtn">{% trans 'Subscribe' %}</button>
                     </div>
                 </form>
                 <div id="subscribeMessage" class="mt-2 small"></div>
@@ -231,7 +231,7 @@
                     const btn = document.getElementById('subscribeBtn');
                     const msg = document.getElementById('subscribeMessage');
                     const email = document.getElementById('newsletterEmail').value.trim();
-                    btn.disabled = true; btn.textContent = 'Subscribing...';
+                    btn.disabled = true; btn.textContent = '{% trans "Subscribing..." %}';
                     fetch('/api/subscribe/', {
                         method: 'POST',
                         headers: {'Content-Type': 'application/json'},
@@ -243,14 +243,14 @@
                             msg.innerHTML = '<span class="text-copper">✓ ' + data.message + '</span>';
                             document.getElementById('newsletterEmail').value = '';
                         } else {
-                            msg.innerHTML = '<span class="text-danger">✗ ' + (data.error || 'Something went wrong') + '</span>';
+                            msg.innerHTML = '<span class="text-danger">✗ ' + (data.error || '{% trans "Something went wrong" %}') + '</span>';
                         }
                     })
-                    .catch(() => msg.innerHTML = '<span class="text-danger">✗ Network error. Please try again.</span>')
-                    .finally(() => { btn.disabled = false; btn.textContent = 'Subscribe'; });
+                    .catch(() => msg.innerHTML = '<span class="text-danger">✗ {% trans "Network error. Please try again." %}</span>')
+                    .finally(() => { btn.disabled = false; btn.textContent = '{% trans "Subscribe" %}'; });
                 });
                 </script>
-                <p class="text-white-50 small mt-3">Free chapter + scorecard access. Unsubscribe anytime.</p>
+                <p class="text-white-50 small mt-3">{% trans 'Free chapter + scorecard access. Unsubscribe anytime.' %}</p>
             </div>
         </div>
     </div>
